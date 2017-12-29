@@ -26,11 +26,12 @@ public class UserInfoViewPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new Fragment();
+                fragment = new CalcFragment();
                 break;
-//            case 1:
-//                fragment = new AgeFragment();
-//                break;
+            case 1:
+                fragment = new JuunanseiFragment();
+                break;
+
             default:
                 fragment = new Fragment();
         }
