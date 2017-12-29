@@ -27,19 +27,25 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_weight="1"
-        android:text="レース情報" />
+        android:text="有馬記念 G1" />
+
+    <!--改行をできなくして、編集を押さないと、編集できなくする。
+    つまり、編集ボタンを押すとレイアウトファイルを変更できるようにする。それでTextViewからEditTextになる-->
+
 
     <!--ここで馬データを入力させて、選択した馬の情報をポップアップで選択させる
 
     -->
 
 
+
     <Button
-        android:id="@+id/Editing"
+        android:id="@+id/push"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_weight="1"
-        android:text="編集" />
+        android:text="決定" />
+
 </LinearLayout>
 
 
@@ -63,7 +69,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="距離:"
+        android:text="2017 12/24(日) 15:24"
         android:layout_weight="1"/>
 
     <!--spinnerで選択できるようにする-->
@@ -77,15 +83,11 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2400m"
+        android:text="          中山/芝 2500"
         android:layout_weight="1"
-        android:id="@+id/matal"/>
+        android:id="@+id/place"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="  頭数:"
-        android:layout_weight="1"/>
+
 
     <!--<EditText-->
     <!--android:layout_width="100dp"-->
@@ -93,66 +95,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     <!--android:id="@+id/hourseCount"/>-->
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="14頭"
-        android:layout_weight="1"
-        android:id="@+id/hourseCount"
-        />
-
-
-</LinearLayout>
-
-
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="出走馬一覧"
-        android:layout_weight="1"
-        android:id="@+id/hourse"
-        />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="キタサンブラック"
-        android:layout_weight="1"
-        android:id="@+id/kitasan"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="サイレンスすずか"
-        android:layout_weight="1"
-        android:id="@+id/silent"
-        />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="キングカメハメハ"
-        android:layout_weight="1"
-        android:id="@+id/kingkame"
-        />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ディープインパクト"
-        android:layout_weight="1"
-        android:id="@+id/deep"
-        />
 
 
 </LinearLayout>
@@ -160,323 +102,989 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
+    <!--<GridLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:columnCount="7"-->
+        <!--android:orientation="horizontal">-->
 
-<!--ここからは入力してもらうスタイル。ポップアツプで表示するようにする-->
-
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <TextView
-        android:id="@+id/mental"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:text="精神状態" />
-
-    <RadioGroup
-        android:id="@+id/mentalGroup"
-        android:layout_width="fill_parent"
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:columnCount="7"
+        android:rowCount="8" >
 
-        <RadioButton
-            android:id="@+id/mental_bad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="悪い" />
 
-        <RadioButton
-            android:id="@+id/mental_normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="安定" />
+        <!--ここで表にする ここにTextVieをおく-->
 
-        <RadioButton
-            android:id="@+id/mental_good"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="良い" />
-    </RadioGroup>
-</LinearLayout>
-
+        <Button
+            android:id="@+id/wakubann"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="枠番" />
 
 
 
 
+        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
+        <Button
+            android:id="@+id/umaban"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="馬番" />
 
+        <Button
+            android:id="@+id/hourseName"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="馬名" />
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+        <Button
+            android:id="@+id/seirei"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="性齢" />
 
-    <TextView
-        android:id="@+id/wet"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:text="馬場状態"  />
+        <Button
+            android:id="@+id/hutann"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="負担重量" />
 
-    <RadioGroup
-        android:id="@+id/wetGroup"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
 
-        <RadioButton android:id="@+id/wet_soBad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="不良"
-            />
-        <RadioButton android:id="@+id/wet_normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="重"
-            />
-        <RadioButton android:id="@+id/wet_good"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="稍重"
-            />
+        <Button
+            android:id="@+id/jokkie"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:text="騎手" />
 
-        <RadioButton android:id="@+id/wet_soGood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 良"
-            />
 
-    </RadioGroup>
+        <Button
+            android:id="@+id/kixyuusixya"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:text="厩舎" />
 
-</LinearLayout>
 
 
 
 
+        <Button
+            android:id="@+id/hitokoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="7"
+            android:text="ひとこと"/>
 
+        <!--ここまでが見出しの列。ここから右を横スクロールできるようにする-->
 
-<!--距離-->
 
-<!--馬場状態-->
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
 
 
 
-    <TextView
-        android:id="@+id/distance"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:text="距離" />
 
-    <RadioGroup
-        android:id="@+id/distanceGroup"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <RadioButton android:id="@+id/distance_1200"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1200"
-            />
-        <RadioButton android:id="@+id/distance_1400"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1400"
-            />
 
-        <RadioButton android:id="@+id/distance_1800"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1800"
-            />
 
 
-        <RadioButton android:id="@+id/distance_2400"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2400"
-            />
 
 
-    </RadioGroup>
 
-</LinearLayout>
 
+        <Button
+            android:id="@+id/wakubann0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:text="1" />
 
 
+        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
+        <Button
+            android:id="@+id/umaban0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="1" />
 
+        <Button
+            android:id="@+id/hourseName0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:text="キタサンブラック"
+            android:textSize="10dp"/>
 
+        <!--文字数が多いときは、字を自動で小さくする-->
 
+        <Button
+            android:id="@+id/seirei0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:text="牡4" />
 
-<!--できるだけラジオボタンで選択させる。これによってそれぞれの項目によってブレが出ない。もっとも近いものが選べる-->
+        <Button
+            android:id="@+id/hutann0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:text="57" />
 
 
+        <Button
+            android:id="@+id/jokkie0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:text="武豊" />
 
 
+        <Button
+            android:id="@+id/kixyuusixya0"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="6"
+            android:text="清水 久" />
 
-<!--頭数-->
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
 
 
 
-    <TextView
-        android:id="@+id/HeadCount"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:text="頭数" />
 
-    <RadioGroup
-        android:id="@+id/HeadCountGroup"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <RadioButton android:id="@+id/count_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8頭"
-            />
-        <RadioButton android:id="@+id/count_10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10頭"
-            />
-        <RadioButton android:id="@+id/count_12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12頭"
-            />
+        <Button
+            android:id="@+id/hitokoto1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:text="【有馬記念】キタサンブラック1枠2番「一番欲しかった枠」"/>
 
-        <RadioButton android:id="@+id/count16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="16頭数"
-            />
 
-    </RadioGroup>
 
-</LinearLayout>
 
-<!--頭数などの決まり値は誰でも編奥できるものとして、マトリクスのグラフにする-->
 
 
 
 
-<!--何なら出走情報も全てユーザー任せにして、自信をつけさせる-->
 
 
+        <!--ここからも違う馬-->
 
-<!--ジョッキーとの相性-->
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/wakubann2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:text="1" />
 
-    <TextView
-        android:id="@+id/Compatibility"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:text="相性" />
 
-    <RadioGroup
-        android:id="@+id/CompatibilityGroup"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <RadioButton android:id="@+id/Compatibility_good"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="とても良い"
-            />
-        <RadioButton android:id="@+id/coundition_normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="普通"
-            />
-        <RadioButton android:id="@+id/coundition_bad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="よくない"
-            />
+        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-    </RadioGroup>
+        <Button
+            android:id="@+id/umaban2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="2" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/hourseName2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:text="ゴールドアーサー"
+            android:textSize="10dp"/>
 
+        <!--文字数が多いときは、字を自動で小さくする-->
 
+        <Button
+            android:id="@+id/seirei2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:text="牡5" />
 
+        <Button
+            android:id="@+id/hutann2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="4"
+            android:text="57" />
 
 
+        <Button
+            android:id="@+id/jokkie2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="5"
+            android:text="古田 隼" />
 
 
+        <Button
+            android:id="@+id/kixyuusixya2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="6"
+            android:text="中川" />
 
 
 
 
+        <Button
+            android:id="@+id/hitokoto2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:text="小さな牧場生まれで地味な血統の上がり馬、デビュー12年の苦労人騎手。"/>
 
 
 
 
 
 
-<!--<EditText-->
-<!--android:id="@+id/jockey"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="ジョッキーとの相性"/>-->
 
+        <Button
+            android:id="@+id/wakubann3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:text="2" />
 
 
 
-<!--ペースは後でシーケンスバーにする。スローペースなどを選べるように-->
+        <Button
+            android:id="@+id/umaban3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:text="3" />
 
-<!--会場はラジオボタンで選べるようにする-->
+        <Button
+            android:id="@+id/hourseName3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="2"
+            android:text="ラストインパクト"
+            android:textSize="10dp"/>
 
-<!--砂、芝を選択させる-->
+        <!--文字数が多いときは、字を自動で小さくする-->
 
-<!--レーンも選べるように-->
-<!--<EditText-->
-<!--android:id="@+id/lane"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="レーン"-->
-<!--/>-->
+        <Button
+            android:id="@+id/seirei3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="3"
+            android:text="牡5" />
 
+        <Button
+            android:id="@+id/hutann3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="4"
+            android:text="57" />
 
 
+        <Button
+            android:id="@+id/jokkie3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="5"
+            android:text="菱田 裕二" />
 
-<Button
-    android:id="@+id/push"
-    android:layout_width="60dp"
-    android:layout_height="10dp"
-    android:layout_weight="1"
-    android:text="送信" />
+
+        <Button
+            android:id="@+id/kixyuusixya3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="6"
+            android:text="松田博資" />
+
+
+        <Button
+            android:id="@+id/hitokoto3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="3"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:text="超絶鞍上弱化"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/wakubann4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="0"
+            android:text="2" />
+
+
+
+        <Button
+            android:id="@+id/umaban4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/hourseName4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="2"
+            android:text="ラブリーデイ"
+            android:textSize="10dp"/>
+
+        <!--文字数が多いときは、字を自動で小さくする-->
+
+        <Button
+            android:id="@+id/seirei4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="3"
+            android:text="牡5" />
+
+        <Button
+            android:id="@+id/hutann4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="4"
+            android:text="57" />
+
+
+        <Button
+            android:id="@+id/jokkie4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="5"
+            android:text="川田将雅" />
+
+
+        <Button
+            android:id="@+id/kixyuusixya4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="6"
+            android:text="池江泰寿" />
+
+
+
+        <Button
+            android:id="@+id/hitokoto4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="4"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:text="ラブリーデイ4番に川田「いい枠が残っていてよかった」"/>
+
+
+
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/wakubann5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="0"
+            android:text="3" />
+
+
+
+        <Button
+            android:id="@+id/umaban5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/hourseName5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="2"
+            android:text="アドマイヤデウス"
+            android:textSize="10dp"/>
+
+        <!--文字数が多いときは、字を自動で小さくする-->
+
+        <Button
+            android:id="@+id/seirei5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="3"
+            android:text="牡4" />
+
+        <Button
+            android:id="@+id/hutann5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="4"
+            android:text="57" />
+
+
+        <Button
+            android:id="@+id/jokkie5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="5"
+            android:text="岩田康誠" />
+
+
+        <Button
+            android:id="@+id/kixyuusixya5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="6"
+            android:text="橋田満" />
+
+
+
+        <Button
+            android:id="@+id/hitokoto5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:text="良好な状態で右回りコースとなれば、この馬が浮上するチャンスもあるのではないか。"/>
+
+
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/wakubann6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="0"
+            android:text="3" />
+
+
+
+        <Button
+            android:id="@+id/umaban6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/hourseName6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="2"
+            android:text="アルバート"
+            android:textSize="10dp"/>
+
+        <!--文字数が多いときは、字を自動で小さくする-->
+
+        <Button
+            android:id="@+id/seirei6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="3"
+            android:text="牡4" />
+
+        <Button
+            android:id="@+id/hutann6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="4"
+            android:text="57" />
+
+
+        <Button
+            android:id="@+id/jokkie6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="5"
+            android:text="Ａ．アッゼニ"
+            android:textSize="10dp"/>
+
+
+        <Button
+            android:id="@+id/kixyuusixya6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="6"
+            android:text="堀宣行" />
+
+
+        <Button
+            android:id="@+id/hitokoto6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="6"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:text="英国から今秋初来日のアッゼニは、４連勝中の新星アルバートで初めて有馬参戦。２走前の比叡Ｓ（１着）でも手綱を取っており「コントロールがしやすい馬で、最後の瞬発力も凄い」と能力を絶賛している。"/>
+
+
+
+        <!--レースに参加する馬の数が増えると、+ボタンで馬を足すことができる-->
+
+
+    </GridLayout>
+
+
+
+
+
+
+    <!--ここで出走馬一覧を表示している。これを一覧表のgridにする-->
+
+
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="出走馬一覧"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/hourse"-->
+        <!--/>-->
+
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="キタサンブラック"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/kitasan"-->
+        <!--/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="サイレンスすずか"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/silent"-->
+        <!--/>-->
+
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="キングカメハメハ"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/kingkame"-->
+        <!--/>-->
+
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="ディープインパクト"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/deep"-->
+        <!--/>-->
+
+
+<!--</LinearLayout>-->
+
+
+
+
+<!--ここもgridにまとめる-->
+<!--&lt;!&ndash;ここからは入力してもらうスタイル。ポップアツプで表示するようにする&ndash;&gt;-->
+
+
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/mental"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:ems="10"-->
+        <!--android:text="精神状態" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/mentalGroup"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/mental_bad"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="悪い" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/mental_normal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="安定" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/mental_good"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="良い" />-->
+    <!--</RadioGroup>-->
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/wet"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:ems="10"-->
+        <!--android:text="馬場状態"  />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/wetGroup"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+
+        <!--<RadioButton android:id="@+id/wet_soBad"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="不良"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/wet_normal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="重"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/wet_good"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="稍重"-->
+            <!--/>-->
+
+        <!--<RadioButton android:id="@+id/wet_soGood"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" 良"-->
+            <!--/>-->
+
+    <!--</RadioGroup>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+
+
+<!--&lt;!&ndash;距離&ndash;&gt;-->
+
+<!--&lt;!&ndash;馬場状態&ndash;&gt;-->
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/distance"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:ems="10"-->
+        <!--android:text="距離" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/distanceGroup"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+        <!--<RadioButton android:id="@+id/distance_1200"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1200"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/distance_1400"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1400"-->
+            <!--/>-->
+
+        <!--<RadioButton android:id="@+id/distance_1800"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1800"-->
+            <!--/>-->
+
+
+        <!--<RadioButton android:id="@+id/distance_2400"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="2400"-->
+            <!--/>-->
+
+
+    <!--</RadioGroup>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;できるだけラジオボタンで選択させる。これによってそれぞれの項目によってブレが出ない。もっとも近いものが選べる&ndash;&gt;-->
+
+
+
+
+
+<!--&lt;!&ndash;頭数&ndash;&gt;-->
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/HeadCount"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:ems="10"-->
+        <!--android:text="頭数" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/HeadCountGroup"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+        <!--<RadioButton android:id="@+id/count_8"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="8頭"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/count_10"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="10頭"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/count_12"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="12頭"-->
+            <!--/>-->
+
+        <!--<RadioButton android:id="@+id/count16"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="16頭数"-->
+            <!--/>-->
+
+    <!--</RadioGroup>-->
+
+<!--</LinearLayout>-->
+
+<!--&lt;!&ndash;頭数などの決まり値は誰でも編奥できるものとして、マトリクスのグラフにする&ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash;何なら出走情報も全てユーザー任せにして、自信をつけさせる&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;ジョッキーとの相性&ndash;&gt;-->
+
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/Compatibility"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:ems="10"-->
+        <!--android:text="相性" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/CompatibilityGroup"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--&gt;-->
+        <!--<RadioButton android:id="@+id/Compatibility_good"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="とても良い"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/coundition_normal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="普通"-->
+            <!--/>-->
+        <!--<RadioButton android:id="@+id/coundition_bad"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="よくない"-->
+            <!--/>-->
+
+
+    <!--</RadioGroup>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;<EditText&ndash;&gt;-->
+<!--&lt;!&ndash;android:id="@+id/jockey"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:text="ジョッキーとの相性"/>&ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash;ペースは後でシーケンスバーにする。スローペースなどを選べるように&ndash;&gt;-->
+
+<!--&lt;!&ndash;会場はラジオボタンで選べるようにする&ndash;&gt;-->
+
+<!--&lt;!&ndash;砂、芝を選択させる&ndash;&gt;-->
+
+<!--&lt;!&ndash;レーンも選べるように&ndash;&gt;-->
+<!--&lt;!&ndash;<EditText&ndash;&gt;-->
+<!--&lt;!&ndash;android:id="@+id/lane"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;android:text="レーン"&ndash;&gt;-->
+<!--&lt;!&ndash;/>&ndash;&gt;-->
+
 
 
 
