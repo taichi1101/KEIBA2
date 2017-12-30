@@ -16,3 +16,4 @@ public class JuunanseiFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_juunansei, container, false);
     }
 }
+
