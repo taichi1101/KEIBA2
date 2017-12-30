@@ -7,18 +7,20 @@
 
 
 
-        <Button
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="平均"/>
+            android:orientation="horizontal">
 
 
         <GridLayout
             android:id="@+id/gridLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="12" >
+            android:columnCount="3"
+            android:rowCount="12"
+            android:layout_weight="1">
 
 
                 <!--多分この上のlistの数は1つ多くないと行けない-->
@@ -39,18 +41,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="キタサンブラック"
+                    android:text="平均"
                     android:layout_column="0"
                     android:layout_row="0"
-                    android:textSize="15sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  8.5"
-                    android:layout_column="1"
-                    android:layout_row="0"
-                    android:textSize="15sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
 
 
@@ -252,11 +247,89 @@
                     android:layout_row="11"
                     android:textSize="15sp" />
 
+
+
         </GridLayout>
 
 
 
 
+
+
+
+
+
+
+
+
+        <!--ここからは、過去に自分が投稿した違う馬のデータ-->
+
+
+        <!--<Buttonこれは上に持ってく、toRightOf-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="自分の投稿"/>-->
+
+
+        <GridLayout
+            android:id="@+id/gridLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="12"
+            android:layout_weight="1">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="入力済み"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ゴールドアーサー"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  5.3"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ラストインパクト"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  3.4"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:textSize="15sp"/>
+        </GridLayout>
+
+
+
+
+        </LinearLayout>
 
 
 
@@ -286,6 +359,7 @@
                 <!--ボタンはいらない、次の画面に行けばいい-->
 
         </LinearLayout>
+
 
 
 
