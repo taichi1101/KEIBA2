@@ -6,21 +6,24 @@
         android:orientation="vertical"
         tools:context="com.example.android.sample.keiba.CalcActivity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:onClick="onClickGoToTop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="先頭のページへ"/>
-            <Button
-                android:onClick="onClickNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="次のページへ"/>
-        </LinearLayout>
+
+
+        <!--ここをなくすと、余計なボタンがなくなっていい-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+            <!--<Button-->
+                <!--android:onClick="onClickGoToTop"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="先頭のページへ"/>-->
+            <!--<Button-->
+                <!--android:onClick="onClickNext"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="次のページへ"/>-->
+        <!--</LinearLayout>-->
 
 
         <android.support.v4.view.ViewPager

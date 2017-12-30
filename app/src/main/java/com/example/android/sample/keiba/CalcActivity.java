@@ -36,16 +36,16 @@ public class CalcActivity extends AppCompatActivity {
         currentPage = 0;
 
     }
-
-    public void onClickNext(View view) {
-        currentPage ++;
-        pager.setCurrentItem(currentPage);
-    }
-
-    public void onClickGoToTop(View view) {
-        currentPage = 0;
-        pager.setCurrentItem(currentPage);
-    }
+//ここをなくすと、余計なボタンがなくなっていい
+//    public void onClickNext(View view) {
+//        currentPage ++;
+//        pager.setCurrentItem(currentPage);
+//    }
+//
+//    public void onClickGoToTop(View view) {
+//        currentPage = 0;
+//        pager.setCurrentItem(currentPage);
+//    }
 }
 
 
