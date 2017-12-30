@@ -109,7 +109,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     <GridLayout
         android:id="@+id/gridLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:columnCount="8"
         android:rowCount="8" >
 
@@ -118,11 +118,13 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="0"
-            android:text="枠番" />
+            android:text="枠番"
+            />
 
 
 
@@ -132,32 +134,36 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="1"
             android:text="馬番" />
 
         <Button
             android:id="@+id/hourseName"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="2"
             android:text="馬名" />
 
         <Button
             android:id="@+id/seirei"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="3"
             android:text="性齢" />
 
         <Button
             android:id="@+id/hutann"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="4"
             android:text="負担重量"
@@ -166,8 +172,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="5"
             android:text="騎手" />
@@ -175,8 +182,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="6"
             android:text="厩舎" />
@@ -187,8 +195,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="7"
             android:textSize="7dp"
@@ -210,8 +219,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="0"
             android:text="1" />
@@ -222,16 +232,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="1"
             android:text="1" />
 
         <Button
             android:id="@+id/hourseName0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="2"
             android:text="キタサンブラック"
@@ -243,16 +255,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="3"
             android:text="牡4" />
 
         <Button
             android:id="@+id/hutann0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="4"
             android:text="57" />
@@ -260,8 +274,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="5"
             android:textSize="7dp"
@@ -272,8 +287,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="6"
             android:textSize="7dp"
@@ -287,8 +303,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="7"
             android:ellipsize="end"
@@ -311,8 +328,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="0"
             android:text="1" />
@@ -323,16 +341,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="1"
             android:text="2" />
 
         <Button
             android:id="@+id/hourseName2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="2"
             android:text="ゴールドアーサー"
@@ -344,16 +364,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="3"
             android:text="牡5" />
 
         <Button
             android:id="@+id/hutann2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="4"
             android:text="57" />
@@ -361,8 +383,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="5"
             android:text="古田 隼"
@@ -373,8 +396,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="6"
             android:text="中川"
@@ -388,8 +412,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="2"
             android:layout_row="7"
             android:textSize="5dp"
@@ -405,8 +430,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="0"
             android:text="2" />
@@ -415,16 +441,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="1"
             android:text="3" />
 
         <Button
             android:id="@+id/hourseName3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="2"
             android:ellipsize="end"
@@ -437,16 +465,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="3"
             android:text="牡5" />
 
         <Button
             android:id="@+id/hutann3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="4"
             android:text="57" />
@@ -454,8 +484,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="5"
             android:text="菱田 裕二"
@@ -466,8 +497,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="6"
             android:text="松田博資"
@@ -478,8 +510,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="7"
             android:textSize="5dp"
@@ -503,8 +536,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="0"
             android:text="2" />
@@ -513,16 +547,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="1"
             android:text="4" />
 
         <Button
             android:id="@+id/hourseName4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="2"
             android:textSize="5dp"
@@ -534,16 +570,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="3"
             android:text="牡5" />
 
         <Button
             android:id="@+id/hutann4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="4"
             android:text="57" />
@@ -551,8 +589,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:textSize="7dp"
             android:layout_row="5"
@@ -563,8 +602,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:textSize="7dp"
             android:layout_row="6"
@@ -576,8 +616,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="7"
             android:textSize="5dp"
@@ -596,8 +637,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="0"
             android:text="3" />
@@ -606,16 +648,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="1"
             android:text="5" />
 
         <Button
             android:id="@+id/hourseName5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="2"
             android:text="アドマイヤデウス"
@@ -627,16 +671,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="3"
             android:text="牡4" />
 
         <Button
             android:id="@+id/hutann5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="4"
             android:text="57" />
@@ -644,8 +690,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="5"
             android:text="岩田康誠"
@@ -656,8 +703,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="6"
             android:text="橋田満"
@@ -669,8 +717,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="7"
             android:textSize="5dp"
@@ -688,8 +737,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="0"
             android:text="3" />
@@ -698,16 +748,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="1"
             android:text="6" />
 
         <Button
             android:id="@+id/hourseName6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="2"
             android:text="アルバート"
@@ -719,16 +771,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="3"
             android:text="牡4" />
 
         <Button
             android:id="@+id/hutann6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="4"
             android:text="57" />
@@ -736,8 +790,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="5"
             android:text="Ａ．アッゼニ"
@@ -748,8 +803,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="6"
             android:text="堀宣行"
@@ -760,8 +816,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="7"
             android:textSize="5dp"
@@ -779,8 +836,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/wakubann7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="0"
             android:text="4" />
@@ -789,16 +847,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/umaban7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="1"
             android:text="7" />
 
         <Button
             android:id="@+id/hourseName7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="2"
             android:text="タイチー"
@@ -810,16 +870,18 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/seirei7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="3"
             android:text="牡21" />
 
         <Button
             android:id="@+id/hutann7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="4"
             android:text="71" />
@@ -827,8 +889,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/jokkie7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="5"
             android:text="タイチー"
@@ -839,8 +902,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/kixyuusixya7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="6"
             android:text="タイチー"
@@ -851,8 +915,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <Button
             android:id="@+id/hitokoto7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_column="7"
             android:layout_row="7"
             android:textSize="5dp"
