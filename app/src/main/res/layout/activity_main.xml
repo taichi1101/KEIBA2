@@ -26,7 +26,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="有馬記念 G1" />
 
     <!--改行をできなくして、編集を押さないと、編集できなくする。
@@ -41,10 +40,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
     <Button
         android:id="@+id/push"
-        android:layout_width="55dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="決定" />
+        android:text="予想画面へ" />
 
 </LinearLayout>
 
@@ -112,7 +110,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         android:id="@+id/gridLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="7"
+        android:columnCount="8"
         android:rowCount="8" >
 
 
@@ -775,6 +773,93 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--レースに参加する馬の数が増えると、+ボタンで馬を足すことができる-->
         <!--ボタンが押されたら、その項目の編集画面を出して、横スクロールでその隣の、上スクロールでその上のものを表示させる-->
+
+
+
+
+        <Button
+            android:id="@+id/wakubann7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="0"
+            android:text="4" />
+
+
+
+        <Button
+            android:id="@+id/umaban7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/hourseName7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="2"
+            android:text="タイチー"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="5dp"/>
+
+        <!--文字数が多いときは、字を自動で小さくする-->
+
+        <Button
+            android:id="@+id/seirei7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="3"
+            android:text="牡21" />
+
+        <Button
+            android:id="@+id/hutann7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="4"
+            android:text="71" />
+
+
+        <Button
+            android:id="@+id/jokkie7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="5"
+            android:text="タイチー"
+            android:textSize="7dp"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+
+        <Button
+            android:id="@+id/kixyuusixya7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="6"
+            android:text="タイチー"
+            android:textSize="7dp"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+
+        <Button
+            android:id="@+id/hitokoto7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="7"
+            android:layout_row="7"
+            android:textSize="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="2000m以上なら、増えるほどに得意になる。ただ芝でその距離を走ったことがないため、自ら大外を希望しての参戦"/>
+
 
 
     </GridLayout>
