@@ -23,7 +23,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     android:orientation="horizontal">
 
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="有馬記念 G1" />
@@ -66,7 +66,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2017 12/24(日) 15:24"
@@ -80,7 +80,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     <!--android:id="@+id/matal"/>-->
 
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="中山/芝 2500"
@@ -119,7 +119,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--ここで表にする ここにTextVieをおく-->
 
-        <Button
+        <TextView
             android:id="@+id/wakubann"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,7 +135,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-        <Button
+        <TextView
             android:id="@+id/umaban"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,7 +144,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="馬番" />
 
-        <Button
+        <TextView
             android:id="@+id/hourseName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -153,7 +153,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="2"
             android:text="馬名" />
 
-        <Button
+        <TextView
             android:id="@+id/seirei"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,7 +162,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="性齢" />
 
-        <Button
+        <TextView
             android:id="@+id/hutann"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -173,7 +173,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <TextView
             android:id="@+id/jokkie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -183,7 +183,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="騎手" />
 
 
-        <Button
+        <TextView
             android:id="@+id/kixyuusixya"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <TextView
             android:id="@+id/hitokoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -219,7 +219,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -232,7 +232,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -241,7 +241,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="1" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -255,7 +255,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -264,7 +264,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡4" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -274,7 +274,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="57" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -286,7 +286,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -301,7 +301,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -327,7 +327,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -340,7 +340,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -349,7 +349,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="2" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -363,7 +363,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -372,7 +372,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡5" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -382,7 +382,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="57" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -394,7 +394,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -408,7 +408,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -427,7 +427,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -438,7 +438,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -447,7 +447,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="3" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -461,7 +461,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -470,7 +470,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡5" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -480,7 +480,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="57" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -492,7 +492,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
            />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -504,7 +504,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -529,7 +529,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -540,7 +540,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -549,7 +549,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="4" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -562,7 +562,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -571,7 +571,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡5" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -581,7 +581,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="57" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -593,7 +593,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
            />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -606,7 +606,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -626,7 +626,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -637,7 +637,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -646,7 +646,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="5" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -660,7 +660,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -669,7 +669,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡4" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -679,7 +679,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="57" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -691,7 +691,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -704,7 +704,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -723,7 +723,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -734,7 +734,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -743,7 +743,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="6" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -757,7 +757,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -766,7 +766,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡4" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -776,7 +776,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="57" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -788,7 +788,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -800,7 +800,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -819,7 +819,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/wakubann7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -830,7 +830,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-        <Button
+        <EditText
             android:id="@+id/umaban7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -839,7 +839,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="1"
             android:text="7" />
 
-        <Button
+        <EditText
             android:id="@+id/hourseName7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -852,7 +852,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <Button
+        <EditText
             android:id="@+id/seirei7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -861,7 +861,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="3"
             android:text="牡21" />
 
-        <Button
+        <EditText
             android:id="@+id/hutann7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -871,7 +871,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="71" />
 
 
-        <Button
+        <EditText
             android:id="@+id/jokkie7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -883,7 +883,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/kixyuusixya7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -895,7 +895,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             />
 
 
-        <Button
+        <EditText
             android:id="@+id/hitokoto7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
