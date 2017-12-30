@@ -38,6 +38,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
+
+
     <Button
         android:id="@+id/push"
         android:layout_width="wrap_content"
@@ -111,7 +113,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="8"
-        android:rowCount="8" >
+        android:rowCount="8"
+        >
 
 
         <!--ここで表にする ここにTextVieをおく-->
@@ -167,7 +170,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="0"
             android:layout_row="4"
             android:text="負担重量"
-            android:textSize="7dp"/>
+            />
 
 
         <Button
@@ -200,7 +203,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="0"
             android:layout_row="7"
-            android:textSize="7dp"
             android:text="ひとこと"/>
 
         <!--ここまでが見出しの列。ここから右を横スクロールできるようにする-->
@@ -246,10 +248,10 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="2"
+            android:maxLength="10"
             android:text="キタサンブラック"
-            android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            android:textSize="7dp"
+            />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -281,8 +283,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="5"
             android:textSize="7dp"
             android:text="武豊"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -294,8 +295,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="6"
             android:textSize="7dp"
             android:text="清水 久"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
 
@@ -311,6 +311,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:ellipsize="end"
             android:singleLine="true"
             android:textSize="5dp"
+            android:maxLength="13"
             android:text="【有馬記念】キタサンブラック1枠2番「一番欲しかった枠」"/>
 
 
@@ -356,9 +357,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="2"
             android:layout_row="2"
             android:text="ゴールドアーサー"
-            android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            android:maxLength="10"
+            android:textSize="7dp"
+            />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -390,8 +391,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="5"
             android:text="古田 隼"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -403,8 +403,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="6"
             android:text="中川"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"
             />
 
 
@@ -420,6 +418,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:textSize="5dp"
             android:ellipsize="end"
             android:singleLine="true"
+            android:maxLength="13"
             android:text="小さな牧場生まれで地味な血統の上がり馬、デビュー12年の苦労人騎手。"/>
 
 
@@ -455,9 +454,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="2"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textSize="5dp"
+            android:maxLength="10"
+            android:textSize="7dp"
             android:text="ラストインパクト"
          />
 
@@ -491,8 +489,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="5"
             android:text="菱田 裕二"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+           />
 
 
         <Button
@@ -504,8 +501,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="6"
             android:text="松田博資"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -515,10 +511,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="3"
             android:layout_row="7"
-            android:textSize="5dp"
             android:text="超絶鞍上弱化"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            android:maxLength="13"
+            android:textSize="5dp"/>
 
 
 
@@ -561,10 +556,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="4"
             android:layout_row="2"
-            android:textSize="5dp"
             android:text="ラブリーデイ"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            android:maxLength="10"
+            android:textSize="7dp"/>
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -596,8 +590,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:textSize="7dp"
             android:layout_row="5"
             android:text="川田将雅"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+           />
 
 
         <Button
@@ -609,8 +602,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:textSize="7dp"
             android:layout_row="6"
             android:text="池江泰寿"
-            android:ellipsize="end"
-            android:singleLine="true" />
+            />
 
 
 
@@ -622,8 +614,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="4"
             android:layout_row="7"
             android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"
+            android:maxLength="13"
             android:text="ラブリーデイ4番に川田「いい枠が残っていてよかった」"/>
 
 
@@ -663,9 +654,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="5"
             android:layout_row="2"
             android:text="アドマイヤデウス"
-            android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            android:maxLength="10"
+            android:textSize="7dp"
+            />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -697,8 +688,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="5"
             android:text="岩田康誠"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -709,9 +699,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="5"
             android:layout_row="6"
             android:text="橋田満"
-            android:ellipsize="end"
             android:textSize="7dp"
-            android:singleLine="true"/>
+          />
 
 
 
@@ -722,9 +711,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="5"
             android:layout_row="7"
-            android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"
+            android:maxLength="10"
+            android:textSize="7dp"
             android:text="良好な状態で右回りコースとなれば、この馬が浮上するチャンスもあるのではないか。"/>
 
 
@@ -762,10 +750,10 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="2"
+            android:maxLength="10"
+            android:textSize="7dp"
             android:text="アルバート"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textSize="5dp"/>
+            />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -797,8 +785,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="5"
             android:text="Ａ．アッゼニ"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -810,8 +797,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="6"
             android:text="堀宣行"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -821,9 +807,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_weight="1"
             android:layout_column="6"
             android:layout_row="7"
+            android:maxLength="13"
             android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"
             android:text="英国から今秋初来日のアッゼニは、４連勝中の新星アルバートで初めて有馬参戦。２走前の比叡Ｓ（１着）でも手綱を取っており「コントロールがしやすい馬で、最後の瞬発力も凄い」と能力を絶賛している。"/>
 
 
@@ -862,9 +847,8 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="7"
             android:layout_row="2"
             android:text="タイチー"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textSize="5dp"/>
+            android:maxLength="10"
+            android:textSize="7dp" />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -896,8 +880,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="5"
             android:text="タイチー"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -909,8 +892,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_row="6"
             android:text="タイチー"
             android:textSize="7dp"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            />
 
 
         <Button
@@ -921,8 +903,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:layout_column="7"
             android:layout_row="7"
             android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"
+            android:maxLength="13"
             android:text="2000m以上なら、増えるほどに得意になる。ただ芝でその距離を走ったことがないため、自ら大外を希望しての参戦"/>
 
 
