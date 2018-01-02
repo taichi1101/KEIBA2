@@ -5,19 +5,49 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+
+
+
+public class ChatActivity extends Activity implements View.OnClickListener {
 
 
     Button pushCalcButton;
     Button pushTotalButton;
-    Button pushChatButton;
+
+
+
+    private static final String[] texts = {
+            "abc ", "bcd", "cde", "def", "efg",
+            "fgh", 	"ghi", "hij", "ijk", "jkl",
+            "klm"
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_chat);
+
+        pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
+        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
+
+        pushCalcButton.setOnClickListener(this);
+        pushTotalButton.setOnClickListener(this);
+
+
+
+        ListView listView = new ListView(this);
+        setContentView(listView);
+
+        // simple_list_item_1 は、 もともと用意されている定義済みのレイアウトファイルのID
+        ArrayAdapter<String> arrayAdapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts);
+
+        listView.setAdapter(arrayAdapter);
 
 
         //ここでやることは、ボタンを押したときにその項目の文字を入れたEditTextを表示して、
@@ -25,13 +55,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         //そのときにめくるようなUIはいらない。あえて、文字だけ変えさせたい
         //文字サイズは考慮しなくていい
 
-        pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
-        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
-        pushChatButton=(Button)findViewById(R.id.pushChatButton);
 
-        pushCalcButton.setOnClickListener(this);
-        pushTotalButton.setOnClickListener(this);
-        pushChatButton.setOnClickListener(this);
     }
 
     @Override
@@ -41,25 +65,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.pushCalcButton:
 
-
                 //次のデータ入力画面にいくボタンが押されたので、処理する
                 Intent intent = new Intent(this, CalcActivity.class);
                 startActivity(intent);
                 break;
 
-                //トータルスコアをみる
+            //トータルスコアをみる
             case R.id.pushTotalButton:
                 intent = new Intent(this, TotalActivity.class);
                 startActivity(intent);
                 break;
-
-            case R.id.pushChatButton:
-                intent = new Intent(this, ChatActivity.class);
-                startActivity(intent);
-                break;
-
-
-
 
 
         }

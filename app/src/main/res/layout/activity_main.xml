@@ -54,6 +54,12 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         android:layout_height="wrap_content"
         android:text="スコア一覧へ" />
 
+    <Button
+        android:id="@+id/pushChatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="チャット画面へ" />
+
 
 </LinearLayout>
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.sample.keiba.ChatActivity">
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有馬記念 G1" />
+
+
+
+        <Button
+            android:id="@+id/pushCalcButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="予想画面へ" />
+
+
+
+        <Button
+            android:id="@+id/pushTotalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="スコア一覧へ" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017 12/24(日) 15:24"
+            android:layout_weight="1"/>
+
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中山/芝 2500"
+            android:layout_weight="1"
+            android:id="@+id/place"/>
+
+
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        </Spinner>
+
+
+
+
+        <!--<ListView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--&gt;-->
+            <!--&lt;!&ndash;このListViewはどこに入れても結果は変わらず全画面のListViewになる。やはりカスタマイズのListViewにする&ndash;&gt;-->
+            <!--&lt;!&ndash;とりあえず、最後にChatActivityのonClickListenerだけつける&ndash;&gt;-->
+
+
+        <!--</ListView>-->
+
+    </LinearLayout>
+
+
+    <!--ここではspinnerでレース名を選択できるようにする-->
+    <!--ListViewを入れてこの下で、どんどんチャットできるようにする。後はLinerLayoutのVerticalだから、ListViewを足すだけでいい-->
+
+
+
+
+</LinearLayout>
