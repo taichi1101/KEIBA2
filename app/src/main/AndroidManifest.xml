@@ -20,7 +20,8 @@
             android:name=".CalcActivity"
             android:label="@string/title_activity_calc"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".UserInfoViewPagerAdapter"></activity>
+        <activity android:name=".UserInfoViewPagerAdapter" />
+        <activity android:name=".TotalActivity"></activity>
     </application>
 
 </manifest>
