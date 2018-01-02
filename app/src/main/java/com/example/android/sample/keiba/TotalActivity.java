@@ -13,6 +13,8 @@ public class TotalActivity extends Activity implements View.OnClickListener {
 
     Button pushCalcButton;
     Button pushMainButton;
+    Button  pushChatButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +24,12 @@ public class TotalActivity extends Activity implements View.OnClickListener {
 
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushMainButton=(Button)findViewById(R.id.pushMainButton);
-
+        pushChatButton=(Button)findViewById(R.id.pushChatButton);
 
         pushCalcButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
+        pushChatButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -48,6 +52,12 @@ public class TotalActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
+
+
+            case R.id.pushChatButton:
+                intent = new Intent(this, ChatActivity.class);
+                startActivity(intent);
+                break;
 
 
 

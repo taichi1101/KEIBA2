@@ -21,7 +21,8 @@
             android:label="@string/title_activity_calc"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UserInfoViewPagerAdapter" />
-        <activity android:name=".TotalActivity"></activity>
+        <activity android:name=".TotalActivity" />
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>
