@@ -9,6 +9,10 @@ import android.widget.Button;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
+
+    Button pushCalcButton;
+    Button pushTotalButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,18 +24,36 @@ public class MainActivity extends Activity implements View.OnClickListener {
         //そのときにめくるようなUIはいらない。あえて、文字だけ変えさせたい
         //文字サイズは考慮しなくていい
 
-        Button pushbutton=(Button)findViewById(R.id.push);
+        pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
+        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
 
-
-        pushbutton.setOnClickListener(this);
+        pushCalcButton.setOnClickListener(this);
+        pushTotalButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
 
-        //次の画面にいくボタンが押されたので、処理する
-        Intent intent =new Intent(this,CalcActivity.class);
-        startActivity(intent);
 
+        switch (view.getId()) {
+            case R.id.pushCalcButton:
+
+
+                //次のデータ入力画面にいくボタンが押されたので、処理する
+                Intent intent = new Intent(this, CalcActivity.class);
+                startActivity(intent);
+                break;
+
+                //トータルスコアをみる
+            case R.id.pushTotalButton:
+                intent = new Intent(this, TotalActivity.class);
+                startActivity(intent);
+                break;
+
+
+
+
+        }
     }
+
 }

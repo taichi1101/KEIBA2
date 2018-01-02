@@ -41,10 +41,19 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
     <Button
-        android:id="@+id/push"
+        android:id="@+id/pushCalcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="予想画面へ" />
+
+
+
+    <Button
+        android:id="@+id/pushTotalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="スコア一覧へ" />
+
 
 </LinearLayout>
 

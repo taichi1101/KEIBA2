@@ -39,12 +39,19 @@
 
 
 
-
         <Button
-            android:id="@+id/push"
+            android:id="@+id/pushCalcButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="予想画面へ" />
+            android:text="予想画面" />
+
+        <Button
+            android:id="@+id/pushMainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出走表" />
+
+
 
     </LinearLayout>
 
@@ -108,6 +115,13 @@
     <!--android:columnCount="7"-->
     <!--android:orientation="horizontal">-->
 
+
+
+
+
+
+
+
     <GridLayout
         android:id="@+id/gridLayout1"
         android:layout_width="match_parent"
@@ -119,8 +133,9 @@
 
         <!--ここで表にする ここにTextVieをおく-->
 
+
         <TextView
-            android:id="@+id/wakubann"
+            android:id="@+id/umammei"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -137,7 +152,7 @@
 
 
         <TextView
-            android:id="@+id/umaban"
+            android:id="@+id/jixyuunansei"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -146,7 +161,7 @@
             android:text="柔軟性" />
 
         <TextView
-            android:id="@+id/hourseName"
+            android:id="@+id/kireazi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -155,7 +170,7 @@
             android:text="切れ味" />
 
         <TextView
-            android:id="@+id/seirei"
+            android:id="@+id/sutamina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -164,7 +179,7 @@
             android:text="スタミナ" />
 
         <TextView
-            android:id="@+id/hutann"
+            android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -175,7 +190,7 @@
 
 
         <TextView
-            android:id="@+id/jokkie"
+            android:id="@+id/ninoasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -185,7 +200,7 @@
 
 
         <TextView
-            android:id="@+id/kixyuusixya"
+            android:id="@+id/kisitu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -198,7 +213,7 @@
 
 
         <TextView
-            android:id="@+id/hitokoto"
+            android:id="@+id/jokkie_power"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -209,7 +224,7 @@
 
 
         <TextView
-            android:id="@+id/tekisei"
+            android:id="@+id/tekiseikixyori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -220,7 +235,7 @@
 
 
         <TextView
-            android:id="@+id/gate"
+            android:id="@+id/gate_place"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -230,7 +245,7 @@
 
 
         <TextView
-            android:id="@+id/race_page"
+            android:id="@+id/race_pace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -242,7 +257,7 @@
 
 
         <TextView
-            android:id="@+id/place_state"
+            android:id="@+id/place_state_gate_place"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -253,7 +268,7 @@
 
 
         <TextView
-            android:id="@+id/place_wind_strong"
+            android:id="@+id/wind_strong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -264,7 +279,7 @@
 
 
         <TextView
-            android:id="@+id/place_studiam"
+            android:id="@+id/studiam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -274,7 +289,37 @@
 
 
 
-        <!--ここまでが見出しの列。ここから右を横スクロールできるようにする-->
+        <!--
+            android:id="@+id/umammei"
+
+
+            android:id="@+id/jixyuunansei"
+
+            android:id="@+id/kireazi"
+
+            android:id="@+id/sutamina"
+
+            android:id="@+id/start"
+
+            android:id="@+id/ninoasi"
+
+            android:id="@+id/kisitu"
+
+            android:id="@+id/jokkie_power"
+
+            android:id="@+id/tekiseikixyori"
+
+            android:id="@+id/gate_place"
+
+            android:id="@+id/race_pace"
+
+            android:id="@+id/place_state_gate_place"
+
+            android:id="@+id/wind_strong"
+
+            android:id="@+id/studiam"
+
+            -->
 
 
 
@@ -282,507 +327,168 @@
 
 
 
-
-
-
-
-
-
-        <EditText
-            android:id="@+id/wakubann0"
+        <TextView
+            android:id="@+id/umammei0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_column="1"
             android:layout_row="0"
-            android:text="1" />
-
-
-        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-        <EditText
-            android:id="@+id/umaban0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:text="1" />
-
-        <EditText
-            android:id="@+id/hourseName0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="2"
-            android:maxLength="10"
             android:text="キタサンブラック"
-            android:textSize="7dp"
-            />
-
-        <!--文字数が多いときは、字を自動で小さくする-->
-
-        <EditText
-            android:id="@+id/seirei0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="3"
-            android:text="牡4" />
-
-        <EditText
-            android:id="@+id/hutann0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="4"
-            android:text="57" />
-
-
-        <EditText
-            android:id="@+id/jokkie0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="5"
-            android:textSize="7dp"
-            android:text="武豊"
-            />
-
-
-        <EditText
-            android:id="@+id/kixyuusixya0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="6"
-            android:textSize="7dp"
-            android:text="清水 久"
-            />
-
-
-
-
-
-        <EditText
-            android:id="@+id/hitokoto1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="1"
-            android:layout_row="7"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textSize="5dp"
-            android:maxLength="13"
-            android:text="【有馬記念】キタサンブラック1枠2番「一番欲しかった枠」"/>
-
-
-
-
-
-
-
-
-
-
-        <!--ここからも違う馬-->
-
-
-
-        <EditText
-            android:id="@+id/wakubann2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="0"
-            android:text="1" />
-
-
-        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-        <EditText
-            android:id="@+id/umaban2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="1"
-            android:text="2" />
-
-        <EditText
-            android:id="@+id/hourseName2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="2"
-            android:text="ゴールドアーサー"
-            android:maxLength="10"
-            android:textSize="7dp"
-            />
-
-        <!--文字数が多いときは、字を自動で小さくする-->
-
-        <EditText
-            android:id="@+id/seirei2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="3"
-            android:text="牡5" />
-
-        <EditText
-            android:id="@+id/hutann2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="4"
-            android:text="57" />
-
-
-        <EditText
-            android:id="@+id/jokkie2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="5"
-            android:text="古田 隼"
-            android:textSize="7dp"
-            />
-
-
-        <EditText
-            android:id="@+id/kixyuusixya2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="6"
-            android:text="中川"
-            android:textSize="7dp"
-            />
-
-
-
-
-        <EditText
-            android:id="@+id/hitokoto2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="2"
-            android:layout_row="7"
-            android:textSize="5dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:maxLength="13"
-            android:text="小さな牧場生まれで地味な血統の上がり馬、デビュー12年の苦労人騎手。"/>
-
-
-
-
-
-
-
-        <EditText
-            android:id="@+id/wakubann3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="0"
-            android:text="2" />
-
-
-
-        <EditText
-            android:id="@+id/umaban3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="1"
-            android:text="3" />
-
-        <EditText
-            android:id="@+id/hourseName3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="2"
-            android:maxLength="10"
-            android:textSize="7dp"
-            android:text="ラストインパクト"
-            />
-
-        <!--文字数が多いときは、字を自動で小さくする-->
-
-        <EditText
-            android:id="@+id/seirei3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="3"
-            android:text="牡5" />
-
-        <EditText
-            android:id="@+id/hutann3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="4"
-            android:text="57" />
-
-
-        <EditText
-            android:id="@+id/jokkie3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="5"
-            android:text="菱田 裕二"
-            android:textSize="7dp"
-            />
-
-
-        <EditText
-            android:id="@+id/kixyuusixya3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="6"
-            android:text="松田博資"
-            android:textSize="7dp"
-            />
-
-
-        <EditText
-            android:id="@+id/hitokoto3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="3"
-            android:layout_row="7"
-            android:text="超絶鞍上弱化"
-            android:maxLength="13"
             android:textSize="5dp"/>
 
 
+        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-
-
-
-
-
-
-
-
-
-
-
-        <EditText
-            android:id="@+id/wakubann4"
+        <TextView
+            android:id="@+id/jixyuunansei0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="4"
-            android:layout_row="0"
-            android:text="2" />
-
-
-
-        <EditText
-            android:id="@+id/umaban4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="4"
+            android:layout_column="1"
             android:layout_row="1"
-            android:text="4" />
+            android:text="10" />
 
-        <EditText
-            android:id="@+id/hourseName4"
+        <TextView
+            android:id="@+id/kireazi0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="4"
+            android:layout_column="1"
             android:layout_row="2"
-            android:text="ラブリーデイ"
-            android:maxLength="10"
-            android:textSize="7dp"/>
-
-        <!--文字数が多いときは、字を自動で小さくする-->
-
-        <EditText
-            android:id="@+id/seirei4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="4"
-            android:layout_row="3"
-            android:text="牡5" />
-
-        <EditText
-            android:id="@+id/hutann4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="4"
-            android:layout_row="4"
-            android:text="57" />
-
-
-        <EditText
-            android:id="@+id/jokkie4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="4"
-            android:textSize="7dp"
-            android:layout_row="5"
-            android:text="川田将雅"
-            />
-
-
-        <EditText
-            android:id="@+id/kixyuusixya4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="4"
-            android:textSize="7dp"
-            android:layout_row="6"
-            android:text="池江泰寿"
-            />
-
-
-
-        <EditText
-            android:id="@+id/hitokoto4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="4"
-            android:layout_row="7"
-            android:textSize="5dp"
-            android:maxLength="13"
-            android:text="ラブリーデイ4番に川田「いい枠が残っていてよかった」"/>
-
-
-
-
-
-
-
-
-
-
-        <EditText
-            android:id="@+id/wakubann5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="5"
-            android:layout_row="0"
-            android:text="3" />
-
-
-
-        <EditText
-            android:id="@+id/umaban5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="5"
-            android:layout_row="1"
-            android:text="5" />
-
-        <EditText
-            android:id="@+id/hourseName5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="5"
-            android:layout_row="2"
-            android:text="アドマイヤデウス"
-            android:maxLength="10"
-            android:textSize="7dp"
+            android:text="9"
             />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <EditText
-            android:id="@+id/seirei5"
+        <TextView
+            android:id="@+id/sutamina0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="5"
+            android:layout_column="1"
             android:layout_row="3"
-            android:text="牡4" />
+            android:text="10" />
 
-        <EditText
-            android:id="@+id/hutann5"
+        <TextView
+            android:id="@+id/start0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="5"
+            android:layout_column="1"
             android:layout_row="4"
-            android:text="57" />
+            android:text="9" />
 
 
-        <EditText
-            android:id="@+id/jokkie5"
+        <TextView
+            android:id="@+id/ninoasi0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="5"
+            android:layout_column="1"
             android:layout_row="5"
-            android:text="岩田康誠"
-            android:textSize="7dp"
+            android:text="8"
             />
 
 
-        <EditText
-            android:id="@+id/kixyuusixya5"
+        <TextView
+            android:id="@+id/kisitu0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="5"
+            android:layout_column="1"
             android:layout_row="6"
-            android:text="橋田満"
-            android:textSize="7dp"
+            android:text="7"
             />
 
 
 
-        <EditText
-            android:id="@+id/hitokoto5"
+
+
+        <TextView
+            android:id="@+id/jokkie_power0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="5"
+            android:layout_column="1"
             android:layout_row="7"
-            android:maxLength="10"
-            android:textSize="7dp"
-            android:text="良好な状態で右回りコースとなれば、この馬が浮上するチャンスもあるのではないか。"/>
+            android:layout_weight="1"
+            android:text="10"
+            />
+
+
+        <TextView
+            android:id="@+id/tekiseikixyori0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="8"
+            android:layout_weight="1"
+            android:text="3"
+            />
+
+
+        <TextView
+            android:id="@+id/gate_place0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="9"
+            android:layout_weight="1"
+            android:text="5"
+             />
+
+
+        <TextView
+            android:id="@+id/race_pace0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="10"
+            android:layout_weight="1"
+            android:text="8"
+             />
+
+
+        <TextView
+            android:id="@+id/place_state_gate_place0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="11"
+            android:layout_weight="1"
+            android:text="10"
+           />
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/wind_strong0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="12"
+            android:layout_weight="1"
+            android:text="10"
+             />
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/studiam0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="13"
+            android:layout_weight="1"
+            android:text="10"
+            />
 
 
 
@@ -792,188 +498,184 @@
 
 
 
-        <EditText
-            android:id="@+id/wakubann6"
+
+
+
+
+
+
+
+
+
+        <!--ここからは違う馬-->
+
+
+
+        <TextView
+            android:id="@+id/umammei1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="0"
-            android:text="3" />
+            android:text="キタサンブラック"
+            android:textSize="5dp"/>
 
 
+        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
-        <EditText
-            android:id="@+id/umaban6"
+
+        <TextView
+            android:id="@+id/jixyuunansei1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="1"
-            android:text="6" />
+            android:text="10" />
 
-        <EditText
-            android:id="@+id/hourseName6"
+        <TextView
+            android:id="@+id/kireazi1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="2"
-            android:maxLength="10"
-            android:textSize="7dp"
-            android:text="アルバート"
+            android:text="9"
             />
 
         <!--文字数が多いときは、字を自動で小さくする-->
 
-        <EditText
-            android:id="@+id/seirei6"
+        <TextView
+            android:id="@+id/sutamina1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="3"
-            android:text="牡4" />
+            android:text="10" />
 
-        <EditText
-            android:id="@+id/hutann6"
+        <TextView
+            android:id="@+id/start1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="4"
-            android:text="57" />
+            android:text="9" />
 
 
-        <EditText
-            android:id="@+id/jokkie6"
+        <TextView
+            android:id="@+id/ninoasi1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="5"
-            android:text="Ａ．アッゼニ"
-            android:textSize="7dp"
+            android:text="8"
             />
 
 
-        <EditText
-            android:id="@+id/kixyuusixya6"
+        <TextView
+            android:id="@+id/kisitu1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="6"
-            android:text="堀宣行"
-            android:textSize="7dp"
+            android:text="7"
             />
 
 
-        <EditText
-            android:id="@+id/hitokoto6"
+
+
+
+        <TextView
+            android:id="@+id/jokkie_power1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="6"
+            android:layout_column="2"
             android:layout_row="7"
-            android:maxLength="13"
-            android:textSize="5dp"
-            android:text="英国から今秋初来日のアッゼニは、４連勝中の新星アルバートで初めて有馬参戦。２走前の比叡Ｓ（１着）でも手綱を取っており「コントロールがしやすい馬で、最後の瞬発力も凄い」と能力を絶賛している。"/>
-
-
-
-        <!--レースに参加する馬の数が増えると、+ボタンで馬を足すことができる-->
-        <!--ボタンが押されたら、その項目の編集画面を出して、横スクロールでその隣の、上スクロールでその上のものを表示させる-->
-
-
-
-
-        <EditText
-            android:id="@+id/wakubann7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="0"
-            android:text="4" />
-
-
-
-        <EditText
-            android:id="@+id/umaban7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="1"
-            android:text="7" />
-
-        <EditText
-            android:id="@+id/hourseName7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="2"
-            android:text="タイチー"
-            android:maxLength="10"
-            android:textSize="7dp" />
-
-        <!--文字数が多いときは、字を自動で小さくする-->
-
-        <EditText
-            android:id="@+id/seirei7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="3"
-            android:text="牡21" />
-
-        <EditText
-            android:id="@+id/hutann7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="4"
-            android:text="71" />
-
-
-        <EditText
-            android:id="@+id/jokkie7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="5"
-            android:text="タイチー"
-            android:textSize="7dp"
+            android:text="10"
             />
 
 
-        <EditText
-            android:id="@+id/kixyuusixya7"
+        <TextView
+            android:id="@+id/tekiseikixyori1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="8"
             android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="6"
-            android:text="タイチー"
-            android:textSize="7dp"
+            android:text="3"
             />
 
 
-        <EditText
-            android:id="@+id/hitokoto7"
+        <TextView
+            android:id="@+id/gate_place1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="9"
             android:layout_weight="1"
-            android:layout_column="7"
-            android:layout_row="7"
-            android:textSize="5dp"
-            android:maxLength="13"
-            android:text="2000m以上なら、増えるほどに得意になる。ただ芝でその距離を走ったことがないため、自ら大外を希望しての参戦"/>
+            android:text="5"
+            />
+
+
+        <TextView
+            android:id="@+id/race_pace1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="10"
+            android:layout_weight="1"
+            android:text="8"
+            />
+
+
+        <TextView
+            android:id="@+id/place_state_gate_place1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="11"
+            android:layout_weight="1"
+            android:text="10"
+            />
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/wind_strong1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="12"
+            android:layout_weight="1"
+            android:text="10"
+            />
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/studiam1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="13"
+            android:layout_weight="1"
+            android:text="10"
+            />
+
+
+
 
 
 
