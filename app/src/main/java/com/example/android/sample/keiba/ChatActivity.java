@@ -47,13 +47,18 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         ArrayAdapter<String> arrayAdapter =
                 new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts);
 
+        //調べる
+
         listView.setAdapter(arrayAdapter);
+
+        //↑多分ここで動的に追加してるから、場所が指定できずに、上に付け足されているのではないか？
 
 
         //ここでやることは、ボタンを押したときにその項目の文字を入れたEditTextを表示して、
         //上下左右のスワイプへの対応として、その方向の文字を表示させる。
         //そのときにめくるようなUIはいらない。あえて、文字だけ変えさせたい
         //文字サイズは考慮しなくていい
+
 
 
     }
