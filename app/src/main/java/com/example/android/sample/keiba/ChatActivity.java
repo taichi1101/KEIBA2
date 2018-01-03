@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-
+import java.util.ArrayList;
 
 
 public class ChatActivity extends Activity implements View.OnClickListener {
@@ -26,6 +26,9 @@ public class ChatActivity extends Activity implements View.OnClickListener {
             "klm"
     };
 
+    //この上で作った配列を下でArrayAdapterを作ってセットしている
+    //そのため、EditTextから、この配列にaddするコードにする
+    //ただし、ただ配列をセットしても、あのxmlには当てはまらない。どうするのか？
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,17 +43,32 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
 
 
-        ListView listView = new ListView(this);
-        setContentView(listView);
+
+        ArrayList<User> adapterlist;
+
+        adapterlist = new ArrayList<>();
+        User user = new User();
+        user.setData("date");
+        user.setUsername("name");
+        user.setComment("comment");
+        user.setIdnumber("idnumber");
+        adapterlist.add(user);
+        // 出力結果をリストビューに表示
+
+
+        ListView listView = (ListView) findViewById(R.id.list_view);
+        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, adapterlist);
+        listView.setAdapter(adapter);
+
+
+        //この下の2行はなぞ
+//        ListView listView = new ListView(this);
+//        setContentView(listView);
 
         // simple_list_item_1 は、 もともと用意されている定義済みのレイアウトファイルのID
-        ArrayAdapter<String> arrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts);
-
-        //調べる
-
-        listView.setAdapter(arrayAdapter);
-
+//        ArrayAdapter<String> arrayAdapter =
+//                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts);
+        //listView.setAdapter(arrayAdapter);
         //↑多分ここで動的に追加してるから、場所が指定できずに、上に付け足されているのではないか？
 
 
@@ -58,6 +76,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         //上下左右のスワイプへの対応として、その方向の文字を表示させる。
         //そのときにめくるようなUIはいらない。あえて、文字だけ変えさせたい
         //文字サイズは考慮しなくていい
+
 
 
 
