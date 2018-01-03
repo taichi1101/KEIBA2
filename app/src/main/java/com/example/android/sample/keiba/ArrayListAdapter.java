@@ -55,6 +55,9 @@ public class ArrayListAdapter extends BaseAdapter {
         return adapterlist.get(position).getId();
     }
 
+
+
+    //1/4 多分この下のgetViewのpositionはタッチされた場所のviewの文字を取得するためのもの
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         User user = adapterlist.get(position);

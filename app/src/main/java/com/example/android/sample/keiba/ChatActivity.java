@@ -48,10 +48,10 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
         adapterlist = new ArrayList<>();
         User user = new User();
-        user.setData("date");
-        user.setUsername("name");
-        user.setComment("comment");
-        user.setIdnumber("idnumber");
+        user.setData("1/4 2:10");
+        user.setUsername("taichi");
+        user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
+        //user.setIdnumber("idnumber");
         adapterlist.add(user);
         // 出力結果をリストビューに表示
 
