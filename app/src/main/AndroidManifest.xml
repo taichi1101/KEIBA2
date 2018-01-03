@@ -22,7 +22,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UserInfoViewPagerAdapter" />
         <activity android:name=".TotalActivity" />
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ArrayListAdapter"></activity>
     </application>
 
 </manifest>
