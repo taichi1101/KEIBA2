@@ -86,9 +86,6 @@
     </LinearLayout>
 
 
-    <!--ここではspinnerでレース名を選択できるようにする-->
-    <!--ListViewを入れてこの下で、どんどんチャットできるようにする。後はLinerLayoutのVerticalだから、ListViewを足すだけでいい-->
-
 
     <android.support.v7.widget.Toolbar
 
@@ -152,7 +149,7 @@
             android:id="@+id/sentencePushbutton"
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:layout_toRightOf="@+id/Transmission"
+            android:layout_toRightOf="@+id/sentence"
             android:text="送信"
 
             />

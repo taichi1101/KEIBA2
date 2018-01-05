@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 
-public class ChatActivity extends Activity implements View.OnClickListener {
+public class ChatActivity extends Activity implements View.OnClickListener{
 
 
     private static final String TAG ="ChatActivity" ;
@@ -146,9 +146,9 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
 //    名前が変な気もするが、spinnerItemsを更新した時に呼び出す
     public void raceSpinnerAdapterSet() {
-        ArrayAdapter<String> madapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,raceSpinner);
-        madapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        idRaceSpinner.setAdapter(madapter);
+        ArrayAdapter<String> raceSpinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,raceSpinner);
+        raceSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        idRaceSpinner.setAdapter(raceSpinnerAdapter);
         idRaceSpinner.setFocusable(false);
 
     }
@@ -231,7 +231,8 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         user.setComment(text);
         commentAdapterlist.add(user);
 
-        idCommentListView = (ListView) findViewById(R.id.comment_list_view);
+//        サイド取得する必要はない
+        //idCommentListView = (ListView) findViewById(R.id.comment_list_view);
         setCommentAdapterlist = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
         idCommentListView.setAdapter(setCommentAdapterlist);
         idCommentListView.setSelection(idCommentListView.getCount());
