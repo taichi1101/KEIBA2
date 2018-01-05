@@ -2,15 +2,23 @@ package com.example.android.sample.keiba;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
+import android.widget.Toast;
 
 import java.sql.Time;
 import java.util.ArrayList;
@@ -23,62 +31,49 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     private static final String TAG ="ChatActivity" ;
     Button pushCalcButton;
     Button pushTotalButton;
-    Button pushButton;
+    Button sentencePushButton;
 
 
-
-    private static final String[] texts = {
-            "abc ", "bcd", "cde", "def", "efg",
-            "fgh", 	"ghi", "hij", "ijk", "jkl",
-            "klm"
-    };
+    ArrayListAdapter setCommentAdapterlist;
+    ListView idCommentListView;
 
     //この上で作った配列を下でArrayAdapterを作ってセットしている
     //そのため、EditTextから、この配列にaddするコードにする
     //ただし、ただ配列をセットしても、あのxmlには当てはまらない。どうするのか？
 
-    ArrayList<User> adapterlist;
+
+
+    Spinner idRaceSpinner;
+
+    ArrayList<User> commentAdapterlist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+
+
+//        spinner
+        idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
+
+//        button
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
-        pushButton=(Button)findViewById(R.id.pushbutton);
+        sentencePushButton=(Button)findViewById(R.id.sentencePushbutton);
 
         pushCalcButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
-        pushButton.setOnClickListener(this);
+        sentencePushButton.setOnClickListener(this);
 
 
+//        サンプルのListViewを作ってる
+        ListViewSet();
 
 
-        adapterlist = new ArrayList<>();
-
-        User user = new User();
-        user.setData("1/4 2:10");
-        user.setUsername("taichi");
-        user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
-        //user.setIdnumber("idnumber");
-        adapterlist.add(user);
-        // 出力結果をリストビューに表示
+//        スピナーの初期化
+        firstRaceSpinner();
 
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, adapterlist);
-        listView.setAdapter(adapter);
-
-
-        //この下の2行はなぞ
-//        ListView listView = new ListView(this);
-//        setContentView(listView);
-
-        // simple_list_item_1 は、 もともと用意されている定義済みのレイアウトファイルのID
-//        ArrayAdapter<String> arrayAdapter =
-//                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts);
-        //listView.setAdapter(arrayAdapter);
-        //↑多分ここで動的に追加してるから、場所が指定できずに、上に付け足されているのではないか？
 
 
         //ここでやることは、ボタンを押したときにその項目の文字を入れたEditTextを表示して、
@@ -86,14 +81,121 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         //そのときにめくるようなUIはいらない。あえて、文字だけ変えさせたい
         //文字サイズは考慮しなくていい
 
+    }
 
+
+
+    @Override
+    public void onStart(){
+        super.onStart();
+
+
+        idRaceSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Spinner spinner = (Spinner) parent;
+                String spinnerRaceItem = (String) spinner.getSelectedItem();
+
+                //クラス変数に入れる。今選択されていたspinnerを後で指定できるように
+
+//                わからなくなるからとりあえずローカル
+                int spinnerRacePosition=position;
+
+
+            }
+            //アイテムが選択されなかった
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        raceSpinnerAdapterSet();
+//        データベースから取得したぶんだけのfavoriteをどんどんspinnerに追加していくfavoriteクラス、とりあえずコメントアウト
+        //spinnerItems = favorite.favorite(LocationActivity.this, username);//これでok
 
 
     }
 
+
+
+    String raceSpinner[];
+    public void firstRaceSpinner(){
+
+        raceSpinner = new String[5];
+        raceSpinner[0] = "桜花賞";
+        raceSpinner[1] = "日本ダービー";
+        raceSpinner[2] ="菊花賞";
+        raceSpinner[3] ="天皇賞・秋";
+        raceSpinner[4] ="有馬記念";
+        //このしたが、キーボードが押されないようにしてる
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        setContentView(R.layout.activity_chat);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        // setSupportActionBar(toolbar);
+        toolbar.setTitle("");
+        // mResolvingError = false;
+        //nullになるから、ここでよんどく
+
+
+//        spinnerを使うためここでセットする。セットしないとnullになる
+        raceSpinnerAdapterSet();
+
+    }
+
+
+
+//    名前が変な気もするが、spinnerItemsを更新した時に呼び出す
+    public void raceSpinnerAdapterSet() {
+        ArrayAdapter<String> madapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,raceSpinner);
+        madapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        idRaceSpinner.setAdapter(madapter);
+        idRaceSpinner.setFocusable(false);
+
+    }
+
+
+
+//    これは使うかわからない。多分spinnerの値を使って計算をするためのもの
+    public static void setSelection(Spinner spinner, String item) {
+        // ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerItems);
+        SpinnerAdapter adapter = spinner.getAdapter();
+        int index = 0;
+        for (int i = 0; i < adapter.getCount(); i++) {
+            if (adapter.getItem(i).equals(item)) {
+                index = i; break;
+            }
+        }
+        spinner.setSelection(index);
+    }
+
+
+
+
+    //    ListViewSet
+    public void ListViewSet() {
+
+        commentAdapterlist = new ArrayList<>();
+        User user = new User();
+        user.setData("1/4 2:10");
+        user.setUsername("taichi");
+        user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
+        //user.setIdnumber("idnumber");
+        commentAdapterlist.add(user);
+        // 出力結果をリストビューに表示
+
+
+        idCommentListView = (ListView) findViewById(R.id.comment_list_view);
+        setCommentAdapterlist = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
+        idCommentListView.setAdapter(setCommentAdapterlist);
+        idCommentListView.setSelection(idCommentListView.getCount());
+    }
+
+
+
     @Override
     public void onClick(View view) {
 
+        Log.e(TAG,"aaaaaaaaaaaaaaaaaaaaa");
 
         switch (view.getId()) {
             case R.id.pushCalcButton:
@@ -109,17 +211,14 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
-            case R.id.pushbutton:
+            case R.id.sentencePushbutton:
                 //EditTextのidから文字列を取得して、それをListに追加する。
                 EditText edit = (EditText)findViewById(R.id.sentence);
                 String text=edit.getText().toString();
                 comment(text);
-
+                edit.setText("");
                 //入力されたたびに、Listを下まで下げる
-
-
                 break;
-
         }
     }
 
@@ -127,17 +226,18 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     public void comment(String text){
 
         User user = new User();
-        user.setData(nowTime());
+        user.setData(getNowTime());
         user.setUsername("taichi");
         user.setComment(text);
-        adapterlist.add(user);
+        commentAdapterlist.add(user);
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, adapterlist);
-        listView.setAdapter(adapter);
+        idCommentListView = (ListView) findViewById(R.id.comment_list_view);
+        setCommentAdapterlist = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
+        idCommentListView.setAdapter(setCommentAdapterlist);
+        idCommentListView.setSelection(idCommentListView.getCount());
     }
 
-    public String nowTime(){
+    public String getNowTime(){
 
         Calendar calendar = Calendar.getInstance();
         int month = calendar.get(Calendar.MONTH) + 1;
