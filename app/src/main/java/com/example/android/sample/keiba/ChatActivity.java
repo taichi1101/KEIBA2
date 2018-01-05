@@ -56,6 +56,9 @@ public class ChatActivity extends Activity implements View.OnClickListener{
 //        spinner
         idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
 
+//        listView
+        idCommentListView=(ListView)findViewById(R.id.comment_list_view);
+
 //        button
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
@@ -121,6 +124,8 @@ public class ChatActivity extends Activity implements View.OnClickListener{
     String raceSpinner[];
     public void firstRaceSpinner(){
 
+        Log.e(TAG,"aaaaccccccccccfirstRaceSpinner");
+
         raceSpinner = new String[5];
         raceSpinner[0] = "桜花賞";
         raceSpinner[1] = "日本ダービー";
@@ -174,6 +179,7 @@ public class ChatActivity extends Activity implements View.OnClickListener{
     //    ListViewSet
     public void ListViewSet() {
 
+        Log.e(TAG,"aaaacccccccccclistViewSet");
         commentAdapterlist = new ArrayList<>();
         User user = new User();
         user.setData("1/4 2:10");
@@ -184,7 +190,6 @@ public class ChatActivity extends Activity implements View.OnClickListener{
         // 出力結果をリストビューに表示
 
 
-        idCommentListView = (ListView) findViewById(R.id.comment_list_view);
         setCommentAdapterlist = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
         idCommentListView.setAdapter(setCommentAdapterlist);
         idCommentListView.setSelection(idCommentListView.getCount());
@@ -250,3 +255,4 @@ public class ChatActivity extends Activity implements View.OnClickListener{
     }
 
 }
+
