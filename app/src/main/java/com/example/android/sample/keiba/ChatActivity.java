@@ -4,19 +4,26 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class ChatActivity extends Activity implements View.OnClickListener {
 
 
+    private static final String TAG ="ChatActivity" ;
     Button pushCalcButton;
     Button pushTotalButton;
+    Button pushButton;
 
 
 
@@ -30,6 +37,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     //そのため、EditTextから、この配列にaddするコードにする
     //ただし、ただ配列をセットしても、あのxmlには当てはまらない。どうするのか？
 
+    ArrayList<User> adapterlist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,16 +45,17 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
+        pushButton=(Button)findViewById(R.id.pushbutton);
 
         pushCalcButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
+        pushButton.setOnClickListener(this);
 
 
 
-
-        ArrayList<User> adapterlist;
 
         adapterlist = new ArrayList<>();
+
         User user = new User();
         user.setData("1/4 2:10");
         user.setUsername("taichi");
@@ -100,8 +109,43 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
+            case R.id.pushbutton:
+                //EditTextのidから文字列を取得して、それをListに追加する。
+                EditText edit = (EditText)findViewById(R.id.sentence);
+                String text=edit.getText().toString();
+                comment(text);
+
+                //入力されたたびに、Listを下まで下げる
+
+
+                break;
 
         }
+    }
+
+
+    public void comment(String text){
+
+        User user = new User();
+        user.setData(nowTime());
+        user.setUsername("taichi");
+        user.setComment(text);
+        adapterlist.add(user);
+
+        ListView listView = (ListView) findViewById(R.id.list_view);
+        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, adapterlist);
+        listView.setAdapter(adapter);
+    }
+
+    public String nowTime(){
+
+        Calendar calendar = Calendar.getInstance();
+        int month = calendar.get(Calendar.MONTH) + 1;
+        int day = calendar.get(Calendar.DATE);
+        int hour = calendar.get(Calendar.HOUR);
+        int minute = calendar.get(Calendar.MINUTE);
+        String nowTime = month + "/" + day + ":" + hour + ":" + minute + ">";
+        return nowTime;
     }
 
 }
