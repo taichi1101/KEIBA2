@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.sql.Time;
 import java.util.ArrayList;
@@ -28,7 +29,12 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
 
 
-    ArrayList<User> adapterlist;
+
+    Spinner idRaceSpinner;
+
+    ArrayList<User> commentAdapterlist;
+
+    ListView idCommentListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +49,12 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         sentencePushbutton.setOnClickListener(this);
 
 
-        adapterlist = new ArrayList<>();
+
+//        spinner
+        idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
+
+
+        commentAdapterlist = new ArrayList<>();
 
 
         User user = new User();
@@ -51,13 +62,15 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         user.setUsername("taichi");
         user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
         //user.setIdnumber("idnumber");
-        adapterlist.add(user);
+        commentAdapterlist.add(user);
         // 出力結果をリストビューに表示
 
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, adapterlist);
-        listView.setAdapter(adapter);
+
+//        listView
+        idCommentListView=(ListView)findViewById(R.id.comment_list_view);
+        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
+        idCommentListView.setAdapter(adapter);
 
 
 
@@ -105,11 +118,11 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         user.setData(nowTime());
         user.setUsername("taichi");
         user.setComment(text);
-        adapterlist.add(user);
+        commentAdapterlist.add(user);
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, adapterlist);
-        listView.setAdapter(adapter);
+        idCommentListView=(ListView)findViewById(R.id.comment_list_view);
+        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
+        idCommentListView.setAdapter(adapter);
     }
 
     public String nowTime(){
