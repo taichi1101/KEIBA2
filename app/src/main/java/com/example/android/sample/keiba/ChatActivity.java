@@ -167,6 +167,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 EditText edit = (EditText)findViewById(R.id.sentence);
                 String text=edit.getText().toString();
                 comment(text);
+                edit.setText("");
 
                 //入力されたたびに、Listを下まで下げる
 
@@ -188,6 +189,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         idCommentListView=(ListView)findViewById(R.id.comment_list_view);
         ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
         idCommentListView.setAdapter(adapter);
+        idCommentListView.setSelection(idCommentListView.getCount());
     }
 
     public String nowTime(){
