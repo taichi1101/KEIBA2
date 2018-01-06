@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -58,6 +60,8 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
         ListViewSet();
 
+        //firstRaceSpinner();
+
 //        commentAdapterlist = new ArrayList<>();
 //
 //
@@ -77,6 +81,47 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
 
     }
+
+
+
+    String raceSpinner[];
+    public void firstRaceSpinner(){
+
+        Log.e(TAG,"aaaaccccccccccfirstRaceSpinner");
+
+        raceSpinner = new String[5];
+        raceSpinner[0] = "桜花賞";
+        raceSpinner[1] = "日本ダービー";
+        raceSpinner[2] ="菊花賞";
+        raceSpinner[3] ="天皇賞・秋";
+        raceSpinner[4] ="有馬記念";
+        //このしたが、キーボードが押されないようにしてる
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        setContentView(R.layout.activity_chat);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        // setSupportActionBar(toolbar);
+        //toolbar.setTitle("");
+        // mResolvingError = false;
+        //nullになるから、ここでよんどく
+
+
+//        spinnerを使うためここでセットする。セットしないとnullになる
+        raceSpinnerAdapterSet();
+
+    }
+
+
+
+    //    名前が変な気もするが、spinnerItemsを更新した時に呼び出す
+    public void raceSpinnerAdapterSet() {
+        ArrayAdapter<String> raceSpinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,raceSpinner);
+        raceSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        idRaceSpinner.setAdapter(raceSpinnerAdapter);
+        idRaceSpinner.setFocusable(false);
+
+    }
+
+
 
 
     //    ListViewSet
