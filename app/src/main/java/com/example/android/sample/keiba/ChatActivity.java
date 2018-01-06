@@ -28,6 +28,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
 
 
+    ArrayListAdapter setCommentAdapterlist;
 
 
     Spinner idRaceSpinner;
@@ -54,9 +55,35 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
 
 
+
+        ListViewSet();
+
+//        commentAdapterlist = new ArrayList<>();
+//
+//
+//        User user = new User();
+//        user.setData("1/4 2:10");
+//        user.setUsername("taichi");
+//        user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
+//        //user.setIdnumber("idnumber");
+//        commentAdapterlist.add(user);
+//        // 出力結果をリストビューに表示
+//
+////        listView
+//        idCommentListView=(ListView)findViewById(R.id.comment_list_view);
+//        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
+//        idCommentListView.setAdapter(adapter);
+
+
+
+    }
+
+
+    //    ListViewSet
+    public void ListViewSet() {
+
+        Log.e(TAG,"aaaacccccccccclistViewSet");
         commentAdapterlist = new ArrayList<>();
-
-
         User user = new User();
         user.setData("1/4 2:10");
         user.setUsername("taichi");
@@ -66,17 +93,10 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         // 出力結果をリストビューに表示
 
 
-
-//        listView
         idCommentListView=(ListView)findViewById(R.id.comment_list_view);
-        ArrayListAdapter adapter = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
-        idCommentListView.setAdapter(adapter);
-
-
-
-
-
-
+        setCommentAdapterlist = new ArrayListAdapter(ChatActivity.this, commentAdapterlist);
+        idCommentListView.setAdapter(setCommentAdapterlist);
+        idCommentListView.setSelection(idCommentListView.getCount());
     }
 
     @Override
