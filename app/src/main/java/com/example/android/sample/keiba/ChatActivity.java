@@ -23,19 +23,10 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     private static final String TAG ="ChatActivity" ;
     Button pushCalcButton;
     Button pushTotalButton;
-    Button pushButton;
+    Button sentencePushbutton;
 
 
 
-    private static final String[] texts = {
-            "abc ", "bcd", "cde", "def", "efg",
-            "fgh", 	"ghi", "hij", "ijk", "jkl",
-            "klm"
-    };
-
-    //この上で作った配列を下でArrayAdapterを作ってセットしている
-    //そのため、EditTextから、この配列にaddするコードにする
-    //ただし、ただ配列をセットしても、あのxmlには当てはまらない。どうするのか？
 
     ArrayList<User> adapterlist;
     @Override
@@ -45,16 +36,15 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
-        pushButton=(Button)findViewById(R.id.pushbutton);
+        sentencePushbutton=(Button)findViewById(R.id.sentencePushbutton);
 
         pushCalcButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
-        pushButton.setOnClickListener(this);
-
-
+        sentencePushbutton.setOnClickListener(this);
 
 
         adapterlist = new ArrayList<>();
+
 
         User user = new User();
         user.setData("1/4 2:10");
@@ -70,21 +60,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         listView.setAdapter(adapter);
 
 
-        //この下の2行はなぞ
-//        ListView listView = new ListView(this);
-//        setContentView(listView);
-
-        // simple_list_item_1 は、 もともと用意されている定義済みのレイアウトファイルのID
-//        ArrayAdapter<String> arrayAdapter =
-//                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, texts);
-        //listView.setAdapter(arrayAdapter);
-        //↑多分ここで動的に追加してるから、場所が指定できずに、上に付け足されているのではないか？
-
-
-        //ここでやることは、ボタンを押したときにその項目の文字を入れたEditTextを表示して、
-        //上下左右のスワイプへの対応として、その方向の文字を表示させる。
-        //そのときにめくるようなUIはいらない。あえて、文字だけ変えさせたい
-        //文字サイズは考慮しなくていい
 
 
 
@@ -109,7 +84,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
-            case R.id.pushbutton:
+            case R.id.sentencePushbutton:
                 //EditTextのidから文字列を取得して、それをListに追加する。
                 EditText edit = (EditText)findViewById(R.id.sentence);
                 String text=edit.getText().toString();
