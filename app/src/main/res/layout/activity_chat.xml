@@ -12,40 +12,82 @@
 
 
 
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
-        <EditText
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/pushRaceOrderButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="有馬記念 G1" />
-
+            android:text="出走表" />
 
 
         <Button
             android:id="@+id/pushCalcButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="予想画面へ" />
+            android:text="予想画面" />
 
 
 
         <Button
             android:id="@+id/pushTotalButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="スコア一覧へ" />
+            android:text="スコア一覧" />
 
 
+
+        <Button
+            android:id="@+id/pushChatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="チャット" />
     </LinearLayout>
 
 
 
 
 
+    <!--ここではspinnerでレース名を選択できるようにする-->
+    <!--ListViewを入れてこの下で、どんどんチャットできるようにする。後はLinerLayoutのVerticalだから、ListViewを足すだけでいい-->
+
+
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        >
+        <Spinner
+            android:id="@+id/raceSpinner"
+            android:layout_width="180dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:popupBackground="#ccffffff"
+            />
+
+        <Spinner
+            android:id="@+id/hourseSpinner"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:popupBackground="#ccffffff" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +95,7 @@
 
 
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2017 12/24(日) 15:24"
@@ -62,7 +104,7 @@
 
 
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="中山/芝 2500"
@@ -86,33 +128,6 @@
     </LinearLayout>
 
 
-    <!--ここではspinnerでレース名を選択できるようにする-->
-    <!--ListViewを入れてこの下で、どんどんチャットできるようにする。後はLinerLayoutのVerticalだから、ListViewを足すだけでいい-->
-
-
-    <android.support.v7.widget.Toolbar
-
-        android:id="@+id/tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        >
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:popupBackground="#ccffffff"
-            />
-
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:popupBackground="#ccffffff" />
-
-    </android.support.v7.widget.Toolbar>
 
 
     <LinearLayout
@@ -122,13 +137,14 @@
         android:layout_margin="20dp">
 
         <ListView
-            android:id="@+id/list_view"
+            android:id="@+id/comment_list_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000"
             ></ListView>
 
     </LinearLayout>
+
 
 
 
@@ -141,7 +157,7 @@
         android:layout_alignParentBottom="true">
 
         <EditText
-            android:id="@+id/Transmission"
+            android:id="@+id/sentence"
             android:inputType="text"
             android:layout_width="310dp"
             android:layout_height="40dp"
@@ -149,14 +165,15 @@
             />
 
         <Button
-            android:id="@+id/buttonTransmission"
+            android:id="@+id/sentencePushbutton"
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:layout_toRightOf="@+id/Transmission"
+            android:layout_toRightOf="@+id/sentence"
             android:text="送信"
 
             />
     </LinearLayout>
+
 
 
 
