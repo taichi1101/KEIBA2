@@ -29,6 +29,14 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
     <Button
+        android:id="@+id/pushRaceOrderButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="出走表" />
+
+
+    <Button
         android:id="@+id/pushCalcButton"
         android:layout_width="0dp"
         android:layout_weight="1"

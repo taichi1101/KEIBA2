@@ -31,7 +31,7 @@ public class TotalActivity extends Activity implements View.OnClickListener {
 
 
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
-        pushMainButton=(Button)findViewById(R.id.pushMainButton);
+        pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
 
         pushCalcButton.setOnClickListener(this);
@@ -144,7 +144,7 @@ public class TotalActivity extends Activity implements View.OnClickListener {
                 break;
 
 
-            case R.id.pushMainButton:
+            case R.id.pushRaceOrderButton:
 
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);

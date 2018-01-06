@@ -31,6 +31,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
     //    レースのspinner
     Spinner idRaceSpinner;
+    //    馬のspinner
+    Spinner idHourseSpinner;
 
 
     private FragmentPagerAdapter adapter;
@@ -46,7 +48,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
-        pushMainButton=(Button)findViewById(R.id.pushMainButton);
+        pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
 
 
         pushChatButton.setOnClickListener(this);
@@ -58,8 +60,11 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 //        spinner
         idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
+        idHourseSpinner=(Spinner) findViewById(R.id.hourseSpinner);
 
         firstRaceSpinner();
+        firstHourseSpinner();
+
 
 
         pager = (ViewPager) findViewById(R.id.pager);
@@ -69,6 +74,37 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         currentPage = 0;
 
     }
+
+
+    String hourseSpinner[];
+    public void firstHourseSpinner(){
+
+
+        hourseSpinner = new String[5];
+        hourseSpinner[0] = "キタサンブラック";
+        hourseSpinner[1] = "サイレントスズカ";
+        hourseSpinner[2] ="ディープインパクト";
+        hourseSpinner[3] ="オルフェーブル";
+        hourseSpinner[4] ="マカヒキ";
+
+//        この下のコードがあるとlistが表示されなくなり、ボタンが押せなくなる。とりあえず省いておく
+        //このしたが、キーボードが押されないようにしてる
+        //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        //setContentView(R.layout.activity_chat);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        // setSupportActionBar(toolbar);
+        //toolbar.setTitle("");
+        // mResolvingError = false;
+        //nullになるから、ここでよんどく
+
+
+//        spinnerを使うためここでセットする。セットしないとnullになる
+        hourseSpinnerAdapterSet();
+
+    }
+
+
+
 
 
 
@@ -108,6 +144,18 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         idRaceSpinner.setFocusable(false);
 
     }
+
+
+//    一応馬用のAdapterSetも作る
+
+    public void hourseSpinnerAdapterSet() {
+        ArrayAdapter<String> hourseSpinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,hourseSpinner);
+        hourseSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        idHourseSpinner.setAdapter(hourseSpinnerAdapter);
+        idHourseSpinner.setFocusable(false);
+
+    }
+
 
     public void onStart() {
         super.onStart();
@@ -150,6 +198,47 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         });
 //        spinnerItems = favorite.favorite(LocationActivity.this, username);//もしかしたら役に立つから、コメントを残す
 
+
+//    馬のspinnerが押された時の対応
+
+//        レースのspinnerが押された時の対応
+        idHourseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Spinner nowHourseSpinner = (Spinner) parent;
+                String item = (String) nowHourseSpinner.getSelectedItem();
+
+                //クラス変数に入れる。今選択されていたspinnerを後で指定できるように
+                int nowHourseSpinnerPosition=position;
+
+
+//                spinner初回起動
+                if (idHourseSpinner.isFocusable() == false) {
+                    idHourseSpinner.setFocusable(true);
+                    String activity = getIntent().getStringExtra("Activity");
+                    if (item.equals("キタサンブラック")) {
+
+                        Log.e(TAG,"1/6:初期化のspinnerでキタサンブラックが選択された");
+                    }
+                    return;
+                }
+
+//                選択を検知したspinnerごとの対応
+                if (item.equals("マカヒキ")) {
+                    String activity = getIntent().getStringExtra("Activity");
+
+                    Log.e(TAG,"1/6:初期化のspinnerでマカヒキが選択された");
+                }
+            }
+            //アイテムが選択されなかった
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+
+        });
+//        spinnerItems = favorite.favorite(LocationActivity.this, username);//もしかしたら役に立つから、コメントを残す
+
     }
 
 
@@ -172,7 +261,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
 
-            case R.id.pushMainButton:
+            case R.id.pushRaceOrderButton:
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;

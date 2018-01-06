@@ -32,6 +32,13 @@
 
         -->
 
+        <Button
+            android:id="@+id/pushRaceOrderButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="出走表" />
+
 
         <Button
             android:id="@+id/pushCalcButton"
@@ -43,11 +50,11 @@
 
 
         <Button
-            android:id="@+id/pushMainButton"
+            android:id="@+id/pushTotalButton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="出走表" />
+            android:text="スコア一覧" />
 
 
 
@@ -57,7 +64,6 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="チャット" />
-
 
 
 

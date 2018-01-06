@@ -17,8 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-
+        <Button
+            android:id="@+id/pushRaceOrderButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="出走表" />
 
 
         <Button
@@ -38,13 +42,13 @@
             android:text="スコア一覧" />
 
 
-        <Button
-            android:id="@+id/pushRaceOrderButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="出走表"/>
 
+        <Button
+            android:id="@+id/pushChatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="チャット" />
     </LinearLayout>
 
 
