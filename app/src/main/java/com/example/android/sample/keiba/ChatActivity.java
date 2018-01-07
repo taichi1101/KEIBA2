@@ -305,6 +305,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
+
             case R.id.pushAccountButton:
                 intent= new Intent(this,AccountActivity.class);
                 startActivity(intent);

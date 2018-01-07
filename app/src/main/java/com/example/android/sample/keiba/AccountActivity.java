@@ -9,11 +9,26 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AccountActivity extends Activity implements View.OnClickListener {
+
+
+
+    //listのidとか、変数の名前だけ違うが、ArrayListAdapterを使うとこは同じで、同じrowdataを使う
+
+    ArrayList<User> userCommentAdapterlist;
+
+    User user;
+
+    ArrayListAdapter setUserCommentAdapterlist;
+
+    ListView idUserCommentListView;
 
 
     private String TAG="AccountActivity";
@@ -33,6 +48,9 @@ public class AccountActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_account);
 
 
+//        下から持ってきた。毎度listを作ると文が更新されないため、user名もこのようにする
+        userCommentAdapterlist = new ArrayList<>();
+        user = new User();
 
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
@@ -46,13 +64,19 @@ public class AccountActivity extends Activity implements View.OnClickListener {
         pushCalcButton.setOnClickListener(this);
 
 
-
 //        spinner
         idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
 
-
-
         firstRaceSpinner();
+
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
     }
 
 
@@ -62,12 +86,15 @@ public class AccountActivity extends Activity implements View.OnClickListener {
     public void firstRaceSpinner(){
 
 
-        raceSpinner = new String[5];
-        raceSpinner[0] = "桜花賞";
-        raceSpinner[1] = "日本ダービー";
+//        この下のspinnerの数は可変にするためにはNew3のコードを見る
+
+        raceSpinner = new String[6];
+        raceSpinner[0] = "全レース";
+        raceSpinner[1] = "桜花賞";
         raceSpinner[2] ="菊花賞";
         raceSpinner[3] ="天皇賞・秋";
         raceSpinner[4] ="有馬記念";
+        raceSpinner[5] ="日本ダービー";
 
 //        この下のコードがあるとlistが表示されなくなり、ボタンが押せなくなる。とりあえず省いておく
         //このしたが、キーボードが押されないようにしてる
@@ -116,9 +143,10 @@ public class AccountActivity extends Activity implements View.OnClickListener {
                 if (idRaceSpinner.isFocusable() == false) {
                     idRaceSpinner.setFocusable(true);
                     String activity = getIntent().getStringExtra("Activity");
-                    if (item.equals("桜花賞")) {
+                    if (item.equals("全レース")) {
 
-                        Log.e(TAG, "1/6:初期化のspinnerで桜花賞が選択された");
+
+                        Log.e(TAG, "1/6:初期化のspinnerで全レースが選択された");
                     }
                     return;
                 }
@@ -138,6 +166,27 @@ public class AccountActivity extends Activity implements View.OnClickListener {
         });
 //        spinnerItems = favorite.favorite(LocationActivity.this, username);//もしかしたら役に立つから、コメントを残す
 
+    }
+
+
+
+
+    //    ListViewSet
+    public void ListViewSet() {
+
+
+        user.setData("1/4 2:10");
+        user.setUsername("taichi");
+        user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
+        //user.setIdnumber("idnumber");
+        userCommentAdapterlist.add(user);
+        // 出力結果をリストビューに表示
+
+
+        idUserCommentListView=(ListView)findViewById(R.id.user_comment_list_view);
+        setUserCommentAdapterlist = new ArrayListAdapter(AccountActivity.this, userCommentAdapterlist);
+        idUserCommentListView.setAdapter(setUserCommentAdapterlist);
+        idUserCommentListView.setSelection(idUserCommentListView.getCount());
     }
 
 
