@@ -28,6 +28,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     Button pushChatButton;
     Button pushTotalButton;
     Button pushMainButton;
+    Button pushAccountButton;
 
     //    レースのspinner
     Spinner idRaceSpinner;
@@ -49,12 +50,13 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
+        pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
 
 
         pushChatButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
-
+        pushAccountButton.setOnClickListener(this);
 
 
 
@@ -246,12 +248,13 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         @Override
     public void onClick(View view) {
 
+            Intent intent;
 
         switch (view.getId()) {
             case R.id.pushChatButton:
 
                 //次のデータ入力画面にいくボタンが押されたので、処理する
-                Intent intent = new Intent(this, ChatActivity.class);
+                intent = new Intent(this, ChatActivity.class);
                 startActivity(intent);
                 break;
 
@@ -265,6 +268,10 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.pushAccountButton:
+                intent= new Intent(this,AccountActivity.class);
+                startActivity(intent);
 
         }
     }

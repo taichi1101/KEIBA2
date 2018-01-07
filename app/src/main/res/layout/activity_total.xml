@@ -68,6 +68,16 @@
 
 
 
+        <Button
+            android:id="@+id/pushAccountButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="アカウント"
+            />
+
+
+
     </LinearLayout>
 
 
@@ -91,6 +101,21 @@
     </android.support.v7.widget.Toolbar>
 
 
+    <!--ツールバーをなくすと画面幅いっぱいに表示されるが、toolbarのほうが見やすい-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--&gt;-->
+    <!--<Spinner-->
+        <!--android:id="@+id/raceSpinner"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:popupBackground="#ccffffff"-->
+        <!--/>-->
+    <!--</LinearLayout>-->
 
 
 

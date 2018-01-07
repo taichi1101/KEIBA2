@@ -23,7 +23,8 @@
         <activity android:name=".UserInfoViewPagerAdapter" />
         <activity android:name=".TotalActivity" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".ArrayListAdapter"></activity>
+        <activity android:name=".ArrayListAdapter" />
+        <activity android:name=".AccountActivity"></activity>
     </application>
 
 </manifest>

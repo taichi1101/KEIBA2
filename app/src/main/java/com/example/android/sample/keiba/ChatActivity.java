@@ -32,6 +32,8 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     Button pushTotalButton;
     Button sentencePushbutton;
     Button pushRaceOrderButton;
+    Button pushAccountButton;
+
 
 
 
@@ -58,12 +60,15 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
         sentencePushbutton=(Button)findViewById(R.id.sentencePushbutton);
         pushRaceOrderButton=(Button)findViewById(R.id.pushRaceOrderButton);
+        pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
+
+
 
         pushCalcButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
         sentencePushbutton.setOnClickListener(this);
         pushRaceOrderButton.setOnClickListener(this);
-
+        pushAccountButton.setOnClickListener(this);
 
 
 //        spinner
@@ -270,12 +275,13 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+        Intent intent;
 
         switch (view.getId()) {
             case R.id.pushCalcButton:
 
                 //次のデータ入力画面にいくボタンが押されたので、処理する
-                Intent intent = new Intent(this, CalcActivity.class);
+                intent = new Intent(this, CalcActivity.class);
                 startActivity(intent);
                 break;
 
@@ -298,6 +304,12 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.pushAccountButton:
+                intent= new Intent(this,AccountActivity.class);
+                startActivity(intent);
+
+
 
         }
     }
