@@ -36,6 +36,19 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     Spinner idHourseSpinner;
 
 
+    //10択ボタンの変数
+    Button pushCalc_button_1;
+    Button pushCalc_button_2;
+    Button pushCalc_button_3;
+    Button pushCalc_button_4;
+    Button pushCalc_button_5;
+    Button pushCalc_button_6;
+    Button pushCalc_button_7;
+    Button pushCalc_button_8;
+    Button pushCalc_button_9;
+    Button pushCalc_button_10;
+
+
     private FragmentPagerAdapter adapter;
 
     private int currentPage;
@@ -52,11 +65,32 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
 
+        pushCalc_button_1=(Button)findViewById(R.id.calc_button_1);
+        pushCalc_button_2=(Button)findViewById(R.id.calc_button_2);
+        pushCalc_button_3=(Button)findViewById(R.id.calc_button_3);
+        pushCalc_button_4=(Button)findViewById(R.id.calc_button_4);
+        pushCalc_button_5=(Button)findViewById(R.id.calc_button_5);
+        pushCalc_button_6=(Button)findViewById(R.id.calc_button_6);
+        pushCalc_button_7=(Button)findViewById(R.id.calc_button_7);
+        pushCalc_button_8=(Button)findViewById(R.id.calc_button_8);
+        pushCalc_button_9=(Button)findViewById(R.id.calc_button_9);
+        pushCalc_button_10=(Button)findViewById(R.id.calc_button_10);
 
         pushChatButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
+
+        pushCalc_button_1.setOnClickListener(this);
+        pushCalc_button_2.setOnClickListener(this);
+        pushCalc_button_3.setOnClickListener(this);
+        pushCalc_button_4.setOnClickListener(this);
+        pushCalc_button_5.setOnClickListener(this);
+        pushCalc_button_6.setOnClickListener(this);
+        pushCalc_button_7.setOnClickListener(this);
+        pushCalc_button_8.setOnClickListener(this);
+        pushCalc_button_9.setOnClickListener(this);
+        pushCalc_button_10.setOnClickListener(this);
 
 
 
@@ -272,6 +306,31 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.pushAccountButton:
                 intent= new Intent(this,AccountActivity.class);
                 startActivity(intent);
+
+
+            case R.id.calc_button_1:
+                //ボタン１が押された時は、spinnerから今の馬とレース名を取得して、そこに1をセットする
+                //それの繰り返し。
+                //テキストじゃない、listにaddして、次の画面にスライドさせる
+                //まず、このlistが偽物になってるから、動的に変更できるものに変える
+
+            case R.id.calc_button_2:
+
+            case R.id.calc_button_3:
+
+            case R.id.calc_button_4:
+
+            case R.id.calc_button_5:
+
+            case R.id.calc_button_6:
+
+            case R.id.calc_button_7:
+
+            case R.id.calc_button_8:
+
+            case R.id.calc_button_9:
+
+            case R.id.calc_button_10:
 
         }
     }
