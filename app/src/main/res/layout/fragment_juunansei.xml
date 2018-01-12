@@ -6,12 +6,31 @@
     tools:context="com.example.android.sample.keiba.JuunanseiFragment">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1ページめ"
+            android:textSize="20sp" />
 
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="柔軟性を入力して下さい"
+            android:textSize="25dp"
+           />
+
+
+
+
+        <!--この下のLinerLayoutは必要。足してく。だがその下の、GridLayoutは動的にする。ここら辺はあとでやる-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
 
 
         <GridLayout
@@ -291,6 +310,17 @@
 
 
 
+                <!--この下のtextたちにidを振り分けて、値を代入する-->
+                <!--activityの中で、ボタンが押されたら、指定されているspinnerの値を取得してきて、(馬名)、値をsetするようにする-->
+                <!--まずはidをつける-->
+
+                <!--ここら辺はサーバーに保存するかクラス変数に保存するかになる-->
+                <!--とりあえず、クラス変数に入れるか、謎の配列に入れて、もう一つの配列に入れた値とかけて、評価をする。それを馬ごとに何個かやってみる-->
+
+                <!--配列にaddするのはめんどくさい。本来ならserverのdatabaseにinsertするだけだから。そして、listから取得したものを表示させる。ただ、serverから取得-->
+                <!--したものの表示する時には一度listに入れるから、その作業はやっておいて無駄にはならない-->
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -340,25 +370,122 @@
             />
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="ここに10段階評価で入力"/>
 
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="次へ"/>
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+        <!--<EditText-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="ここに10段階評価で入力"/>-->
 
 
-                <!--ボタンはいらない、次の画面に行けばいい-->
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="次へ"/>-->
 
-        </LinearLayout>
+
+                <!--&lt;!&ndash;ボタンはいらない、次の画面に行けばいい&ndash;&gt;-->
+
+        <!--</LinearLayout>-->
+
+        <!--ここでbuttonを10個、自動レイアウトでできるように配置させる。gridLayoutを使う-->
+
+
+
+        <!--<GridLayout-->
+            <!--android:id="@+id/number_input"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:columnCount="6"-->
+            <!--android:rowCount="3">-->
+
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="1"-->
+                    <!--android:layout_column="1"-->
+                    <!--android:layout_row="1"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="2"-->
+                    <!--android:layout_column="2"-->
+                    <!--android:layout_row="1"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="3"-->
+                    <!--android:layout_column="3"-->
+                    <!--android:layout_row="1"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="4"-->
+                    <!--android:layout_column="4"-->
+                    <!--android:layout_row="1"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="5"-->
+                    <!--android:layout_column="5"-->
+                    <!--android:layout_row="1"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="6"-->
+                    <!--android:layout_column="1"-->
+                    <!--android:layout_row="2"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="7"-->
+                    <!--android:layout_column="2"-->
+                    <!--android:layout_row="2"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="8"-->
+                    <!--android:layout_column="3"-->
+                    <!--android:layout_row="2"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="9"-->
+                    <!--android:layout_column="4"-->
+                    <!--android:layout_row="2"-->
+                    <!--android:textSize="15sp"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="10"-->
+                    <!--android:layout_column="5"-->
+                    <!--android:layout_row="2"-->
+                    <!--android:textSize="15sp"/>-->
+
+        <!--</GridLayout>-->
+
 
 
 

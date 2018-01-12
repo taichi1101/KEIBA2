@@ -9,17 +9,35 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 
-public class TotalActivity extends Activity implements View.OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
 
 
-    private static final String TAG ="TotalActivity";
-    Button pushCalcButton;
-    Button pushMainButton;
+public class AccountActivity extends Activity implements View.OnClickListener {
+
+
+
+    //listのidとか、変数の名前だけ違うが、ArrayListAdapterを使うとこは同じで、同じrowdataを使う
+
+    ArrayList<User> userCommentAdapterlist;
+
+    User user;
+
+    ArrayListAdapter setUserCommentAdapterlist;
+
+    ListView idUserCommentListView;
+
+
+    private String TAG="AccountActivity";
+
+
     Button pushChatButton;
-    Button pushAccountButton;
-
+    Button pushTotalButton;
+    Button pushMainButton;
+    Button pushCalcButton;
 
     //    レースのspinner
     Spinner idRaceSpinner;
@@ -27,37 +45,56 @@ public class TotalActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_total);
+        setContentView(R.layout.activity_account);
 
 
+//        下から持ってきた。毎度listを作ると文が更新されないため、user名もこのようにする
+        userCommentAdapterlist = new ArrayList<>();
+        user = new User();
 
-        pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
-        pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
-        pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
+        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
+        pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
+        pushCalcButton=(Button)findViewById(R.id.pushAccountButton);
 
-        pushCalcButton.setOnClickListener(this);
-        pushMainButton.setOnClickListener(this);
+
         pushChatButton.setOnClickListener(this);
-        pushAccountButton.setOnClickListener(this);
+        pushTotalButton.setOnClickListener(this);
+        pushMainButton.setOnClickListener(this);
+        pushCalcButton.setOnClickListener(this);
 
 
-        //        spinner
+//        spinner
         idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
+
         firstRaceSpinner();
+
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
+        ListViewSet();
     }
+
+
 
 
     String raceSpinner[];
     public void firstRaceSpinner(){
 
 
-        raceSpinner = new String[5];
-        raceSpinner[0] = "桜花賞";
-        raceSpinner[1] = "日本ダービー";
+//        この下のspinnerの数は可変にするためにはNew3のコードを見る
+
+        raceSpinner = new String[6];
+        raceSpinner[0] = "全レース";
+        raceSpinner[1] = "桜花賞";
         raceSpinner[2] ="菊花賞";
         raceSpinner[3] ="天皇賞・秋";
         raceSpinner[4] ="有馬記念";
+        raceSpinner[5] ="日本ダービー";
 
 //        この下のコードがあるとlistが表示されなくなり、ボタンが押せなくなる。とりあえず省いておく
         //このしたが、キーボードが押されないようにしてる
@@ -86,7 +123,6 @@ public class TotalActivity extends Activity implements View.OnClickListener {
     }
 
 
-
     @Override
     public void onStart(){
         super.onStart();
@@ -100,16 +136,17 @@ public class TotalActivity extends Activity implements View.OnClickListener {
                 String item = (String) nowRaceSpinner.getSelectedItem();
 
                 //クラス変数に入れる。今選択されていたspinnerを後で指定できるように
-                int nowRaceSpinnerPosition=position;
+                int nowRaceSpinnerPosition = position;
 
 
 //                spinner初回起動
                 if (idRaceSpinner.isFocusable() == false) {
                     idRaceSpinner.setFocusable(true);
                     String activity = getIntent().getStringExtra("Activity");
-                    if (item.equals("桜花賞")) {
+                    if (item.equals("全レース")) {
 
-                        Log.e(TAG,"1/6:初期化のspinnerで桜花賞が選択された");
+
+                        Log.e(TAG, "1/6:初期化のspinnerで全レースが選択された");
                     }
                     return;
                 }
@@ -118,7 +155,7 @@ public class TotalActivity extends Activity implements View.OnClickListener {
                 if (item.equals("日本ダービー")) {
                     String activity = getIntent().getStringExtra("Activity");
 
-                    Log.e(TAG,"1/6:初期化のspinnerで日本ダービーが選択された");
+                    Log.e(TAG, "1/6:初期化のspinnerで日本ダービーが選択された");
                 }
             }
             //アイテムが選択されなかった
@@ -129,11 +166,34 @@ public class TotalActivity extends Activity implements View.OnClickListener {
         });
 //        spinnerItems = favorite.favorite(LocationActivity.this, username);//もしかしたら役に立つから、コメントを残す
 
-
     }
+
+
+
+
+    //    ListViewSet
+    public void ListViewSet() {
+
+
+        user.setData("1/4 2:10");
+        user.setUsername("taichi");
+        user.setComment("武豊が一番悔しかったのは、有馬記念で最後刺されたことらしい。");
+        //user.setIdnumber("idnumber");
+        userCommentAdapterlist.add(user);
+        // 出力結果をリストビューに表示
+
+
+        idUserCommentListView=(ListView)findViewById(R.id.user_comment_list_view);
+        setUserCommentAdapterlist = new ArrayListAdapter(AccountActivity.this, userCommentAdapterlist);
+        idUserCommentListView.setAdapter(setUserCommentAdapterlist);
+        idUserCommentListView.setSelection(idUserCommentListView.getCount());
+    }
+
+
 
     @Override
     public void onClick(View view) {
+
 
         Intent intent;
 
@@ -146,27 +206,25 @@ public class TotalActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
-
-            case R.id.pushRaceOrderButton:
-
-                intent = new Intent(this, MainActivity.class);
+            //トータルスコアをみる
+            case R.id.pushTotalButton:
+                intent = new Intent(this, TotalActivity.class);
                 startActivity(intent);
                 break;
-
-
 
             case R.id.pushChatButton:
                 intent = new Intent(this, ChatActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id. pushAccountButton:
+
+            case R.id.pushAccountButton:
                 intent = new Intent(this,AccountActivity.class);
                 startActivity(intent);
                 break;
 
 
+
         }
     }
-
 }

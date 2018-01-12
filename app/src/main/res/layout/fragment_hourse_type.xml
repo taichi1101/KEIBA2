@@ -3,25 +3,23 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.android.sample.keiba.JuunanseiFragment">
-
-
+    tools:context="com.example.android.sample.keiba.HourseTypeFragment">
 
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2ページめ"
+        android:text="13ページめ"
         android:textSize="20sp" />
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="切れ味"
-        android:textSize="25dp"
-        />
+        android:text="類型"
+        android:textSize="25dp" />
+    <!--柔軟性"切れ味"スタミナ"スタート"気質"二の足"ジョッキーの能力"距離適性"疲れ具合"内側の馬場状態、外側の馬場状態、類型"レースのペースの速さ-->
+
+
 
 </LinearLayout>
