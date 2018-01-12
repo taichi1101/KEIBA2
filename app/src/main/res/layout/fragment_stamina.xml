@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.sample.keiba.StaminaFragment">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3ページめ"
+        android:textSize="20sp" />
+
+    <!--柔軟性"切れ味"スタミナ"スタート"気質"二の足"ジョッキーの能力"距離適性"疲れ具合"内側の馬場状態、外側の馬場状態、類型"レースのペースの速さ-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="スタミナを入力して下さい"
+        android:textSize="25dp"/>
+
+</LinearLayout>

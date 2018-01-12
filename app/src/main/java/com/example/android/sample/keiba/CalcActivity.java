@@ -19,6 +19,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -314,6 +316,10 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 //テキストじゃない、listにaddして、次の画面にスライドさせる
                 //まず、このlistが偽物になってるから、動的に変更できるものに変える
 
+                //ここで値を送って、メソッドでspinnerの値を取得してlistに追加するコードを作る
+
+                getSpinnerAddNumber(1);
+
             case R.id.calc_button_2:
 
             case R.id.calc_button_3:
@@ -334,6 +340,50 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+
+    public void getSpinnerAddNumber(int number){
+
+        // Spinnerオブジェクトを取得
+        Spinner raceSpinner = (Spinner)findViewById(R.id.raceSpinner);
+
+        // 選択されているアイテムのIndexを取得
+        int raceSpinnerIdx = raceSpinner.getSelectedItemPosition();
+
+        // 選択されているアイテムを取得
+        String raceSppinerItem = (String)raceSpinner.getSelectedItem();
+
+
+
+        // Spinnerオブジェクトを取得
+        Spinner hourseSpinner = (Spinner)findViewById(R.id.hourseSpinner);
+
+        // 選択されているアイテムのIndexを取得
+        int hourseSpinnerIdx = hourseSpinner.getSelectedItemPosition();
+
+        // 選択されているアイテムを取得
+        String hourseSpinnerItem = (String)hourseSpinner.getSelectedItem();
+
+
+        //hourseで、選択されている値をnumberと連結して、textにセットする。
+
+
+                String numberString=String.valueOf(number);
+
+        String hoursename_and_number=hourseSpinnerItem+numberString;
+
+        //この値を、配列に追加する。
+        // その配列をforで回して、表示している
+
+        //これらのデータの識別には、まずレース名が必要で、次にuser名が必要(自分が何を入力したかを把握する必要があるから)、そして、hoursename_and_numberが必要
+        //とりあえずusernameはtaichi
+        //項目名も必要。これは、今はfragmentのどこにいるかどうか？を把握する必要がある。
+        //
+
+       // ArrayList<String>
+
+    }
+
+
 
 //ここをなくすと、余計なボタンがなくなっていい
 //    public void onClickNext(View view) {

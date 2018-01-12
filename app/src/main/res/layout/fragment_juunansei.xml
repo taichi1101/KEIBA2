@@ -6,16 +6,25 @@
     tools:context="com.example.android.sample.keiba.JuunanseiFragment">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1ページめ"
+            android:textSize="20sp" />
+
+
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="柔軟性を入力して下さい"
             android:textSize="25dp"
-            android:textStyle="bold"/>
+           />
 
 
 
+
+        <!--この下のLinerLayoutは必要。足してく。だがその下の、GridLayoutは動的にする。ここら辺はあとでやる-->
 
         <LinearLayout
             android:layout_width="match_parent"
