@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class UserInfoViewPagerAdapter extends FragmentPagerAdapter {
     private static final int PAGE_NUM = 15;
 
-    State state=new State();
 
     public UserInfoViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -133,6 +132,10 @@ public class UserInfoViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
+        return PAGE_NUM;
+    }
+
+    public static int getPageCount() {
         return PAGE_NUM;
     }
 }

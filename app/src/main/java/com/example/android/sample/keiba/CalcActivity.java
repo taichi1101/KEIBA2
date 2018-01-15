@@ -325,38 +325,51 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 //ここで値を送って、メソッドでspinnerの値を取得してlistに追加するコードを作る
 
                 getSpinnerAddNumber(1);
+                break;
 
             case R.id.calc_button_2:
                 getSpinnerAddNumber(2);
+                break;
 
             case R.id.calc_button_3:
                 getSpinnerAddNumber(3);
+                break;
 
             case R.id.calc_button_4:
                 getSpinnerAddNumber(4);
+                break;
 
             case R.id.calc_button_5:
                 getSpinnerAddNumber(5);
+                break;
 
             case R.id.calc_button_6:
                 getSpinnerAddNumber(6);
+                break;
 
             case R.id.calc_button_7:
                 getSpinnerAddNumber(7);
+                break;
 
             case R.id.calc_button_8:
                 getSpinnerAddNumber(8);
+                break;
 
             case R.id.calc_button_9:
                 getSpinnerAddNumber(9);
+                break;
 
             case R.id.calc_button_10:
                 getSpinnerAddNumber(10);
+                break;
 
         }
     }
 
     public void getSpinnerAddNumber(int number){
+
+
+
 
         // Spinnerオブジェクトを取得
         Spinner raceSpinner = (Spinner)findViewById(R.id.raceSpinner);
@@ -452,6 +465,16 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         Log.e(TAG,"nullやないで、順調やで"+nowSpinnerArrayList);
         //全データが入力されないと、最終スコアは出さない
 
+        //現在のViewPageAdapterの次のページに動的にセット
+       //UserInfoViewPagerAdapter.getItem()+1
+
+
+         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+//        呼び出されるたび次のページに切り替え
+        Log.e(TAG,"ここやで:"+viewPager.getCurrentItem());
+        viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+
+
 
         //ここで、ratioされた数値(String)が帰ってくるから、それを配列にセットして、
         //今度は、その配列を全てforで表示して、←いや、メンドくさい？
@@ -489,6 +512,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
             //全データの入力が終わった。全ての数値をたす
 
+
+            //これは正しいのかわからない
             Integer totalNowSpinnerArrayListScore;
 
             Iterator it = nowSpinnerArrayList.keySet().iterator();
@@ -513,6 +538,33 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+
+    //ここはhttps://qiita.com/kentosasa/items/a556f8d12d3f689352be  1/15
+    ViewPager mViewPager;
+
+
+    public ViewPager getViewPager() {
+        if (null == mViewPager) {
+            mViewPager = (ViewPager) findViewById(R.id.pager);
+        }
+        return mViewPager;
+    }
+
+
+
+//    Bundle bundle = new Bundle();
+//
+//
+//    KireaziFragment fragment = new KireaziFragment();
+//    //fragment.setArguments(bundle);
+//
+//    ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+////    ExampleFragmentPagerAdapter adapter = new ExampleFragmentPagerAdapter(manager);
+//FragmentManager manager = getSupportFragmentManager();
+//    UserInfoViewPagerAdapter adapter=new  UserInfoViewPagerAdapter(manager);
+//
+//    //viewPager.setAdapter(adapter);
 
 
     //最後の画面に行った時に、今選択されているspinnerのレース&馬のスコアを算出する
