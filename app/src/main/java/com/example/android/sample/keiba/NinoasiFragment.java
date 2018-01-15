@@ -23,8 +23,7 @@ public class NinoasiFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_ninoasi");
+        State.setCalcActivity_fragment_state("fragment_ninoasi");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_ninoasi, container, false);
     }

@@ -24,8 +24,7 @@ public class JokieAbilityFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_jokie_ability");
+        State.setCalcActivity_fragment_state("fragment_jokie_ability");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_jokie_ability, container, false);
     }

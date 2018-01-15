@@ -24,8 +24,7 @@ public class HourseTypeFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_hourse_type");
+        State.setCalcActivity_fragment_state("fragment_hourse_type");
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_hourse_type, container, false);

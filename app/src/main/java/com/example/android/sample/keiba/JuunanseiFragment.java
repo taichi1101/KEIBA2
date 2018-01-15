@@ -13,8 +13,7 @@ public class JuunanseiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_juunansei");
+        State.setCalcActivity_fragment_state("fragment_juunansei");
         return inflater.inflate(R.layout.fragment_juunansei, container, false);
     }
 }

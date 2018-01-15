@@ -21,8 +21,7 @@ public class OutCourseStateFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_out_course_state");
+        State.setCalcActivity_fragment_state("fragment_out_course_state");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_out_course_state, container, false);
     }

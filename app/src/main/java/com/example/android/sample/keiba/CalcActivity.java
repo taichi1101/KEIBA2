@@ -396,19 +396,29 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //違うなら、新しく、配列を作る。
 
 
+
+
+        String aaa=nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem");
+        Log.e(TAG,"nullyanai aaaa"+aaa);
         //先頭にKeyをつける  https://www.sejuku.net/blog/16055
-        if(!nowSpinnerArrayList.get("keyRaceSppinerItem+hourseSpinnerItem").equals(raceSppinerItem+hourseSpinnerItem)){
 
-            //配列のvalueと、今のspinnerが揃ってれば、newしない
-            //揃ってない場合は、更新が必要だから、newする
-            //将来的には、newというより、databaseに、別のレース、もしくは別の馬ということで、配列を作る
-            //今はそれは大変だから後で、
+        //nullだったら、作るようにする
 
 
-            //spinnerと違う場合は新しく作る。本来はdatabaseにaddにする
-            nowSpinnerArrayList = new HashMap<>();
+            if (nowSpinnerArrayList== null) {
 
-        }
+                //nullの場合は、作る
+//            if(!nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem").equals(raceSppinerItem+hourseSpinnerItem)){
+
+                //配列のvalueと、今のspinnerが揃ってれば、newしない
+                //揃ってない場合は、更新が必要だから、newする
+                //将来的には、newというより、databaseに、別のレース、もしくは別の馬ということで、配列を作る
+                //今はそれは大変だから後で、
+
+                //spinnerと違う場合は新しく作る。本来はdatabaseにaddにする
+                nowSpinnerArrayList = new HashMap<>();
+
+            }
 
         //それで、もう既にlistができてる、buttonが2コメ以上でspinnerを買えてない場合は、ここで、配列にセットさせる。
 
@@ -424,16 +434,22 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //この下のkey1のところを、stateから持ってくる
         //この下のコードで、buttonが押された時に、選択されているspinnerの配列に対して、今のfragment名と、押されたボタンの値が足されて行く
 
-        State state=new State();
-        String calcActivity_fragment_state= state.getCalcActivity_fragment_state();
+        //State state=new State();
+        //Stateクラスの変数をstaticにすることで、newしなくてよくなったからnullでもなくなったかも
+
+        String calcActivity_fragment_state= State.getCalcActivity_fragment_state();
+
 
 
         //ここで、putする前に、比率を調整しておきたい
 
+        //fragment名と、値を入力
         String numberString_ratioed=nowSpinnerArrayListSetRatio(calcActivity_fragment_state,numberString);
+
 
         nowSpinnerArrayList.put(calcActivity_fragment_state, numberString_ratioed);
 
+        Log.e(TAG,"nullやないで、順調やで"+nowSpinnerArrayList);
         //全データが入力されないと、最終スコアは出さない
 
 
@@ -504,6 +520,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     //そして、for文で、回して、比率を調整しながら、全ての総合スコアを出して、とりあえず、画面にtextViewを作って、そこにセットする
 
     //最後に呼び出される。
+
 
 
     public String  nowSpinnerArrayListSetRatio(String calcActivity_fragment_state,String numberString_ratioed) {

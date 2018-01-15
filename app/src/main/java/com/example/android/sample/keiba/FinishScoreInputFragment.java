@@ -25,8 +25,7 @@ public class FinishScoreInputFragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
 
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_finish_score_input");
+        State.setCalcActivity_fragment_state("fragment_finish_score_input");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_finish_score_input, container, false);
     }

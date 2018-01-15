@@ -14,8 +14,7 @@ public class KireaziFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        State state=new State();
-        state.setCalcActivity_fragment_state("fragment_kireazi");
+        State.setCalcActivity_fragment_state("fragment_kireazi");
         return inflater.inflate(R.layout.fragment_kireazi, container, false);
     }
 }
