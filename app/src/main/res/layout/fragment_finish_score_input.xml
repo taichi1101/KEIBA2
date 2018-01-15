@@ -9,6 +9,7 @@
         android:id="@+id/finish_score_input_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:text="これで最後"
         />
 
 </FrameLayout>

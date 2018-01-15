@@ -508,9 +508,12 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         /////////////とりあえず、最後にだけ呼ばれるやつ
 
 
-        if(calcActivity_fragment_state.equals("fragment_finish_score_input")) {
+        //最後の画面で全部足しても遅い、最後の画面に表示するなら、最後のデータの画面でやらないと
+        if(calcActivity_fragment_state.equals("fragment_race_pace")) {
 
             //全データの入力が終わった。全ての数値をたす
+
+            Log.e(TAG,"fragment_race_paceが呼び出された。最後まで来た、全てのデータをfinish_score_input_textに入れる");
 
 
             //これは正しいのかわからない
@@ -520,6 +523,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             while (it.hasNext()) {
                 Object o = it.next();
                 totalNowSpinnerArrayListScore=+Integer.parseInt(nowSpinnerArrayList.get(o));
+
+                Log.e(TAG,"while(it.hasNext()で回す:"+totalNowSpinnerArrayListScore);
+
 
 
                 TextView finish_score_input_text=findViewById(R.id.finish_score_input_text);
@@ -539,17 +545,17 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
-    //ここはhttps://qiita.com/kentosasa/items/a556f8d12d3f689352be  1/15
-    ViewPager mViewPager;
-
-
-    public ViewPager getViewPager() {
-        if (null == mViewPager) {
-            mViewPager = (ViewPager) findViewById(R.id.pager);
-        }
-        return mViewPager;
-    }
+//
+//    //ここはhttps://qiita.com/kentosasa/items/a556f8d12d3f689352be  1/15
+//    ViewPager mViewPager;
+//
+//
+//    public ViewPager getViewPager() {
+//        if (null == mViewPager) {
+//            mViewPager = (ViewPager) findViewById(R.id.pager);
+//        }
+//        return mViewPager;
+//    }
 
 
 
