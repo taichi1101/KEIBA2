@@ -201,7 +201,7 @@ public class AccountActivity extends Activity implements View.OnClickListener {
 
             case R.id.pushRaceOrderButton:
 
-                intent = new Intent(this, AccountActivity.class);
+                intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
 
