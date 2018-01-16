@@ -513,7 +513,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //最後の画面で全部足しても遅い、最後の画面に表示するなら、最後のデータの画面でやらないと
-        if(calcActivity_fragment_state.equals("fragment_race_pace")) {
+        if(calcActivity_fragment_state.equals("fragment_finish_score_input")) {
 
             //全データの入力が終わった。全ての数値をたす
 
@@ -646,54 +646,67 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
             case "fragment_juunansei":
-                numberString_ratioed = String.valueOf(Integer.parseInt(numberString_ratioed) * 1);//3
+                numberString_ratioed = String.valueOf(Integer.parseInt(numberString_ratioed) * 3);//3
+                break;
 
             case "fragment_kireazi":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
 
 
             case "fragment_stamina":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
 
 
             case "fragment_start":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
 
             case "fragment_kishitu":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
 
 
             case "fragment_ninoashi":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
 
 
             case "fragment_jokie_ability":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
 
 
 
             case "DistanceAppropriateFragment":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
 
 
             case "fragment_tiredness":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
 
 
             case "fragment_in_course_state":
                 numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);
+                break;
 
 
             case "fragment_out_course_state":
                 numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);
+                break;
 
 
             case "fragment_large_outer_course_state":
                 numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);
+                break;
 
 
             case "fragment_hourse_type":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
 
 
         }
@@ -703,11 +716,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public void nowSpinnerSccoreSetText(){
-
-
-
-    }
 
 
 //ここをなくすと、余計なボタンがなくなっていい
