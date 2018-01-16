@@ -411,8 +411,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        String aaa=nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem");
-        Log.e(TAG,"nullyanai aaaa"+aaa);
+        String keyRaceSppinerItemhourseSpinnerItem=nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem");
+        Log.e(TAG,"keyRaceSppinerItemhourseSpinnerItem"+keyRaceSppinerItemhourseSpinnerItem);
         //先頭にKeyをつける  https://www.sejuku.net/blog/16055
 
         //nullだったら、作るようにする
@@ -429,6 +429,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 //今はそれは大変だから後で、
 
                 //spinnerと違う場合は新しく作る。本来はdatabaseにaddにする
+
+                Log.e(TAG," new HashMap<>()をした");
                 nowSpinnerArrayList = new HashMap<>();
 
             }
@@ -460,6 +462,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         String numberString_ratioed=nowSpinnerArrayListSetRatio(calcActivity_fragment_state,numberString);
 
 
+
         nowSpinnerArrayList.put(calcActivity_fragment_state, numberString_ratioed);
 
         Log.e(TAG,"nowSpinnerArrayListに値を追加した:"+nowSpinnerArrayList);
@@ -471,8 +474,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
          ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 //        呼び出されるたび次のページに切り替え
-        Log.e(TAG,"今のページ数は:"+viewPager.getCurrentItem());
-        viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+        int nowPage=viewPager.getCurrentItem()+1;
+        Log.e(TAG,"今のページ数は:"+nowPage);
+        viewPager.setCurrentItem(nowPage);
 
 
 
@@ -513,10 +517,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
             //全データの入力が終わった。全ての数値をたす
 
-            Log.e(TAG,"fragment_race_paceが呼び出された。最後まで来た、全てのデータをfinish_score_input_textに入れる");
-
-
-
 
             //ここでエラーが起こる。つまり、この配列から全ての値を取得して、足し算するとこでエラーが起こる
 
@@ -531,26 +531,48 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 //
 //            }
 
-            Integer totalNowSpinnerArrayListScore;
+            Integer totalNowSpinnerArrayListScore=0;
 
             //https://www.sejuku.net/blog/16055
             //これを使えば全データを足し算できる
-            for(String val : nowSpinnerArrayList.values()){
-               // System.out.println(val);
+            // for(String val : nowSpinnerArrayList.values()){
 
-                Log.e(TAG,"Integer.parseInt(val)は:"+Integer.parseInt(val));
-                totalNowSpinnerArrayListScore=+Integer.parseInt(val);
 
-                Log.e(TAG,"totalNowSpinnerArrayListScoreは:"+totalNowSpinnerArrayListScore);
+            //とりあえずコメントアウト keyも取得したいから
+             for(String val : nowSpinnerArrayList.values()){
 
-                TextView finish_score_input_text=findViewById(R.id.finish_score_input_text);
 
-                Log.e(TAG,"findViewById(R.id.finish_score_input_text);の段階ではエラーが出てない");
+                 //別にkeyを取得しなくてもいいから、とりあえず先に進める
+//            for (int i = 0; i < nowSpinnerArrayList.size(); i++) {
+//                String val =nowSpinnerArrayList.get(i).values().toString();
+
+                // System.out.println(val);
+
+
+
+                 int intVal = Integer.parseInt(val);
+
+                Log.e(TAG, "Integer.parseInt(val)は:" + intVal);
+
+                //ここで、totalが増えてないのは問題。
+
+//                 int score=Integer.parseInt(totalNowSpinnerArrayListScore);
+
+                 Log.e(TAG,"totalNowSpinnerArrayListScore たす前:"+totalNowSpinnerArrayListScore);
+                totalNowSpinnerArrayListScore =totalNowSpinnerArrayListScore+ intVal;
+
+
+                Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
+
+                TextView finish_score_input_text = findViewById(R.id.finish_score_input_text);
+
+
                 finish_score_input_text.setText(totalNowSpinnerArrayListScore.toString());
-                Log.e(TAG,"setText(totalNowSpinnerArrayListScore)の段階ではエラーが出てない");
 
 
             }
+
+        }
 
 
 //            //これは正しいのかわからない
@@ -580,7 +602,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-    }
 
 //
 //    //ここはhttps://qiita.com/kentosasa/items/a556f8d12d3f689352be  1/15
@@ -625,38 +646,38 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
             case "fragment_juunansei":
-                numberString_ratioed = String.valueOf(Integer.parseInt(numberString_ratioed) * 3);
+                numberString_ratioed = String.valueOf(Integer.parseInt(numberString_ratioed) * 1);//3
 
             case "fragment_kireazi":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
 
 
             case "fragment_stamina":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
 
 
             case "fragment_start":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
 
             case "fragment_kishitu":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
 
 
             case "fragment_ninoashi":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
 
 
             case "fragment_jokie_ability":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
 
 
 
             case "DistanceAppropriateFragment":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//2
 
 
             case "fragment_tiredness":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
 
 
             case "fragment_in_course_state":
@@ -672,7 +693,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
             case "fragment_hourse_type":
-                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);//3
 
 
         }
