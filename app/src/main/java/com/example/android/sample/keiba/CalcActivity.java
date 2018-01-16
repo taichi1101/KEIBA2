@@ -33,6 +33,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager pager;
 
 
+
     Button pushChatButton;
     Button pushTotalButton;
     Button pushMainButton;
