@@ -462,7 +462,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
         nowSpinnerArrayList.put(calcActivity_fragment_state, numberString_ratioed);
 
-        Log.e(TAG,"nullやないで、順調やで"+nowSpinnerArrayList);
+        Log.e(TAG,"nowSpinnerArrayListに値を追加した:"+nowSpinnerArrayList);
         //全データが入力されないと、最終スコアは出さない
 
         //現在のViewPageAdapterの次のページに動的にセット
@@ -471,7 +471,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
          ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 //        呼び出されるたび次のページに切り替え
-        Log.e(TAG,"ここやで:"+viewPager.getCurrentItem());
+        Log.e(TAG,"今のページ数は:"+viewPager.getCurrentItem());
         viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
 
 
@@ -516,22 +516,59 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             Log.e(TAG,"fragment_race_paceが呼び出された。最後まで来た、全てのデータをfinish_score_input_textに入れる");
 
 
-            //これは正しいのかわからない
+
+
+            //ここでエラーが起こる。つまり、この配列から全ての値を取得して、足し算するとこでエラーが起こる
+
+
+//                       for (int i=0; i<=nowSpinnerArrayList.size(); i++){
+//
+//                //iが1ずつ加算されていき、nowSpinnerArrayListのsizeになるまで、繰り返される
+//                //その要素のkeyやvalueを取得する
+//
+//              //  nowSpinnerArrayList(1);
+//
+//
+//            }
+
             Integer totalNowSpinnerArrayListScore;
 
-            Iterator it = nowSpinnerArrayList.keySet().iterator();
-            while (it.hasNext()) {
-                Object o = it.next();
-                totalNowSpinnerArrayListScore=+Integer.parseInt(nowSpinnerArrayList.get(o));
+            //https://www.sejuku.net/blog/16055
+            //これを使えば全データを足し算できる
+            for(String val : nowSpinnerArrayList.values()){
+               // System.out.println(val);
 
-                Log.e(TAG,"while(it.hasNext()で回す:"+totalNowSpinnerArrayListScore);
+                Log.e(TAG,"Integer.parseInt(val)は:"+Integer.parseInt(val));
+                totalNowSpinnerArrayListScore=+Integer.parseInt(val);
 
-
+                Log.e(TAG,"totalNowSpinnerArrayListScoreは:"+totalNowSpinnerArrayListScore);
 
                 TextView finish_score_input_text=findViewById(R.id.finish_score_input_text);
 
-                finish_score_input_text.setText(totalNowSpinnerArrayListScore);
+                Log.e(TAG,"findViewById(R.id.finish_score_input_text);の段階ではエラーが出てない");
+                finish_score_input_text.setText(totalNowSpinnerArrayListScore.toString());
+                Log.e(TAG,"setText(totalNowSpinnerArrayListScore)の段階ではエラーが出てない");
+
+
             }
+
+
+//            //これは正しいのかわからない
+//            Integer totalNowSpinnerArrayListScore;
+//
+//            Iterator it = nowSpinnerArrayList.keySet().iterator();
+//            while (it.hasNext()) {
+//                Object o = it.next();
+//                totalNowSpinnerArrayListScore=+Integer.parseInt(nowSpinnerArrayList.get(o));
+//
+//                Log.e(TAG,"while(it.hasNext()で回す:"+totalNowSpinnerArrayListScore);
+//
+//
+//
+//                TextView finish_score_input_text=findViewById(R.id.finish_score_input_text);
+//
+//                finish_score_input_text.setText(totalNowSpinnerArrayListScore);
+//            }
 
             //これで、totalには、全てのデータが足された数値がセットされた
             //この下で、最後のlayout(fragmentにセットするようにする)
