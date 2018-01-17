@@ -29,7 +29,7 @@ import java.util.Map;
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    Map<String, String> nowSpinnerArrayList = new HashMap<>();
+    HashMap<String, String> nowSpinnerArrayList = new HashMap<>();
     private ViewPager pager;
 
 
@@ -490,9 +490,13 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         /////////////とりあえず、最後にだけ呼ばれるやつ
 
         //最後の画面で全部足しても遅い、最後の画面に表示するなら、最後のデータの画面でやらないと
-        if(calcActivity_fragment_state.equals("fragment_finish_score_input")) {
+        if(calcActivity_fragment_state.equals("fragment_race_pace")) {
 
             //全データの入力が終わった。全ての数値をたす
+
+            //最後のrace_paceの時にボタンが押されたので全データが入力された時こと、
+
+            //本来は、ここで配列の要素数と、全てのkeyがあるかどうか？を確認する
 
 
             //ここでエラーが起こる。つまり、この配列から全ての値を取得して、足し算するとこでエラーが起こる
@@ -541,10 +545,35 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
                 Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
 
-                TextView finish_score_input_text = findViewById(R.id.finish_score_input_text);
+//                TextView finish_score_input_text = findViewById(R.id.finish_score_input_text);
+//
+//
+//                finish_score_input_text.setText(totalNowSpinnerArrayListScore.toString());
 
 
-                finish_score_input_text.setText(totalNowSpinnerArrayListScore.toString());
+                //ここで、よくわからないtextにセットするのではなく、AccountActivityに飛ばして、そこで、表示させる。
+                 //まずActivityを呼び出す
+
+                 //totalNowSpinnerArrayListScore.toString()
+
+                 //いやこっちを nowSpinnerArrayList この配列を呼び出して、受け手のAccountActivityで、表示する
+                 //これをintentに付属させて、呼び出す。
+                 Intent intent= new Intent(this,AccountActivity.class);
+
+
+                 //HashMapならできるらしい。 リンク http://topickup.web.fc2.com/java/map_hashmap.html
+                 intent.putExtra("foo", nowSpinnerArrayList);
+
+//                 Map<String, String> nowSpinnerArrayList = new HashMap<>();
+                 //この値を送りたい。
+
+
+                 //受け取ったところでさっき使ってたtextにセットする
+                 //finishFragmentを使わないようにする
+
+                 startActivity(intent);
+
+                 //まず、最後のデータを表示しているfragmentを消す
 
 
             }
