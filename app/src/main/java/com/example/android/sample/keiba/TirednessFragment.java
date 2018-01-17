@@ -21,6 +21,8 @@ public class TirednessFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        State.setCalcActivity_fragment_state("fragment_tiredness");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tiredness, container, false);
     }

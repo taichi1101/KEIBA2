@@ -7,22 +7,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class LargeOuterCourseStateFragment extends android.support.v4.app.Fragment {
 
 
-    public LargeOuterCourseStateFragment() {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class FinishScoreInputFragment extends android.support.v4.app.Fragment {
+
+
+    public FinishScoreInputFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        State.setCalcActivity_fragment_state("fragment_large_outer_course_state");
+        State.setCalcActivity_fragment_state("fragment_finish_score_input");
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_large_outer_course_state, container, false);
+        return inflater.inflate(R.layout.fragment_finish_score_input, container, false);
     }
 
 }

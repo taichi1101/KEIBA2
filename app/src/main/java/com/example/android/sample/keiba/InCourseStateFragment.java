@@ -17,11 +17,11 @@ public class InCourseStateFragment extends android.support.v4.app.Fragment {
         // Required empty public constructor
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        State.setCalcActivity_fragment_state("fragment_in_course_state");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_in_course_state, container, false);
     }

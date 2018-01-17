@@ -15,8 +15,6 @@
     <!--改行できなくする-->
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -1119,10 +1117,6 @@
     <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
     <!--&lt;!&ndash;android:text="レーン"&ndash;&gt;-->
     <!--&lt;!&ndash;/>&ndash;&gt;-->
-
-
-
-
 
 
 

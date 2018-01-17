@@ -13,6 +13,8 @@ public class KireaziFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
+        State.setCalcActivity_fragment_state("fragment_kireazi");
         return inflater.inflate(R.layout.fragment_kireazi, container, false);
     }
 }

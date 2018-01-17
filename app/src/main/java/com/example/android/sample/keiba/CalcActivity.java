@@ -18,13 +18,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 
 public class CalcActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    Map<String, String> nowSpinnerArrayList = new HashMap<>();
     private ViewPager pager;
+
 
 
     Button pushChatButton;
@@ -319,29 +326,51 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
                 //ここで値を送って、メソッドでspinnerの値を取得してlistに追加するコードを作る
 
                 getSpinnerAddNumber(1);
+                break;
 
             case R.id.calc_button_2:
+                getSpinnerAddNumber(2);
+                break;
 
             case R.id.calc_button_3:
+                getSpinnerAddNumber(3);
+                break;
 
             case R.id.calc_button_4:
+                getSpinnerAddNumber(4);
+                break;
 
             case R.id.calc_button_5:
+                getSpinnerAddNumber(5);
+                break;
 
             case R.id.calc_button_6:
+                getSpinnerAddNumber(6);
+                break;
 
             case R.id.calc_button_7:
+                getSpinnerAddNumber(7);
+                break;
 
             case R.id.calc_button_8:
+                getSpinnerAddNumber(8);
+                break;
 
             case R.id.calc_button_9:
+                getSpinnerAddNumber(9);
+                break;
 
             case R.id.calc_button_10:
+                getSpinnerAddNumber(10);
+                break;
 
         }
     }
 
     public void getSpinnerAddNumber(int number){
+
+
+
 
         // Spinnerオブジェクトを取得
         Spinner raceSpinner = (Spinner)findViewById(R.id.raceSpinner);
@@ -366,10 +395,87 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
         //hourseで、選択されている値をnumberと連結して、textにセットする。
 
+        //配列の設計だけど、一つの馬に対して、いろんな要素(二の足とかを入れて行くことになる)
+        //だから、天皇賞 エアスビネル という配列に、二の足:5、スタート:5とかでセットして行く、key valueにするか
+        //まず、配列が、すでにない場合は、配列を作る
 
-                String numberString=String.valueOf(number);
+        //どうやったら、動的にlistを作れるのか？
+        //spinnerで変更されるたびにlistを切り替えるのか？
+        //とりあえず、毎回ボタンが押されるたびに、ifで、配列がからだったら、new させればいいか
 
-        String hoursename_and_number=hourseSpinnerItem+numberString;
+        //どうしよう、今取得したspinnerと、配列の1爪の値が同じなら、それでok
+        //違うなら、新しく、配列を作る。
+
+
+        String keyRaceSppinerItemhourseSpinnerItem=nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem");
+        Log.e(TAG,"keyRaceSppinerItemhourseSpinnerItem"+keyRaceSppinerItemhourseSpinnerItem);
+        //先頭にKeyをつける  https://www.sejuku.net/blog/16055
+
+        //nullだったら、作るようにする
+            if (nowSpinnerArrayList== null) {
+
+                //nullの場合は、作る
+//            if(!nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem").equals(raceSppinerItem+hourseSpinnerItem)){
+
+                //配列のvalueと、今のspinnerが揃ってれば、newしない
+                //揃ってない場合は、更新が必要だから、newする
+                //将来的には、newというより、databaseに、別のレース、もしくは別の馬ということで、配列を作る
+                //今はそれは大変だから後で、
+
+                //spinnerと違う場合は新しく作る。本来はdatabaseにaddにする
+
+                Log.e(TAG," new HashMap<>()をした");
+                nowSpinnerArrayList = new HashMap<>();
+
+            }
+
+        //それで、もう既にlistができてる、buttonが2コメ以上でspinnerを買えてない場合は、ここで、配列にセットさせる。
+        //普通に、まず、stateから、今のfragementを取って来て、それをkeyにして、押されたボタンをvalueにセットする
+        //レース名と、馬名を表すのは、keyRaceSppinerItem+hourseSpinnerItemというkeyのみで十分
+
+        String numberString=String.valueOf(number);
+
+        //ここで、現在選択されてるnowSpinnerArrayListに対して、putを行う
+        //この下のkey1のところを、stateから持ってくる
+        //この下のコードで、buttonが押された時に、選択されているspinnerの配列に対して、今のfragment名と、押されたボタンの値が足されて行く
+        //State state=new State();
+        //Stateクラスの変数をstaticにすることで、newしなくてよくなったからnullでもなくなったかも
+
+        String calcActivity_fragment_state= State.getCalcActivity_fragment_state();
+
+        //ここで、putする前に、比率を調整しておきたい
+        //fragment名と、値を入力
+        String numberString_ratioed=nowSpinnerArrayListSetRatio(calcActivity_fragment_state,numberString);
+
+        nowSpinnerArrayList.put(calcActivity_fragment_state, numberString_ratioed);
+
+        Log.e(TAG,"nowSpinnerArrayListに値を追加した:"+nowSpinnerArrayList);
+        //全データが入力されないと、最終スコアは出さない
+
+        //現在のViewPageAdapterの次のページに動的にセット
+       //UserInfoViewPagerAdapter.getItem()+1
+
+         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+//        呼び出されるたび次のページに切り替え
+        int nowPage=viewPager.getCurrentItem()+1;
+        Log.e(TAG,"今のページ数は:"+nowPage);
+        viewPager.setCurrentItem(nowPage);
+
+
+        //ここで、ratioされた数値(String)が帰ってくるから、それを配列にセットして、
+        //今度は、その配列を全てforで表示して、←いや、メンドくさい？
+        //でも、今後途中で違う馬に行った場合、そっちの方がいい。
+
+        //ここでは、配列に入れてるけど、実際はデータベース？まあいいや、どっちかわからないけど、
+        //スコアを出す時にも本来はデータベースだよね。
+
+
+        //最後の画面に行った時に、今選択されているspinnerのレース&馬のスコアを算出する
+        //一つの配列から、keyとvalueを取得して、keyに応じて、比率を変える関数を作っておく
+        //そして、for文で、回して、比率を調整しながら、全ての総合スコアを出して、とりあえず、画面にtextViewを作って、そこにセットする
+
+
+        //ここで現在選択されている、hoursenameとnumberを取得してる。
 
         //この値を、配列に追加する。
         // その配列をforで回して、表示している
@@ -379,10 +485,209 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //項目名も必要。これは、今はfragmentのどこにいるかどうか？を把握する必要がある。
         //
 
-       // ArrayList<String>
+        // ArrayList<String>
+
+        /////////////とりあえず、最後にだけ呼ばれるやつ
+
+        //最後の画面で全部足しても遅い、最後の画面に表示するなら、最後のデータの画面でやらないと
+        if(calcActivity_fragment_state.equals("fragment_finish_score_input")) {
+
+            //全データの入力が終わった。全ての数値をたす
+
+
+            //ここでエラーが起こる。つまり、この配列から全ての値を取得して、足し算するとこでエラーが起こる
+
+
+//                       for (int i=0; i<=nowSpinnerArrayList.size(); i++){
+//
+//                //iが1ずつ加算されていき、nowSpinnerArrayListのsizeになるまで、繰り返される
+//                //その要素のkeyやvalueを取得する
+//
+//              //  nowSpinnerArrayList(1);
+//
+//
+//            }
+
+            Integer totalNowSpinnerArrayListScore=0;
+
+            //https://www.sejuku.net/blog/16055
+            //これを使えば全データを足し算できる
+            // for(String val : nowSpinnerArrayList.values()){
+
+
+            //とりあえずコメントアウト keyも取得したいから
+             for(String val : nowSpinnerArrayList.values()){
+
+
+                 //別にkeyを取得しなくてもいいから、とりあえず先に進める
+//            for (int i = 0; i < nowSpinnerArrayList.size(); i++) {
+//                String val =nowSpinnerArrayList.get(i).values().toString();
+
+                // System.out.println(val);
+
+
+
+                 int intVal = Integer.parseInt(val);
+
+                Log.e(TAG, "Integer.parseInt(val)は:" + intVal);
+
+                //ここで、totalが増えてないのは問題。
+
+//                 int score=Integer.parseInt(totalNowSpinnerArrayListScore);
+
+                 Log.e(TAG,"totalNowSpinnerArrayListScore たす前:"+totalNowSpinnerArrayListScore);
+                totalNowSpinnerArrayListScore =totalNowSpinnerArrayListScore+ intVal;
+
+
+                Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
+
+                TextView finish_score_input_text = findViewById(R.id.finish_score_input_text);
+
+
+                finish_score_input_text.setText(totalNowSpinnerArrayListScore.toString());
+
+
+            }
+
+        }
+
+
+//            //これは正しいのかわからない
+//            Integer totalNowSpinnerArrayListScore;
+//
+//            Iterator it = nowSpinnerArrayList.keySet().iterator();
+//            while (it.hasNext()) {
+//                Object o = it.next();
+//                totalNowSpinnerArrayListScore=+Integer.parseInt(nowSpinnerArrayList.get(o));
+//
+//                Log.e(TAG,"while(it.hasNext()で回す:"+totalNowSpinnerArrayListScore);
+//
+//
+//
+//                TextView finish_score_input_text=findViewById(R.id.finish_score_input_text);
+//
+//                finish_score_input_text.setText(totalNowSpinnerArrayListScore);
+//            }
+
+            //これで、totalには、全てのデータが足された数値がセットされた
+            //この下で、最後のlayout(fragmentにセットするようにする)
+
+            //競馬場のデータも作らないといけないし、自動でヤフーから取ってくるレース情報もとりあえず、式に入れないといけない
+
+        }
+
+
+//
+//    //ここはhttps://qiita.com/kentosasa/items/a556f8d12d3f689352be  1/15
+//    ViewPager mViewPager;
+//
+//
+//    public ViewPager getViewPager() {
+//        if (null == mViewPager) {
+//            mViewPager = (ViewPager) findViewById(R.id.pager);
+//        }
+//        return mViewPager;
+//    }
+
+
+
+//    Bundle bundle = new Bundle();
+//
+//
+//    KireaziFragment fragment = new KireaziFragment();
+//    //fragment.setArguments(bundle);
+//
+//    ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+////    ExampleFragmentPagerAdapter adapter = new ExampleFragmentPagerAdapter(manager);
+//FragmentManager manager = getSupportFragmentManager();
+//    UserInfoViewPagerAdapter adapter=new  UserInfoViewPagerAdapter(manager);
+//
+//    //viewPager.setAdapter(adapter);
+
+
+    //最後の画面に行った時に、今選択されているspinnerのレース&馬のスコアを算出する
+    //一つの配列から、keyとvalueを取得して、keyに応じて、比率を変える関数を作っておく
+    //そして、for文で、回して、比率を調整しながら、全ての総合スコアを出して、とりあえず、画面にtextViewを作って、そこにセットする
+
+    //最後に呼び出される。
+
+
+
+    public String  nowSpinnerArrayListSetRatio(String calcActivity_fragment_state,String numberString_ratioed) {
+
+        switch (calcActivity_fragment_state) {
+
+
+
+            case "fragment_juunansei":
+                numberString_ratioed = String.valueOf(Integer.parseInt(numberString_ratioed) * 3);//3
+                break;
+
+            case "fragment_kireazi":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
+
+
+            case "fragment_stamina":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
+
+
+            case "fragment_start":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
+
+            case "fragment_kishitu":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
+
+
+            case "fragment_ninoashi":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
+
+
+            case "fragment_jokie_ability":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
+
+
+
+            case "DistanceAppropriateFragment":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*2);//2
+                break;
+
+
+            case "fragment_tiredness":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
+
+
+            case "fragment_in_course_state":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);
+                break;
+
+
+            case "fragment_out_course_state":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);
+                break;
+
+
+            case "fragment_large_outer_course_state":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*1);
+                break;
+
+
+            case "fragment_hourse_type":
+                numberString_ratioed=String.valueOf(Integer.parseInt(numberString_ratioed)*3);//3
+                break;
+
+
+        }
+        //これで、ratioされた数値を返す。
+        return numberString_ratioed;
 
     }
-
 
 
 //ここをなくすと、余計なボタンがなくなっていい
@@ -396,5 +701,3 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 //        pager.setCurrentItem(currentPage);
 //    }
 }
-
-
