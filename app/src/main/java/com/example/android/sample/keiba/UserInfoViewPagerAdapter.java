@@ -126,7 +126,6 @@ public class UserInfoViewPagerAdapter extends FragmentPagerAdapter {
      柔軟性"切れ味"スタミナ"スタート"気質"二の足"ジョッキーの能力"距離適性"疲れ具合"内側の馬場状態、外側の馬場状態、類型"レースのペースの速さ
 
 
-
      * @return
      */
 

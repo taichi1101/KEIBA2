@@ -19,11 +19,9 @@ public class FinishScoreInputFragment extends android.support.v4.app.Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
 
         State.setCalcActivity_fragment_state("fragment_finish_score_input");
         // Inflate the layout for this fragment

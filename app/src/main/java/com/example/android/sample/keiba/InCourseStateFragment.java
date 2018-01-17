@@ -17,8 +17,6 @@ public class InCourseStateFragment extends android.support.v4.app.Fragment {
         // Required empty public constructor
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -15,8 +15,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 <!--改行できなくする-->
 
 
-
-
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -96,18 +94,9 @@ tools:context="com.example.android.sample.keiba.MainActivity">
     </android.support.v7.widget.Toolbar>
 
 
-
-
-
-
-
-
-
-
     <!--編集するが押されるまではtextviewにして、押されたらEditTextにする。保存が押されたらtextviewにする-->
-<!--何なら、最後に編集した人の番号が入力され、通報もできるようにする-->
-<!--このボタンが押されたら、編集できるようにする。もう一度押されえたら保存ボタンにテキストをかえる
-動的に書くからそれはコードで書く-->
+    <!--何なら、最後に編集した人の番号が入力され、通報もできるようにする-->
+    <!--このボタンが押されたら、編集できるようにする。もう一度押されえたら保存ボタンにテキストをかえる動的に書くからそれはコードで書く-->
 
 
 
@@ -156,9 +145,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 </LinearLayout>
-
-
-
 
     <!--<GridLayout-->
         <!--android:layout_width="fill_parent"-->
@@ -264,16 +250,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
             android:text="ひとこと"/>
 
         <!--ここまでが見出しの列。ここから右を横スクロールできるようにする-->
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1077,10 +1053,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-
-
-
-
 <!--<LinearLayout-->
     <!--android:layout_width="wrap_content"-->
     <!--android:layout_height="wrap_content"-->
@@ -1190,11 +1162,7 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 
 
 
-
-
-
 <!--&lt;!&ndash;できるだけラジオボタンで選択させる。これによってそれぞれの項目によってブレが出ない。もっとも近いものが選べる&ndash;&gt;-->
-
 
 
 
@@ -1337,11 +1305,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
 <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
 <!--&lt;!&ndash;android:text="レーン"&ndash;&gt;-->
 <!--&lt;!&ndash;/>&ndash;&gt;-->
-
-
-
-
-
 
 
 

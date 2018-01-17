@@ -52,6 +52,7 @@ public class AccountActivity extends Activity implements View.OnClickListener {
         userCommentAdapterlist = new ArrayList<>();
         user = new User();
 
+
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushTotalButton=(Button)findViewById(R.id.pushTotalButton);

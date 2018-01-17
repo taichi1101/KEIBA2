@@ -399,17 +399,12 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //だから、天皇賞 エアスビネル という配列に、二の足:5、スタート:5とかでセットして行く、key valueにするか
         //まず、配列が、すでにない場合は、配列を作る
 
-
         //どうやったら、動的にlistを作れるのか？
         //spinnerで変更されるたびにlistを切り替えるのか？
         //とりあえず、毎回ボタンが押されるたびに、ifで、配列がからだったら、new させればいいか
 
-
-
         //どうしよう、今取得したspinnerと、配列の1爪の値が同じなら、それでok
         //違うなら、新しく、配列を作る。
-
-
 
 
         String keyRaceSppinerItemhourseSpinnerItem=nowSpinnerArrayList.get("keyRaceSppinerItemhourseSpinnerItem");
@@ -417,8 +412,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //先頭にKeyをつける  https://www.sejuku.net/blog/16055
 
         //nullだったら、作るようにする
-
-
             if (nowSpinnerArrayList== null) {
 
                 //nullの場合は、作る
@@ -437,32 +430,22 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         //それで、もう既にlistができてる、buttonが2コメ以上でspinnerを買えてない場合は、ここで、配列にセットさせる。
-
         //普通に、まず、stateから、今のfragementを取って来て、それをkeyにして、押されたボタンをvalueにセットする
-
-
         //レース名と、馬名を表すのは、keyRaceSppinerItem+hourseSpinnerItemというkeyのみで十分
 
         String numberString=String.valueOf(number);
 
         //ここで、現在選択されてるnowSpinnerArrayListに対して、putを行う
-
         //この下のkey1のところを、stateから持ってくる
         //この下のコードで、buttonが押された時に、選択されているspinnerの配列に対して、今のfragment名と、押されたボタンの値が足されて行く
-
         //State state=new State();
         //Stateクラスの変数をstaticにすることで、newしなくてよくなったからnullでもなくなったかも
 
         String calcActivity_fragment_state= State.getCalcActivity_fragment_state();
 
-
-
         //ここで、putする前に、比率を調整しておきたい
-
         //fragment名と、値を入力
         String numberString_ratioed=nowSpinnerArrayListSetRatio(calcActivity_fragment_state,numberString);
-
-
 
         nowSpinnerArrayList.put(calcActivity_fragment_state, numberString_ratioed);
 
@@ -472,13 +455,11 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //現在のViewPageAdapterの次のページに動的にセット
        //UserInfoViewPagerAdapter.getItem()+1
 
-
          ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 //        呼び出されるたび次のページに切り替え
         int nowPage=viewPager.getCurrentItem()+1;
         Log.e(TAG,"今のページ数は:"+nowPage);
         viewPager.setCurrentItem(nowPage);
-
 
 
         //ここで、ratioされた数値(String)が帰ってくるから、それを配列にセットして、
@@ -489,12 +470,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //スコアを出す時にも本来はデータベースだよね。
 
 
-
-
         //最後の画面に行った時に、今選択されているspinnerのレース&馬のスコアを算出する
         //一つの配列から、keyとvalueを取得して、keyに応じて、比率を変える関数を作っておく
         //そして、for文で、回して、比率を調整しながら、全ての総合スコアを出して、とりあえず、画面にtextViewを作って、そこにセットする
-
 
 
         //ここで現在選択されている、hoursenameとnumberを取得してる。
@@ -507,11 +485,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         //項目名も必要。これは、今はfragmentのどこにいるかどうか？を把握する必要がある。
         //
 
-       // ArrayList<String>
-
+        // ArrayList<String>
 
         /////////////とりあえず、最後にだけ呼ばれるやつ
-
 
         //最後の画面で全部足しても遅い、最後の画面に表示するなら、最後のデータの画面でやらないと
         if(calcActivity_fragment_state.equals("fragment_finish_score_input")) {
@@ -597,9 +573,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             //この下で、最後のlayout(fragmentにセットするようにする)
 
             //競馬場のデータも作らないといけないし、自動でヤフーから取ってくるレース情報もとりあえず、式に入れないといけない
-
-
-
 
         }
 
@@ -717,8 +690,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
-
 //ここをなくすと、余計なボタンがなくなっていい
 //    public void onClickNext(View view) {
 //        currentPage ++;
@@ -730,5 +701,3 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 //        pager.setCurrentItem(currentPage);
 //    }
 }
-
-

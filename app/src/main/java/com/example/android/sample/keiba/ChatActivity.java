@@ -35,8 +35,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     Button pushAccountButton;
 
 
-
-
     ArrayListAdapter setCommentAdapterlist;
 
 
@@ -45,10 +43,7 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 //    馬のspinner
     Spinner idHourseSpinner;
 
-
-
     ArrayList<User> commentAdapterlist;
-
 
     ListView idCommentListView;
     @Override
@@ -62,8 +57,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         pushRaceOrderButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
 
-
-
         pushCalcButton.setOnClickListener(this);
         pushTotalButton.setOnClickListener(this);
         sentencePushbutton.setOnClickListener(this);
@@ -75,14 +68,10 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         idRaceSpinner = (Spinner) findViewById(R.id.raceSpinner);
         idHourseSpinner=(Spinner) findViewById(R.id.hourseSpinner);
 
-
-
         ListViewSet();
 
         firstRaceSpinner();
         firstHourseSpinner();
-
-
 
     }
 
@@ -90,7 +79,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
     String raceSpinner[];
     public void firstRaceSpinner(){
-
 
         raceSpinner = new String[5];
         raceSpinner[0] = "桜花賞";
@@ -115,8 +103,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
     }
 
-
-
     String hourseSpinner[];
     public void firstHourseSpinner(){
 
@@ -137,7 +123,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         //toolbar.setTitle("");
         // mResolvingError = false;
         //nullになるから、ここでよんどく
-
 
 //        spinnerを使うためここでセットする。セットしないとnullになる
         hourseSpinnerAdapterSet();
@@ -186,8 +171,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 //        spinnerItems = favorite.favorite(LocationActivity.this, username);//もしかしたら役に立つから、コメントを残す
 
 
-
-
 //    馬のspinnerが押された時の対応
 
 //        レースのspinnerが押された時の対応
@@ -231,7 +214,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 }
 
 
-
 //    名前が変な気もするが、spinnerItemsを更新した時に呼び出す
     public void raceSpinnerAdapterSet() {
         ArrayAdapter<String> raceSpinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,raceSpinner);
@@ -240,7 +222,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         idRaceSpinner.setFocusable(false);
 
     }
-
 
 //    一応馬用のAdapterSetも作る
 
@@ -251,7 +232,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         idHourseSpinner.setFocusable(false);
 
     }
-
 
     //    ListViewSet
     public void ListViewSet() {
@@ -310,8 +290,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 intent= new Intent(this,AccountActivity.class);
                 startActivity(intent);
 
-
-
         }
     }
 
@@ -341,8 +319,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         String nowTime = month + "/" + day + ":" + hour + ":" + minute +":"+ second;
         return nowTime;
     }
-
-
 
 
 }
