@@ -48,43 +48,51 @@ public class AccountActivity extends Activity implements View.OnClickListener {
     int totalNowSpinnerArrayListScore;
 
 
+    State state=new State();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
+        //ここで、databaseから取得するようにしとけば、全てを出力できる。
+        //Accountが呼ばれるたびに表示できる。
 
+        //一番最後のレースを送るのは違う。
+        //一番最後に入力したデータを送るようにする。
+        //timeで、いつ入力したのかを記入する？
+        //それか、とりあえずは、stateで、Calc==finishかどうか？をチェックする
 
+        if(state.isCalcFinish()){
 
+            //calcがfinishして、ここが呼び出された場合は、この中で処理をする
 
-        Log.e(TAG,"AccountActivityのonCreate()");
-        //ここで、Calcで、作られたfragmentと値のmapをintentで受け取って、HashMapに変換してる
-        Intent i = getIntent();
-        HashMap<String, String> nowSpinnerArrayList = (HashMap<String, String>) i.getSerializableExtra("nowSpinnerArrayList");
+            Log.e(TAG,"AccountActivityのonCreate()");
+            //ここで、Calcで、作られたfragmentと値のmapをintentで受け取って、HashMapに変換してる
+            Intent i = getIntent();
+            HashMap<String, String> nowSpinnerArrayList = (HashMap<String, String>) i.getSerializableExtra("nowSpinnerArrayList");
 
+            //この下で、配列にして、それをリストにセット、このようにdatabaseからやり取りをしなくても、流れの中で使うなら、intentでもできる。
+            for(String val : nowSpinnerArrayList.values()) {
+                Log.e(TAG,"AccountActivityのonCreate()のfor文の中");
 
-        //この下で、配列にして、それをリストにセット、このようにdatabaseからやり取りをしなくても、流れの中で使うなら、intentでもできる。
-        for(String val : nowSpinnerArrayList.values()) {
-
-
-            Log.e(TAG,"AccountActivityのonCreate()のfor文の中");
-
-            //別にkeyを取得しなくてもいいから、とりあえず先に進める
+                //別にkeyを取得しなくてもいいから、とりあえず先に進める
 //            for (int i = 0; i < nowSpinnerArrayList.size(); i++) {
 //                String val =nowSpinnerArrayList.get(i).values().toString();
 
-            // System.out.println(val);
+                // System.out.println(val);
 
+                int intVal = Integer.parseInt(val);
+                Log.e(TAG, "Integer.parseInt(val)は:" + intVal);
+                Log.e(TAG, "totalNowSpinnerArrayListScore たす前:" + totalNowSpinnerArrayListScore);
+                totalNowSpinnerArrayListScore = totalNowSpinnerArrayListScore + intVal;
+                Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
+            }
 
-            int intVal = Integer.parseInt(val);
-            Log.e(TAG, "Integer.parseInt(val)は:" + intVal);
-            Log.e(TAG, "totalNowSpinnerArrayListScore たす前:" + totalNowSpinnerArrayListScore);
-            totalNowSpinnerArrayListScore = totalNowSpinnerArrayListScore + intVal;
-            Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
-
+            //終わったらfalseをsetする
+            state.setCalcFinish(false);
         }
-
-
 
 
 

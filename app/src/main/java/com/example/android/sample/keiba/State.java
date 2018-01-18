@@ -8,6 +8,16 @@ package com.example.android.sample.keiba;
 public class State {
 
 
+    public static boolean calcFinish;
+
+    public static boolean isCalcFinish() {
+        return calcFinish;
+    }
+
+    public static void setCalcFinish(boolean calcFinish) {
+        State.calcFinish = calcFinish;
+    }
+
     public static String calcActivity_fragment_state;
 
     public  static String getCalcActivity_fragment_state() {

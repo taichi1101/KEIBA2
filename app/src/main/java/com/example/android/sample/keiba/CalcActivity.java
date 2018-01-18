@@ -33,6 +33,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager pager;
 
 
+    State state=new State();
 
     Button pushChatButton;
     Button pushTotalButton;
@@ -476,11 +477,21 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 //        呼び出されるたび次のページに切り替え
             int nowPage = viewPager.getCurrentItem() + 1;
-            Log.e(TAG, "今のページ数は:" + nowPage);
+            Log.e(TAG, "else if(fragment_race_pace==false){に入った。今のページ数は:" + nowPage);
             viewPager.setCurrentItem(nowPage);
 
 
+
         }else if (fragment_race_pace == true) {
+
+
+            //ここはいらない
+            //最後は、layoutを切り替える前に、buttonが押されるから、押された時点で、AccountActivityを呼ぶようにする
+            Log.e(TAG, "else if(fragment_race_pace==true){に入った。");
+
+
+            //これへの対策としては、if elseの順番を変える。
+            //fragment_race_paceの初期値は trueでもfalseでもないから大丈夫。
 
             //ここで、ratioされた数値(String)が帰ってくるから、それを配列にセットして、
             //今度は、その配列を全てforで表示して、←いや、メンドくさい？
@@ -601,6 +612,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             //受け取ったところでさっき使ってたtextにセットする
             //finishFragmentを使わないようにする
 
+            state.setCalcFinish(true);
             startActivity(intent);
 
         }
