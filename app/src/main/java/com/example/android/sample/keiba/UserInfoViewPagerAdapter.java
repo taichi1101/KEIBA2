@@ -91,8 +91,10 @@ public class UserInfoViewPagerAdapter extends FragmentPagerAdapter {
                 break;
 
 
+
+                //ここで、13を表示させたいのに、表示させる前に、14が呼び出される？
             case 14:
-                fragment = new FinishScoreInputFragment();
+                fragment = new FinishFragment();
                // state.setCalcActivity_fragment_state("スコア入力完了");
                 break;
 
