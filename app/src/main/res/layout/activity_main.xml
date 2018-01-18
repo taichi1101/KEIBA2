@@ -42,16 +42,6 @@ tools:context="com.example.android.sample.keiba.MainActivity">
         android:text="予想画面" />
 
 
-
-    <Button
-        android:id="@+id/pushTotalButton"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="スコア一覧" />
-
-
-
     <Button
         android:id="@+id/pushChatButton"
         android:layout_width="0dp"

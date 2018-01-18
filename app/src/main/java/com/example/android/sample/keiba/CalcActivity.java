@@ -36,7 +36,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     State state=new State();
 
     Button pushChatButton;
-    Button pushTotalButton;
     Button pushMainButton;
     Button pushAccountButton;
 
@@ -71,7 +70,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
-        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
 
@@ -87,7 +85,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         pushCalc_button_10=(Button)findViewById(R.id.calc_button_10);
 
         pushChatButton.setOnClickListener(this);
-        pushTotalButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
 
@@ -300,12 +297,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
                 //次のデータ入力画面にいくボタンが押されたので、処理する
                 intent = new Intent(this, ChatActivity.class);
-                startActivity(intent);
-                break;
-
-            //トータルスコアをみる
-            case R.id.pushTotalButton:
-                intent = new Intent(this, TotalActivity.class);
                 startActivity(intent);
                 break;
 

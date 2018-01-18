@@ -36,7 +36,6 @@ public class AccountActivity extends Activity implements View.OnClickListener {
 
 
     Button pushChatButton;
-    Button pushTotalButton;
     Button pushMainButton;
     Button pushCalcButton;
 
@@ -106,12 +105,10 @@ public class AccountActivity extends Activity implements View.OnClickListener {
 
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
-        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
 
 
         pushChatButton.setOnClickListener(this);
-        pushTotalButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
         pushCalcButton.setOnClickListener(this);
 
@@ -262,12 +259,6 @@ public class AccountActivity extends Activity implements View.OnClickListener {
 
                 //次のデータ入力画面にいくボタンが押されたので、処理する
                 intent = new Intent(this, CalcActivity.class);
-                startActivity(intent);
-                break;
-
-            //トータルスコアをみる
-            case R.id.pushTotalButton:
-                intent = new Intent(this, TotalActivity.class);
                 startActivity(intent);
                 break;
 

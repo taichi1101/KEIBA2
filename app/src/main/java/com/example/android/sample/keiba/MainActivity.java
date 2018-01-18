@@ -18,7 +18,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG ="MainActivity";
     Button pushCalcButton;
-    Button pushTotalButton;
     Button pushChatButton;
     Button pushAccountButton;
 
@@ -37,12 +36,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         //文字サイズは考慮しなくていい
 
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
-        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
 
         pushCalcButton.setOnClickListener(this);
-        pushTotalButton.setOnClickListener(this);
         pushChatButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
 
@@ -152,11 +149,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
-                //トータルスコアをみる
-            case R.id.pushTotalButton:
-                intent = new Intent(this, TotalActivity.class);
-                startActivity(intent);
-                break;
 
             case R.id.pushChatButton:
                 intent = new Intent(this, ChatActivity.class);
