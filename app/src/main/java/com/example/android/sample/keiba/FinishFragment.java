@@ -12,20 +12,19 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FinishScoreInputFragment extends android.support.v4.app.Fragment {
+public class FinishFragment extends android.support.v4.app.Fragment{
 
 
-    public FinishScoreInputFragment() {
+    public FinishFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        State.setCalcActivity_fragment_state("fragment_finish_score_input");
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_finish_score_input, container, false);
+        return inflater.inflate(R.layout.fragment_finish, container, false);
     }
 
 }

@@ -462,116 +462,7 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         if (fragment_race_pace == true) {
 
 
-            //ここはいらない
-            //最後は、layoutを切り替える前に、buttonが押されるから、押された時点で、AccountActivityを呼ぶようにする
-            Log.e(TAG, "else if(fragment_race_pace==true){に入った。");
-
-
-            //これへの対策としては、if elseの順番を変える。
-            //fragment_race_paceの初期値は trueでもfalseでもないから大丈夫。
-
-            //ここで、ratioされた数値(String)が帰ってくるから、それを配列にセットして、
-            //今度は、その配列を全てforで表示して、←いや、メンドくさい？
-            //でも、今後途中で違う馬に行った場合、そっちの方がいい。
-
-            //ここでは、配列に入れてるけど、実際はデータベース？まあいいや、どっちかわからないけど、
-            //スコアを出す時にも本来はデータベースだよね。
-
-
-            //最後の画面に行った時に、今選択されているspinnerのレース&馬のスコアを算出する
-            //一つの配列から、keyとvalueを取得して、keyに応じて、比率を変える関数を作っておく
-            //そして、for文で、回して、比率を調整しながら、全ての総合スコアを出して、とりあえず、画面にtextViewを作って、そこにセットする
-
-
-            //ここで現在選択されている、hoursenameとnumberを取得してる。
-
-            //この値を、配列に追加する。
-            // その配列をforで回して、表示している
-
-            //これらのデータの識別には、まずレース名が必要で、次にuser名が必要(自分が何を入力したかを把握する必要があるから)、そして、hoursename_and_numberが必要
-            //とりあえずusernameはtaichi
-            //項目名も必要。これは、今はfragmentのどこにいるかどうか？を把握する必要がある。
-            //
-
-            // ArrayList<String>
-
-            /////////////とりあえず、最後にだけ呼ばれるやつ
-
-            //最後の画面で全部足しても遅い、最後の画面に表示するなら、最後のデータの画面でやらないと
-//        if(calcActivity_fragment_state.equals("fragment_race_pace")) {
-
-
-            //全データの入力が終わった。全ての数値をたす
-
-            //最後のrace_paceの時にボタンが押されたので全データが入力された時こと、
-
-            //本来は、ここで配列の要素数と、全てのkeyがあるかどうか？を確認する
-
-
-            //ここでエラーが起こる。つまり、この配列から全ての値を取得して、足し算するとこでエラーが起こる
-
-
-//                       for (int i=0; i<=nowSpinnerArrayList.size(); i++){
-//
-//                //iが1ずつ加算されていき、nowSpinnerArrayListのsizeになるまで、繰り返される
-//                //その要素のkeyやvalueを取得する
-//
-//              //  nowSpinnerArrayList(1);
-//
-//
-//            }
-
-            Integer totalNowSpinnerArrayListScore = 0;
-
-            //https://www.sejuku.net/blog/16055
-            //これを使えば全データを足し算できる
-            // for(String val : nowSpinnerArrayList.values()){
-
-
-            //とりあえずコメントアウト keyも取得したいから
-//             for(String val : nowSpinnerArrayList.values()){
-//
-//
-//                 //別にkeyを取得しなくてもいいから、とりあえず先に進める
-////            for (int i = 0; i < nowSpinnerArrayList.size(); i++) {
-////                String val =nowSpinnerArrayList.get(i).values().toString();
-//
-//                // System.out.println(val);
-//
-//
-//
-//                 int intVal = Integer.parseInt(val);
-//
-//                Log.e(TAG, "Integer.parseInt(val)は:" + intVal);
-//
-//                //ここで、totalが増えてないのは問題。
-//
-////                 int score=Integer.parseInt(totalNowSpinnerArrayListScore);
-//
-//                 Log.e(TAG,"totalNowSpinnerArrayListScore たす前:"+totalNowSpinnerArrayListScore);
-//                totalNowSpinnerArrayListScore =totalNowSpinnerArrayListScore+ intVal;
-//
-//
-//                Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
-//
-////                TextView finish_score_input_text = findViewById(R.id.finish_score_input_text);
-////
-////
-////                finish_score_input_text.setText(totalNowSpinnerArrayListScore.toString());
-//
-//
-//                //ここで、よくわからないtextにセットするのではなく、AccountActivityに飛ばして、そこで、表示させる。
-//                 //まずActivityを呼び出す
-//
-//                 //totalNowSpinnerArrayListScore.toString()
-//
-//                 //いやこっちを nowSpinnerArrayList この配列を呼び出して、受け手のAccountActivityで、表示する
-//                 //これをintentに付属させて、呼び出す。
-//
-//                 //まず、最後のデータを表示しているfragmentを消す
-//
-//
-//            }
+            Log.e(TAG, "if(fragment_race_pace==true){に入った。");
 
 
             //ここでクラス変数を使って、racepaceに切り替わった直後の画面切り替えを防いで、最後の項目を入力させる。
@@ -580,10 +471,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
             //HashMapならできるらしい。 リンク http://topickup.web.fc2.com/java/map_hashmap.html
             intent.putExtra("nowSpinnerArrayList", nowSpinnerArrayList);
-
-
-//                 Map<String, String> nowSpinnerArrayList = new HashMap<>();
-            //この値を送りたい。
 
 
             //受け取ったところでさっき使ってたtextにセットする
@@ -595,9 +482,6 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         }else if (!calcActivity_fragment_state.equals("fragment_race_pace")) {
 
 
-
-            //言語化すると
-
             ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 //        呼び出されるたび次のページに切り替え
             int nowPage = viewPager.getCurrentItem() + 1;
@@ -607,11 +491,20 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
         }else if(calcActivity_fragment_state.equals("fragment_race_pace")){
             fragment_race_pace = true;
+
+            //このページが13番らしい。
+            Log.e(TAG,"race_paceのページに来た");
+
+            //次のページは表示されないが準備しておかないといけない。
+
             ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 //        呼び出されるたび次のページに切り替え
             int nowPage = viewPager.getCurrentItem() + 1;
             Log.e(TAG, "今のページ数は:" + nowPage);
             viewPager.setCurrentItem(nowPage);
+
+            //まだ、類型ページなのに、なんで、race_paceって判定になってるの？
+            //
 
         }
 
