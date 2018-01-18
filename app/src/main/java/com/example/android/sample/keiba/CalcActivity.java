@@ -458,31 +458,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //ここで、ボタンが押されてページを切り替える前に、今のページが最後だったら、AccountActivityに切り替える
-        if (!calcActivity_fragment_state.equals("fragment_race_pace")) {
 
-
-            //言語化すると
-
-            ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-//        呼び出されるたび次のページに切り替え
-            int nowPage = viewPager.getCurrentItem() + 1;
-            Log.e(TAG, "今のページ数は:" + nowPage);
-            viewPager.setCurrentItem(nowPage);
-
-
-        } else if(fragment_race_pace==false){
-
-            fragment_race_pace = true;
-
-            ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-//        呼び出されるたび次のページに切り替え
-            int nowPage = viewPager.getCurrentItem() + 1;
-            Log.e(TAG, "else if(fragment_race_pace==false){に入った。今のページ数は:" + nowPage);
-            viewPager.setCurrentItem(nowPage);
-
-
-
-        }else if (fragment_race_pace == true) {
+        if (fragment_race_pace == true) {
 
 
             //ここはいらない
@@ -614,6 +591,27 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
             state.setCalcFinish(true);
             startActivity(intent);
+
+        }else if (!calcActivity_fragment_state.equals("fragment_race_pace")) {
+
+
+
+            //言語化すると
+
+            ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+//        呼び出されるたび次のページに切り替え
+            int nowPage = viewPager.getCurrentItem() + 1;
+            Log.e(TAG, "今のページ数は:" + nowPage);
+            viewPager.setCurrentItem(nowPage);
+
+
+        }else if(calcActivity_fragment_state.equals("fragment_race_pace")){
+            fragment_race_pace = true;
+            ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+//        呼び出されるたび次のページに切り替え
+            int nowPage = viewPager.getCurrentItem() + 1;
+            Log.e(TAG, "今のページ数は:" + nowPage);
+            viewPager.setCurrentItem(nowPage);
 
         }
 
