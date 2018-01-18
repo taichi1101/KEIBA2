@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.HashMap;
+
 public class TotalActivity extends Activity implements View.OnClickListener {
 
 
@@ -23,6 +25,7 @@ public class TotalActivity extends Activity implements View.OnClickListener {
 
     //    レースのspinner
     Spinner idRaceSpinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

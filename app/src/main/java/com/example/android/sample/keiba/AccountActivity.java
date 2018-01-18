@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -42,10 +43,52 @@ public class AccountActivity extends Activity implements View.OnClickListener {
     //    レースのspinner
     Spinner idRaceSpinner;
 
+
+    //トータルのスコア
+    int totalNowSpinnerArrayListScore;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+
+
+
+
+
+        Log.e(TAG,"AccountActivityのonCreate()");
+        //ここで、Calcで、作られたfragmentと値のmapをintentで受け取って、HashMapに変換してる
+        Intent i = getIntent();
+        HashMap<String, String> nowSpinnerArrayList = (HashMap<String, String>) i.getSerializableExtra("nowSpinnerArrayList");
+
+
+        //この下で、配列にして、それをリストにセット、このようにdatabaseからやり取りをしなくても、流れの中で使うなら、intentでもできる。
+        for(String val : nowSpinnerArrayList.values()) {
+
+
+            Log.e(TAG,"AccountActivityのonCreate()のfor文の中");
+
+            //別にkeyを取得しなくてもいいから、とりあえず先に進める
+//            for (int i = 0; i < nowSpinnerArrayList.size(); i++) {
+//                String val =nowSpinnerArrayList.get(i).values().toString();
+
+            // System.out.println(val);
+
+
+            int intVal = Integer.parseInt(val);
+            Log.e(TAG, "Integer.parseInt(val)は:" + intVal);
+            Log.e(TAG, "totalNowSpinnerArrayListScore たす前:" + totalNowSpinnerArrayListScore);
+            totalNowSpinnerArrayListScore = totalNowSpinnerArrayListScore + intVal;
+            Log.e(TAG, "totalNowSpinnerArrayListScore 足したあと:" + totalNowSpinnerArrayListScore);
+
+        }
+
+
+
+
+
+
 
 
 //        下から持ってきた。毎度listを作ると文が更新されないため、user名もこのようにする
