@@ -29,7 +29,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG ="ChatActivity" ;
     Button pushCalcButton;
-    Button pushTotalButton;
     Button sentencePushbutton;
     Button pushRaceOrderButton;
     Button pushAccountButton;
@@ -52,13 +51,11 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_chat);
 
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
-        pushTotalButton=(Button)findViewById(R.id.pushTotalButton);
         sentencePushbutton=(Button)findViewById(R.id.sentencePushbutton);
         pushRaceOrderButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
 
         pushCalcButton.setOnClickListener(this);
-        pushTotalButton.setOnClickListener(this);
         sentencePushbutton.setOnClickListener(this);
         pushRaceOrderButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
@@ -265,11 +262,6 @@ public class ChatActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
-            //トータルスコアをみる
-            case R.id.pushTotalButton:
-                intent = new Intent(this, TotalActivity.class);
-                startActivity(intent);
-                break;
 
             case R.id.sentencePushbutton:
                 //EditTextのidから文字列を取得して、それをListに追加する。
