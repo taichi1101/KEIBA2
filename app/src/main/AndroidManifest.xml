@@ -25,7 +25,8 @@
         <activity android:name=".ChatActivity" />
         <activity android:name=".ArrayListAdapter" />
         <activity android:name=".AccountActivity" />
-        <activity android:name=".OtherAccountActivity"></activity>
+        <activity android:name=".OtherAccountActivity" />
+        <activity android:name=".ForecastActivity"></activity>
     </application>
 
 </manifest>
