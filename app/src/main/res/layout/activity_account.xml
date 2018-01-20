@@ -84,40 +84,40 @@
 
     <!--これはあるとごちゃつくから、出走表で表示させる-->
     <!--<LinearLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal">-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
 
-        <!--&lt;!&ndash;ここは、上のspinnerで表示されるからなくす&ndash;&gt;-->
-        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:text="有馬記念 G1" />&ndash;&gt;-->
+    <!--&lt;!&ndash;ここは、上のspinnerで表示されるからなくす&ndash;&gt;-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="有馬記念 G1" />&ndash;&gt;-->
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="2017 12/24(日) 15:24"-->
-            <!--android:layout_weight="1"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="2017 12/24(日) 15:24"-->
+    <!--android:layout_weight="1"/>-->
 
-        <!--&lt;!&ndash;spinnerで選択できるようにする&ndash;&gt;-->
+    <!--&lt;!&ndash;spinnerで選択できるようにする&ndash;&gt;-->
 
-        <!--&lt;!&ndash;<EditText&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/matal"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/matal"/>&ndash;&gt;-->
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="中山/芝 2500"-->
-            <!--android:layout_weight="1"-->
-            <!--android:id="@+id/place"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="中山/芝 2500"-->
+    <!--android:layout_weight="1"-->
+    <!--android:id="@+id/place"/>-->
 
-        <!--&lt;!&ndash;<EditText&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/hourseCount"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/hourseCount"/>&ndash;&gt;-->
     <!--</LinearLayout>-->
 
 
