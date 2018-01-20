@@ -60,21 +60,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <Spinner
-            android:id="@+id/raceSpinner"
-            android:layout_width="180dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:popupBackground="#ccffffff"
-            />
+            <Spinner
+                android:id="@+id/raceSpinner"
+                android:layout_width="180dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:popupBackground="#ccffffff"
+                />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/forecast_purchase"
-            android:text="予想購入"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/forecast_purchase"
+                android:text="予想購入"/>
 
         </LinearLayout>
 
@@ -88,9 +88,9 @@
 
         <!--ここは、上のspinnerで表示されるからなくす-->
         <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="有馬記念 G1" />-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="有馬記念 G1" />-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,14 +126,14 @@
 
         <!--weightを0.5で設定してるが、これは文字数によるし最大5行のscrollviewでいい。別にweightはいらない-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/race_comment"
-        android:text="今回の桜花賞はタイムフレイヤーの要素、叩き3戦目、先行力あり、上がりは毎回2着衣ない、類型がいない、展開に左右されない、騎手、鞍上、ポジショニング、前半のスピードが速く流れた（ハイペース)だったから後ろが有利になる。
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/race_comment"
+            android:text="今回の桜花賞はタイムフレイヤーの要素、叩き3戦目、先行力あり、上がりは毎回2着衣ない、類型がいない、展開に左右されない、騎手、鞍上、ポジショニング、前半のスピードが速く流れた（ハイペース)だったから後ろが有利になる。
 タイムふレイヤーは後方待機策をとったから成功した。"
 
-        />
+            />
 
     </ScrollView>
     <!--ここにコメントを表示するような画面みたいなやつを作る-->
@@ -143,40 +143,40 @@
 
     <!---->
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="vertical"-->
-        <!--&gt;-->
-        <!---->
-        <!---->
-        <!--&lt;!&ndash;ここにtextViewを追加していく&ndash;&gt;-->
-        <!--&lt;!&ndash;ここにタイトルは全て縦書きで表示させる&ndash;&gt;-->
-        <!--&lt;!&ndash;縦書きのやり方を調べる&ndash;&gt;-->
-        <!--&lt;!&ndash;http://yamato-iphone.blogspot.jp/2012/06/android3.html　　大変そう&ndash;&gt;-->
-        <!--&lt;!&ndash;縦書きにできないなら、横に並べた文字列を全て、縦に繋げればいいw&ndash;&gt;-->
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="        柔  切  ス  気  二  ジ  適  疲  馬  馬  馬  馬  類  レ"/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical"-->
+    <!--&gt;-->
+    <!---->
+    <!---->
+    <!--&lt;!&ndash;ここにtextViewを追加していく&ndash;&gt;-->
+    <!--&lt;!&ndash;ここにタイトルは全て縦書きで表示させる&ndash;&gt;-->
+    <!--&lt;!&ndash;縦書きのやり方を調べる&ndash;&gt;-->
+    <!--&lt;!&ndash;http://yamato-iphone.blogspot.jp/2012/06/android3.html　　大変そう&ndash;&gt;-->
+    <!--&lt;!&ndash;縦書きにできないなら、横に並べた文字列を全て、縦に繋げればいいw&ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="        柔  切  ス  気  二  ジ  適  疲  馬  馬  馬  馬  類  レ"/>-->
 
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="        軟  れ  タ  質  の  ョ  正  れ  場  場  場  場  型   |"/>-->
-
-
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="        性  味  ア          足  ョ  正  れ  場  場  場  場  型   |"/>-->
-
-        <!---->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="        軟  れ  タ  質  の  ョ  正  れ  場  場  場  場  型   |"/>-->
 
 
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="        性  味  ア          足  ョ  正  れ  場  場  場  場  型   |"/>-->
+
+    <!---->
 
 
-        <!--&lt;!&ndash;柔軟性 切れ味 スタミナ スタート 気質 二の足 ジョッキー 適正距離 疲れ具合 馬場(内) 馬場(外) 馬場(大外) 類型 レースのペース&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;柔軟性 切れ味 スタミナ スタート 気質 二の足 ジョッキー 適正距離 疲れ具合 馬場(内) 馬場(外) 馬場(大外) 類型 レースのペース&ndash;&gt;-->
 
 
 
@@ -195,251 +195,287 @@
         <!--もうLinerLayoutで縦に並べて、その上で横に並べるLinerLayout内で、どんどん馬が出るたびに追加していく-->
 
         <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <!--ここで表にする ここにTextVieをおく-->
-            <TextView
-                android:id="@+id/umammei"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <!--ここで表にする ここにTextVieをおく-->
+                <TextView
+                    android:id="@+id/umammei"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="馬名"
+                    />
+
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
+
+                <TextView
+                    android:id="@+id/jixyuunansei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="柔軟性"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/kireazi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="切れ味"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/sutamina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="スタミナ"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="スタート"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/ninoasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="二の足"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/kisitu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="気質"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/jokkie_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="ジョッキーの能力"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tekiseikixyori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="適正距離"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/gate_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text=" ゲートの場所"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/race_pace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="レースのペース予想"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/place_state_gate_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="場所ごとの馬場状態*ゲート番号"
+                    android:layout_gravity="center"/>
+
+
+
+                <TextView
+                    android:id="@+id/wind_strong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="風向きと強さ"
+                    android:layout_gravity="center"/>
+
+
+
+                <TextView
+                    android:id="@+id/studiam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="競馬場の特徴"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="馬名"
-                />
-
-            <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-            <TextView
-                android:id="@+id/jixyuunansei"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="柔軟性" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/kireazi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="切れ味" />
-
-            <TextView
-                android:id="@+id/sutamina"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="スタミナ" />
-
-            <TextView
-                android:id="@+id/start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="スタート"
-                />
-
-            <TextView
-                android:id="@+id/ninoasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="二の足" />
-
-            <TextView
-                android:id="@+id/kisitu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="気質" />
-
-            <TextView
-                android:id="@+id/jokkie_power"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="ジョッキーの能力"/>
-
-            <TextView
-                android:id="@+id/tekiseikixyori"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="適正距離"/>
-
-            <TextView
-                android:id="@+id/gate_place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" ゲートの場所"/>
+                <TextView
+                    android:id="@+id/umammei0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="キタサンブラック"
+                    android:textSize="8dp"
+                    android:layout_gravity="center"/>
 
 
-            <TextView
-                android:id="@+id/race_pace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="レースのペース予想"/>
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-            <TextView
-                android:id="@+id/place_state_gate_place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="場所ごとの馬場状態*ゲート番号"/>
+                <TextView
+                    android:id="@+id/jixyuunansei0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/kireazi0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    />
+
+                <!--文字数が多いときは、字を自動で小さくする-->
+
+                <TextView
+                    android:id="@+id/sutamina0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/start0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"/>
 
 
+                <TextView
+                    android:id="@+id/ninoasi0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
 
-            <TextView
-                android:id="@+id/wind_strong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="風向きと強さ"/>
+                <TextView
+                    android:id="@+id/kisitu0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:layout_gravity="center"
+                    />
 
+                <TextView
+                    android:id="@+id/jokkie_power0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
 
+                <TextView
+                    android:id="@+id/tekiseikixyori0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:layout_gravity="center"
+                    />
 
-            <TextView
-                android:id="@+id/studiam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="競馬場の特徴"/>
+                <TextView
+                    android:id="@+id/gate_place0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    />
 
+                <TextView
+                    android:id="@+id/race_pace0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/place_state_gate_place0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
 
+                <TextView
+                    android:id="@+id/wind_strong0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
 
+                <TextView
+                    android:id="@+id/studiam0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/umammei0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="キタサンブラック"
-                android:textSize="5dp"/>
-
-
-            <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-            <TextView
-                android:id="@+id/jixyuunansei0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10" />
-
-            <TextView
-                android:id="@+id/kireazi0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9"
-                />
-
-            <!--文字数が多いときは、字を自動で小さくする-->
-
-            <TextView
-                android:id="@+id/sutamina0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10" />
-
-            <TextView
-                android:id="@+id/start0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9" />
-
-            <TextView
-                android:id="@+id/ninoasi0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="8"
-                />
-
-            <TextView
-                android:id="@+id/kisitu0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="7"
-                />
-
-            <TextView
-                android:id="@+id/jokkie_power0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
-
-            <TextView
-                android:id="@+id/tekiseikixyori0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3"
-                />
-
-            <TextView
-                android:id="@+id/gate_place0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5"
-                />
-
-            <TextView
-                android:id="@+id/race_pace0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="8"
-                />
-
-            <TextView
-                android:id="@+id/place_state_gate_place0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
-
-            <TextView
-                android:id="@+id/wind_strong0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
-
-            <TextView
-                android:id="@+id/studiam0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
-
-        </LinearLayout>
+            </LinearLayout>
 
 
 
@@ -447,129 +483,144 @@
 
             <!--ここからは違う馬-->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/umammei1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="キタサンブラック"
-                android:textSize="5dp"/>
-
-
-            <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-            <TextView
-                android:id="@+id/jixyuunansei1"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/kireazi1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9"
-                />
-
-            <!--文字数が多いときは、字を自動で小さくする-->
-
-            <TextView
-                android:id="@+id/sutamina1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10" />
-
-            <TextView
-                android:id="@+id/start1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9" />
+                <TextView
+                    android:id="@+id/umammei1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="キタサンブラック"
+                    android:textSize="8dp"
+                    android:layout_gravity="center"/>
 
 
-            <TextView
-                android:id="@+id/ninoasi1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="8"
-                />
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
 
 
-            <TextView
-                android:id="@+id/kisitu1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="7"
-                />
+                <TextView
+                    android:id="@+id/jixyuunansei1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
 
-            <TextView
-                android:id="@+id/jokkie_power1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
+                <TextView
+                    android:id="@+id/kireazi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    />
 
-            <TextView
-                android:id="@+id/tekiseikixyori1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3"
-                />
+                <!--文字数が多いときは、字を自動で小さくする-->
 
-            <TextView
-                android:id="@+id/gate_place1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5"
-                />
+                <TextView
+                    android:id="@+id/sutamina1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
 
-            <TextView
-                android:id="@+id/race_pace1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="8"
-                />
+                <TextView
+                    android:id="@+id/start1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"/>
 
-            <TextView
-                android:id="@+id/place_state_gate_place1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
 
-            <TextView
-                android:id="@+id/wind_strong1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
+                <TextView
+                    android:id="@+id/ninoasi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
 
-            <TextView
-                android:id="@+id/studiam1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="10"
-                />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/kisitu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/jokkie_power1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tekiseikixyori1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/gate_place1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/race_pace1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/place_state_gate_place1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/wind_strong1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/studiam1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
 
 
         </LinearLayout>
