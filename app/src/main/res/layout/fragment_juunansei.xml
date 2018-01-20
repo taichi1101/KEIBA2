@@ -7,15 +7,24 @@
 
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
 
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="柔軟性を入力して下さい"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="柔軟性を入力して下さい"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+
+
+                    />
+
+        </LinearLayout>
 
 
 
@@ -24,9 +33,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
             android:orientation="horizontal">
-
 
 
 
@@ -43,128 +52,161 @@
                 <LinearLayout
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
                         <!--多分この上のlistの数は1つ多くないと行けない-->
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="平均"
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:gravity="center"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            >
 
 
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ゴールドアーサー : 5.3"
-                            android:layout_gravity="center"
-                            android:textSize="15sp"/>
-
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ラストインパクト : 3.4"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="入力済み"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
 
 
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ラブリーデイ : 3.2"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="アドマイヤー : 2.1"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
+                        </LinearLayout>
 
 
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ステイゴールド : 8.3"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:orientation="vertical">
 
 
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="サンライズフラッグ : 9.3"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
-
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="サイレントハンター : 2.9"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="メジロブライト : 3.9"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ゴーイングスズカ : 3.2"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ゴールドアーサー : 5.3"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"/>
 
 
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ランニングゲイル : 8.3"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ラストインパクト : 3.4"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ラブリーデイ : 3.2"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="アドマイヤー : 2.1"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
 
 
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="シルクジャスティス : 5.4"
-                            android:layout_gravity="center"
-                            android:textSize="15sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ステイゴールド : 8.3"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
 
 
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="サンライズフラッグ : 9.3"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="サイレントハンター : 2.9"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="メジロブライト : 3.9"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ゴーイングスズカ : 3.2"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ランニングゲイル : 8.3"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="シルクジャスティス : 5.4"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp" />
+
+
+                        </LinearLayout>
 
                 </LinearLayout>
 
-                <!--</GridLayout>-->
 
 
 
@@ -174,63 +216,96 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="入力済み"
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_gravity="center"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:gravity="center"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            >
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="入力済み"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+
+                        </LinearLayout>
 
 
 
-                        <!--この下のtextたちにidを振り分けて、値を代入する-->
-                        <!--activityの中で、ボタンが押されたら、指定されているspinnerの値を取得してきて、(馬名)、値をsetするようにする-->
-                        <!--まずはidをつける-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:orientation="vertical">
 
-                        <!--ここら辺はサーバーに保存するかクラス変数に保存するかになる-->
-                        <!--とりあえず、クラス変数に入れるか、謎の配列に入れて、もう一つの配列に入れた値とかけて、評価をする。それを馬ごとに何個かやってみる-->
+                                <!--この下のtextたちにidを振り分けて、値を代入する-->
+                                <!--activityの中で、ボタンが押されたら、指定されているspinnerの値を取得してきて、(馬名)、値をsetするようにする-->
+                                <!--まずはidをつける-->
 
-                        <!--配列にaddするのはめんどくさい。本来ならserverのdatabaseにinsertするだけだから。そして、listから取得したものを表示させる。ただ、serverから取得-->
-                        <!--したものの表示する時には一度listに入れるから、その作業はやっておいて無駄にはならない-->
+                                <!--ここら辺はサーバーに保存するかクラス変数に保存するかになる-->
+                                <!--とりあえず、クラス変数に入れるか、謎の配列に入れて、もう一つの配列に入れた値とかけて、評価をする。それを馬ごとに何個かやってみる-->
 
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ゴールドアーサー : 5.3"
-                            android:textSize="15sp"
-                            android:layout_gravity="center"/>
+                                <!--配列にaddするのはめんどくさい。本来ならserverのdatabaseにinsertするだけだから。そして、listから取得したものを表示させる。ただ、serverから取得-->
+                                <!--したものの表示する時には一度listに入れるから、その作業はやっておいて無駄にはならない-->
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ラストインパクト : 3.4"
-                            android:textSize="15sp"
-                            android:layout_gravity="center"
-                            />
+                                <TextView
+                                    android:layout_marginTop="30dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ゴールドアーサー : 5.3"
+                                    android:textSize="15sp"
+                                    android:layout_gravity="center"/>
 
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:text="ラストインパクト : 3.4"
+                                    android:textSize="15sp"
+                                    android:layout_gravity="center"
+                                    />
+
+
+                        </LinearLayout>
 
                 </LinearLayout>
 
 
 
         </LinearLayout>
-        
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="1ページめ"
-            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="1ページめ"
+                    android:textSize="20sp" />
+
+        </RelativeLayout>
 
 
 
