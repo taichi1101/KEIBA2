@@ -73,68 +73,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <Spinner
-            android:id="@+id/raceSpinner"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:popupBackground="#ccffffff"
-            />
+            <Spinner
+                android:id="@+id/raceSpinner"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:popupBackground="#ccffffff"
+                />
 
-        <Spinner
-            android:id="@+id/hourseSpinner"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:popupBackground="#ccffffff" />
+            <Spinner
+                android:id="@+id/hourseSpinner"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:popupBackground="#ccffffff" />
 
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
 
 
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2017 12/24(日) 15:24"
-            android:layout_weight="1"/>
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="中山/芝 2500"
-            android:layout_weight="1"
-            android:id="@+id/place"/>
-
-
-
-
-
-        <!--<ListView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--&gt;-->
-            <!--&lt;!&ndash;このListViewはどこに入れても結果は変わらず全画面のListViewになる。やはりカスタマイズのListViewにする&ndash;&gt;-->
-            <!--&lt;!&ndash;とりあえず、最後にChatActivityのonClickListenerだけつける&ndash;&gt;-->
-
-
-        <!--</ListView>-->
-
-    </LinearLayout>
 
 
 
