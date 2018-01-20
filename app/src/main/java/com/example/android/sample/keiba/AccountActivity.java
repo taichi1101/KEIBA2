@@ -139,11 +139,11 @@ public class AccountActivity extends Activity implements View.OnClickListener {
 
         raceSpinner = new String[6];
         raceSpinner[0] = "全レース";
-        raceSpinner[1] = "桜花賞";
-        raceSpinner[2] ="菊花賞";
-        raceSpinner[3] ="天皇賞・秋";
-        raceSpinner[4] ="有馬記念";
-        raceSpinner[5] ="日本ダービー";
+        raceSpinner[1] = "桜花賞 2017 12/24(日)";
+        raceSpinner[2] ="菊花賞 2018 1/22(土)";
+        raceSpinner[3] ="天皇賞・秋 2018 3/13(日)";
+        raceSpinner[4] ="有馬記念 2018 5/23(土)";
+        raceSpinner[5] ="日本ダービー 2018 10/4(土)";
 
 //        この下のコードがあるとlistが表示されなくなり、ボタンが押せなくなる。とりあえず省いておく
         //このしたが、キーボードが押されないようにしてる
@@ -201,10 +201,10 @@ public class AccountActivity extends Activity implements View.OnClickListener {
                 }
 
 //                選択を検知したspinnerごとの対応
-                if (item.equals("日本ダービー")) {
+                if (item.equals("日本ダービー 2018 10/4(土)")) {
                     String activity = getIntent().getStringExtra("Activity");
 
-                    Log.e(TAG, "1/6:初期化のspinnerで日本ダービーが選択された");
+                    Log.e(TAG, "1/6:初期化のspinnerで日本ダービー 2018 10/4(土)が選択された");
                 }
             }
             //アイテムが選択されなかった
