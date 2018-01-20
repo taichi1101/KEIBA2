@@ -39,6 +39,8 @@ public class AccountActivity extends Activity implements View.OnClickListener {
     Button pushMainButton;
     Button pushCalcButton;
 
+    Button forecast_purchase;
+
     //    レースのspinner
     Spinner idRaceSpinner;
 
@@ -107,10 +109,14 @@ public class AccountActivity extends Activity implements View.OnClickListener {
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
 
+        forecast_purchase=(Button)findViewById(R.id.forecast_purchase);
+
 
         pushChatButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
         pushCalcButton.setOnClickListener(this);
+
+        forecast_purchase.setOnClickListener(this);
 
 
 //        spinner
@@ -267,6 +273,11 @@ public class AccountActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
 
+
+            case R.id.forecast_purchase:
+                intent = new Intent(this,ForecastActivity.class);
+                startActivity(intent);
+                break;
 
         }
     }
