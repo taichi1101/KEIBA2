@@ -257,6 +257,14 @@
                     />
 
                 <TextView
+                    android:id="@+id/kisitu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="気質"
+                    android:layout_gravity="center"/>
+
+                <TextView
                     android:id="@+id/ninoasi"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
@@ -264,13 +272,7 @@
                     android:text="二の足"
                     android:layout_gravity="center"/>
 
-                <TextView
-                    android:id="@+id/kisitu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="気質"
-                    android:layout_gravity="center"/>
+
 
                 <TextView
                     android:id="@+id/jokkie_power"
@@ -285,16 +287,44 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="適正距離"
+                    android:text="距離適正"
                     android:layout_gravity="center"/>
 
+                <!--a-->
                 <TextView
-                    android:id="@+id/gate_place"
+                    android:id="@+id/tiredness"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text=" ゲートの場所"
+                    android:text="疲れ具合"
                     android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/in_course_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="内側の馬場状態"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/out_course_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="外側の馬場状態"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/large_outer_course_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="大外の馬場状態"
+                    android:layout_gravity="center"/>
+
 
 
                 <TextView
@@ -302,37 +332,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="レースのペース予想"
+                    android:text="レースのペース"
                     android:layout_gravity="center"/>
 
 
-                <TextView
-                    android:id="@+id/place_state_gate_place"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="場所ごとの馬場状態*ゲート番号"
-                    android:layout_gravity="center"/>
-
-
-
-                <TextView
-                    android:id="@+id/wind_strong"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="風向きと強さ"
-                    android:layout_gravity="center"/>
-
-
-
-                <TextView
-                    android:id="@+id/studiam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="競馬場の特徴"
-                    android:layout_gravity="center"/>
 
 
             </LinearLayout>
@@ -345,13 +348,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
+                <!--動的に作るんだからidはいらない。もし変更する必要ができたら、
+                その時は、EditTextにするか。buttonにしてDialog を表示するか？calcに戻すか-->
+
                 <TextView
-                    android:id="@+id/umammei0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="キタサンブラック"
-                    android:textSize="8dp"
+                    android:textSize="7dp"
                     android:layout_gravity="center"/>
 
 
@@ -359,7 +365,6 @@
 
 
                 <TextView
-                    android:id="@+id/jixyuunansei0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -367,7 +372,6 @@
                     android:layout_gravity="center"/>
 
                 <TextView
-                    android:id="@+id/kireazi0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -378,7 +382,6 @@
                 <!--文字数が多いときは、字を自動で小さくする-->
 
                 <TextView
-                    android:id="@+id/sutamina0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -386,7 +389,6 @@
                     android:layout_gravity="center"/>
 
                 <TextView
-                    android:id="@+id/start0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -395,7 +397,6 @@
 
 
                 <TextView
-                    android:id="@+id/ninoasi0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -404,7 +405,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/kisitu0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -413,7 +413,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/jokkie_power0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -422,7 +421,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/tekiseikixyori0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -431,7 +429,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/gate_place0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -440,7 +437,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/race_pace0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -449,7 +445,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/place_state_gate_place0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -458,7 +453,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/wind_strong0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -467,7 +461,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/studiam0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -483,6 +476,7 @@
 
             <!--ここからは違う馬-->
 
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -490,12 +484,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/umammei1"
+                    android:id="@+id/umammei0"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="キタサンブラック"
-                    android:textSize="8dp"
+                    android:textSize="7dp"
                     android:layout_gravity="center"/>
 
 
@@ -503,7 +497,6 @@
 
 
                 <TextView
-                    android:id="@+id/jixyuunansei1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -511,7 +504,6 @@
                     android:layout_gravity="center"/>
 
                 <TextView
-                    android:id="@+id/kireazi1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -522,7 +514,6 @@
                 <!--文字数が多いときは、字を自動で小さくする-->
 
                 <TextView
-                    android:id="@+id/sutamina1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -530,7 +521,6 @@
                     android:layout_gravity="center"/>
 
                 <TextView
-                    android:id="@+id/start1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -539,7 +529,6 @@
 
 
                 <TextView
-                    android:id="@+id/ninoasi1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -547,9 +536,7 @@
                     android:layout_gravity="center"
                     />
 
-
                 <TextView
-                    android:id="@+id/kisitu1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -558,7 +545,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/jokkie_power1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -567,7 +553,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/tekiseikixyori1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -576,7 +561,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/gate_place1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -585,7 +569,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/race_pace1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -594,7 +577,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/place_state_gate_place1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -603,7 +585,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/wind_strong1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -612,7 +593,506 @@
                     />
 
                 <TextView
-                    android:id="@+id/studiam1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="キタサンブラック"
+                    android:textSize="7dp"
+                    android:layout_gravity="center"/>
+
+
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    />
+
+                <!--文字数が多いときは、字を自動で小さくする-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="キタサンブラック"
+                    android:textSize="7dp"
+                    android:layout_gravity="center"/>
+
+
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    />
+
+                <!--文字数が多いときは、字を自動で小さくする-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="キタサンブラック"
+                    android:textSize="7dp"
+                    android:layout_gravity="center"/>
+
+
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    />
+
+                <!--文字数が多いときは、字を自動で小さくする-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="キタサンブラック"
+                    android:textSize="7dp"
+                    android:layout_gravity="center"/>
+
+
+                <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    />
+
+                <!--文字数が多いときは、字を自動で小さくする-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="7"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -664,4 +1144,5 @@
 
 
 </LinearLayout>
+
 
