@@ -40,10 +40,18 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
-        mPager = (ViewPager) findViewById(R.id.viewpager);
 
-        adapter = new SampleFragmentPagerAdapter(getSupportFragmentManager());
-        mPager.setAdapter(adapter);
+
+        //viewPagerは使わない
+//        mPager = (ViewPager) findViewById(R.id.viewpager);
+//
+//        adapter = new SampleFragmentPagerAdapter(getSupportFragmentManager());
+//        mPager.setAdapter(adapter);
+
+
+
+
+
 //        currentPage = 0;  使われてない
 
 //        //ページ切り替え用のFragmentのAdapterは複数作る必要がありそう。前のは使えない
@@ -98,23 +106,20 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
         usersListView=(ListView)findViewById(R.id.users_list_view);
         setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
 
-        if(setUsersAdapterlist==null){
 
-            Log.e(TAG,"setUsersAdapterlistはnullです");
-
-        }else if(usersListView==null) {
-
-            Log.e(TAG, "usersListViewがnullです");
-        }else{
             usersListView.setAdapter(setUsersAdapterlist);
             usersListView.setSelection(usersListView.getCount());
-        }
+
+
+        user();
+        user();
+        user();
 
     }
 
 
     //commentではない、userをどんどん追加するメソッド、これでuserリストを作る
-    public void user(String text){
+    public void user(){
 
 
         UserAccount user = new UserAccount();
