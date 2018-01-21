@@ -20,17 +20,28 @@ public class IinePageFragment extends android.support.v4.app.Fragment{
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_iine_page, container, false);
-        TextView textView = (TextView) view.findViewById(R.id.iine_textview);
-        textView.setText("Iine");
         // Inflate the layout for this fragment
-        return view;
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_iine_page, container, false);
+        return inflater.inflate(R.layout.fragment_iine_page, container, false);
     }
+
+
+//
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//
+//        View view = inflater.inflate(R.layout.fragment_iine_page, container, false);
+//        TextView textView = (TextView) view.findViewById(R.id.iine_textview);
+//        textView.setText("Iine");
+//        // Inflate the layout for this fragment
+//        return view;
+//        // Inflate the layout for this fragment
+//        //return inflater.inflate(R.layout.fragment_iine_page, container, false);
+//    }
 
 }
