@@ -9,6 +9,7 @@ import android.widget.ImageView;
 public class UserAccount {
 
 
+
     String score;
     ImageView imageView;
 

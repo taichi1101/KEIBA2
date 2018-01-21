@@ -95,20 +95,17 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
 
 
 
-        usersListView=(ListView)findViewById(R.id.users_list_view);
+        //この下のコードを実行するには、users_list_viewがForecastActivityにないといけない。
+        //だから、とりあえず、setUsersAdapterlistをUserAccountのクラス変数に保存しておいて、Fragmentで使う様にする
+
+
+
+       usersListView=(ListView)findViewById(R.id.users_list_view);
         setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
 
-        if(setUsersAdapterlist==null){
 
-            Log.e(TAG,"setUsersAdapterlistはnullです");
-
-        }else if(usersListView==null) {
-
-            Log.e(TAG, "usersListViewがnullです");
-        }else{
             usersListView.setAdapter(setUsersAdapterlist);
             usersListView.setSelection(usersListView.getCount());
-        }
 
     }
 
