@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
 
 
@@ -10,33 +10,38 @@
 
         <ImageView
             android:id="@+id/imageview"
-            android:padding="3dp"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
 
             />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="username"
             android:id="@+id/username"
-            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="10dp"
             />
-        <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+
 
 
         <TextView
             android:id="@+id/score"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="score"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             />
 
 
-
     </LinearLayout>
+
+
 
