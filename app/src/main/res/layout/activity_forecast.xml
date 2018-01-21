@@ -1,26 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-tools:context="com.example.android.sample.keiba.ForecastActivity"
-android:layout_height="match_parent"
-android:orientation="vertical">
-
-<android.support.design.widget.TabLayout
-    android:id="@+id/tabs"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:tabMode="fixed" />
+    tools:context="com.example.android.sample.keiba.ForecastActivity"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<android.support.v4.view.ViewPager
-    android:id="@+id/viewpager"
-    android:layout_width="match_parent"
-    android:layout_height="0px"
-    android:layout_weight="1"
-    android:background="@android:color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--改行をできなくして、編集を押さないと、編集できなくする。
+        つまり、編集ボタンを押すとレイアウトファイルを変更できるようにする。それでTextViewからEditTextになる-->
+
+        <Button
+            android:id="@+id/pushRaceOrderButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="出走表" />
+
+
+        <Button
+            android:id="@+id/pushCalcButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="予想画面" />
+
+        <Button
+            android:id="@+id/pushChatButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="チャット" />
+
+        <Button
+            android:id="@+id/pushAccountButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="アカウント"
+            />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/raceSpinner"
+                android:layout_width="180dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:popupBackground="#ccffffff"
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+
+    <!--weightを0.5で設定してるが、これは文字数によるし最大5行のscrollviewでいい。別にweightはいらない-->
+
+
+    <!--下手にタブを使うと横にスライドする人が出てくるから、ボタンの方がいい?でもあとどれくらいあるのかがわかりやすい-->
+    <!--<android.support.design.widget.TabLayout-->
+    <!--android:id="@+id/tabs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:tabMode="fixed" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+
+
+
+
+
+    </android.support.v4.view.ViewPager>
+
+
+
+
+
+
+
 
 </LinearLayout>
+
 
 
 
