@@ -2,17 +2,23 @@ package com.example.android.sample.keiba;
 
 
 import android.content.Intent;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class ForecastActivity  extends AppCompatActivity implements View.OnClickListener {
 
 
+    private static final String TAG ="ForecastActivity" ;
+    ArrayUserListAdapter setUsersAdapterlist;
     private FragmentPagerAdapter adapter;
 
 
@@ -26,6 +32,8 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
     Button pushAccountButton;
     Button pushCalcButton;
 
+
+    ListView usersListView;
 
 
     @Override
@@ -55,7 +63,80 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
         pushMainButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
         pushCalcButton.setOnClickListener(this);
+
+        ListViewSet();
     }
+
+
+
+
+
+    ArrayList<UserAccount> usersAdapterlist;
+
+
+    public void ListViewSet() {
+
+        usersAdapterlist = new ArrayList<UserAccount>();
+
+
+
+        UserAccount user = new UserAccount();
+
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.s135094276);
+
+        user.setImageView(image);
+
+        user.setScore("15point");
+        user.setUsername("taichi");
+        //user.setIdnumber("idnumber");
+        usersAdapterlist.add(user);
+        // 出力結果をリストビューに表示
+
+
+
+        usersListView=(ListView)findViewById(R.id.users_list_view);
+        setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
+
+        if(setUsersAdapterlist==null){
+
+            Log.e(TAG,"setUsersAdapterlistはnullです");
+
+        }else if(usersListView==null) {
+
+            Log.e(TAG, "usersListViewがnullです");
+        }else{
+            usersListView.setAdapter(setUsersAdapterlist);
+            usersListView.setSelection(usersListView.getCount());
+        }
+
+    }
+
+
+    //commentではない、userをどんどん追加するメソッド、これでuserリストを作る
+    public void user(String text){
+
+
+        UserAccount user = new UserAccount();
+
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.s135094276);
+
+        user.setImageView(image);
+        user.setScore("15point");
+        user.setUsername("taichi");
+        //user.setIdnumber("idnumber");
+        usersAdapterlist.add(user);
+
+        ArrayUserListAdapter setUsersAdapterlist;
+        usersListView=(ListView)findViewById(R.id.users_list_view);
+        setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
+
+    }
+
+
 
 
     @Override

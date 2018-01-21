@@ -8,11 +8,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private static final int PAGE_NUM = 4;
+    private static final int PAGE_NUM = 3;
 
-//    final int PAGE_COUNT = 3;
-//    private String tabTitles[] = new String[]{"Iine", "Score", "Friend"};
-//    private Context context;
+    final int PAGE_COUNT = 3;
+    private String tabTitles[] = new String[]{"Iine", "Score", "Friend"};
+    private Context context;
 
 
 
@@ -52,11 +52,11 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 
     //これは多分titleのページ切り替えを作るやつだからコメントアウト
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        // Generate title based on item position
-//        return tabTitles[position];
-//    }
+    @Override
+    public CharSequence getPageTitle(int position) {
+        // Generate title based on item position
+        return tabTitles[position];
+    }
 
 
     public static int getPageCount() {
