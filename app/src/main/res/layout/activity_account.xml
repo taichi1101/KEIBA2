@@ -104,7 +104,11 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+       >
 
         <!--weightを0.5で設定してるが、これは文字数によるし最大5行のscrollviewでいい。別にweightはいらない-->
 
@@ -125,6 +129,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
 
         >
 
@@ -2090,13 +2097,17 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="チャット履歴 桜花賞"/>
+            android:text="チャット履歴 桜花賞"
+            android:paddingBottom="2dp"
+            />
 
 
         <!--listviewは、全てのレースを選択するか、1レースを選択するかでlisviewにセットする値は変わる。idは同じ-->
