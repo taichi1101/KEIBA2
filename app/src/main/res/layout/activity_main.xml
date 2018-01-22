@@ -75,14 +75,22 @@
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         >
-        <Spinner
-            android:id="@+id/raceSpinner"
-            android:layout_width="180dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:popupBackground="#ccffffff"
-            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/raceSpinner"
+                android:layout_width="180dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:popupBackground="#ccffffff"
+                />
+
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
 
@@ -506,7 +514,7 @@
                             android:text="ルーラーシップ"
                             android:layout_gravity="center"
                             android:ems="5"
-                             />
+                            />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -582,7 +590,7 @@
                             android:text="マカヒキ"
                             android:ems="5"
                             android:layout_gravity="center"
-                             />
+                            />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -659,7 +667,7 @@
                             android:text="ディープインパクト"
                             android:ems="5"
                             android:layout_gravity="center"
-                           />
+                            />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
