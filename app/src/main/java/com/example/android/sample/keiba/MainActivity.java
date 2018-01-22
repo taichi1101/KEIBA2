@@ -20,6 +20,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button pushCalcButton;
     Button pushChatButton;
     Button pushAccountButton;
+    Button pushForecasButton;
+    Button pushMainButton;
 
     //    レースのspinner
     Spinner idRaceSpinner;
@@ -38,10 +40,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
+        pushForecasButton=(Button)findViewById(R.id.pushForecastButton);
+        pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
 
         pushCalcButton.setOnClickListener(this);
         pushChatButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
+        pushForecasButton.setOnClickListener(this);
+        pushMainButton.setOnClickListener(this);
 
 
         //        spinner
@@ -158,6 +164,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             case R.id.pushAccountButton:
                 intent = new Intent(this,AccountActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.pushForecastButton:
+                intent = new Intent(this,ForecastActivity.class);
+                startActivity(intent);
+                break;
+
+
+            case R.id.pushRaceOrderButton:
+                intent = new Intent(this,MainActivity.class);
                 startActivity(intent);
                 break;
 

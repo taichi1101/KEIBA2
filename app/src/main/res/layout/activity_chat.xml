@@ -13,12 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/pushRaceOrderButton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="出走表" />
+            android:text="出走表"
+            android:textSize="11dp"/>
 
 
         <Button
@@ -26,19 +28,16 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="予想画面" />
-
-
-
+            android:text="予想画面"
+            android:textSize="11dp"/>
 
         <Button
             android:id="@+id/pushChatButton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="チャット" />
-
-
+            android:text="チャット"
+            android:textSize="11dp"/>
 
         <Button
             android:id="@+id/pushAccountButton"
@@ -46,6 +45,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="アカウント"
+            android:textSize="11dp"
+            />
+
+
+        <Button
+            android:id="@+id/pushForecastButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ランキング"
+            android:textSize="11dp"
             />
 
     </LinearLayout>

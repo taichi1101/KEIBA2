@@ -38,6 +38,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
     Button pushChatButton;
     Button pushMainButton;
     Button pushAccountButton;
+    Button pushForecastButton;
+    Button pushCalcButton;
 
     //    レースのspinner
     Spinner idRaceSpinner;
@@ -72,6 +74,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         pushChatButton=(Button)findViewById(R.id.pushChatButton);
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
+        pushForecastButton=(Button)findViewById(R.id.pushForecastButton);
+        pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
 
         pushCalc_button_1=(Button)findViewById(R.id.calc_button_1);
         pushCalc_button_2=(Button)findViewById(R.id.calc_button_2);
@@ -87,6 +91,9 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
         pushChatButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
+        pushForecastButton.setOnClickListener(this);
+        pushCalcButton.setOnClickListener(this);
+
 
         pushCalc_button_1.setOnClickListener(this);
         pushCalc_button_2.setOnClickListener(this);
@@ -308,6 +315,18 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.pushAccountButton:
                 intent= new Intent(this,AccountActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.pushForecastButton:
+                intent = new Intent(this,ForecastActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.pushCalcButton:
+                intent = new Intent(this,CalcActivity.class);
+                startActivity(intent);
+                break;
+
 
 
             case R.id.calc_button_1:
@@ -320,6 +339,8 @@ public class CalcActivity extends AppCompatActivity implements View.OnClickListe
 
                 getSpinnerAddNumber(1);
                 break;
+
+
 
             case R.id.calc_button_2:
                 getSpinnerAddNumber(2);

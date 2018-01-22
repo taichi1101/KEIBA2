@@ -53,7 +53,6 @@ public class ArrayUserListAdapter extends BaseAdapter{
 
 
 
-    //1/4 多分この下のgetViewのpositionはタッチされた場所のviewの文字を取得するためのもの
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         UserAccount user = adapterlist.get(position);

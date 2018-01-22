@@ -31,6 +31,7 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
     Button pushMainButton;
     Button pushAccountButton;
     Button pushCalcButton;
+    Button pushForecastButton;
 
 
     ListView usersListView;
@@ -66,11 +67,13 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
         pushMainButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
         pushCalcButton=(Button)findViewById(R.id.pushCalcButton);
+        pushForecastButton=(Button)findViewById(R.id.pushForecastButton);
 
         pushChatButton.setOnClickListener(this);
         pushMainButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
         pushCalcButton.setOnClickListener(this);
+        pushForecastButton.setOnClickListener(this);
 
         ListViewSet();
     }
@@ -106,10 +109,35 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
         usersListView=(ListView)findViewById(R.id.users_list_view);
         setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
 
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
 
-            usersListView.setAdapter(setUsersAdapterlist);
-            usersListView.setSelection(usersListView.getCount());
 
+
+        //違うlistviewもセットしておく
+        usersListView=(ListView)findViewById(R.id.users_list_view_score);
+        setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
+
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
+
+
+
+        //違うlistviewもセットしておく
+        usersListView=(ListView)findViewById(R.id.users_list_view_friend);
+        setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
+
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
+
+
+        user();
+        user();
+        user();
+
+        user();
+        user();
+        user();
 
         user();
         user();
@@ -166,10 +194,19 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
             case R.id.pushAccountButton:
                 intent = new Intent(this, AccountActivity.class);
                 startActivity(intent);
+                break;
 
             case R.id.pushCalcButton:
                 intent = new Intent(this, CalcActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.pushForecastButton:
+                intent = new Intent(this,ForecastActivity.class);
+                startActivity(intent);
+                break;
+
+
 
         }
     }
