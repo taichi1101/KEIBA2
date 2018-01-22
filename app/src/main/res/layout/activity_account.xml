@@ -75,7 +75,7 @@
         >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <Spinner
@@ -83,7 +83,6 @@
                 android:layout_width="180dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
                 android:popupBackground="#ccffffff"
                 />
 
@@ -104,7 +103,7 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.9"
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingEnd="10dp"
@@ -117,8 +116,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/race_comment"
             android:text="今回の桜花賞はタイムフレイヤーの要素、叩き3戦目、先行力あり、上がりは毎回2着衣ない、類型がいない、展開に左右されない、騎手、鞍上、ポジショニング、前半のスピードが速く流れた（ハイペース)だったから後ろが有利になる。
-タイムふレイヤーは後方待機策をとったから成功した。"
-
+タイムふレイヤーは後方待機策をとったから成功した。昨年２着のベストウォーリア（栗東・石坂正厩舎、牡８歳）は、交流ＧＩマイルチャンピオンシップ南部杯６着、武蔵野Ｓ７着と、ここ２戦は振るわない。それでも、２０１４、１５年南部杯連覇、昨年のフェブラリーＳ２着など、実績は最上位。武蔵野Ｓの後はひと息入れて立て直され、年末に帰厩した。じっくり乗り込まれての復帰戦だけに、好走が期待できる。
+"
             />
 
     </ScrollView>
