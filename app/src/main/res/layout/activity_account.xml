@@ -88,11 +88,11 @@
                 />
 
             <!--<Button-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:id="@+id/forecast_purchase"-->
-                <!--android:text="予想購入ページへ"/>-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/forecast_purchase"-->
+            <!--android:text="予想購入ページへ"/>-->
 
         </LinearLayout>
 
@@ -104,7 +104,11 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+       >
 
         <!--weightを0.5で設定してるが、これは文字数によるし最大5行のscrollviewでいい。別にweightはいらない-->
 
@@ -125,6 +129,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
 
         >
 
@@ -316,6 +323,7 @@
                         android:layout_weight="1"
                         android:text="キタサンブラック"
                         android:textSize="7dp"
+                        android:ems="5"
                         android:layout_gravity="center"
                         android:gravity="center"/>
 
@@ -476,6 +484,7 @@
                         android:layout_weight="1"
                         android:text="キタサンブラック"
                         android:textSize="7dp"
+                        android:ems="5"
                         android:layout_gravity="center"
                         android:gravity="center"/>
 
@@ -632,6 +641,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:text="キタサンブラック"
+                        android:ems="5"
                         android:textSize="7dp"
                         android:layout_gravity="center"
                         android:gravity="center"/>
@@ -793,6 +803,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:text="キタサンブラック"
+                        android:ems="5"
                         android:textSize="7dp"
                         android:layout_gravity="center"
                         android:gravity="center"/>
@@ -956,6 +967,7 @@
                         android:layout_weight="1"
                         android:text="キタサンブラック"
                         android:textSize="7dp"
+                        android:ems="5"
                         android:layout_gravity="center"
                         android:gravity="center"/>
 
@@ -1116,6 +1128,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:text="キタサンブラック"
+                        android:ems="5"
                         android:textSize="7dp"
                         android:layout_gravity="center"
                         android:gravity="center"/>
@@ -1250,168 +1263,6 @@
                         android:layout_gravity="center"
                         />
                 </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <!--動的に作るんだからidはいらない。もし変更する必要ができたら、
-                    その時は、EditTextにするか。buttonにしてDialog を表示するか？calcに戻すか-->
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="キタサンブラック"
-                        android:textSize="7dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"/>
-
-
-                    <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="10"
-                        android:gravity="center"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="9"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        />
-
-                    <!--文字数が多いときは、字を自動で小さくする-->
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="10"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="9"
-                        android:gravity="center"
-                        android:layout_gravity="center"/>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="8"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="7"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="10"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="3"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="5"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:gravity="center"
-                        android:layout_weight="1"
-                        android:text="8"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="10"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="10"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="10"
-                        android:layout_gravity="center"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="8"
-                        android:layout_gravity="center"
-                        />
-                </LinearLayout>
-
-
-
 
 
 
@@ -1599,6 +1450,170 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:text="キタサンブラック"
+                        android:ems="5"
+                        android:textSize="7dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+
+                    <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="9"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        />
+
+                    <!--文字数が多いときは、字を自動で小さくする-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="9"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="8"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="7"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="10"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="3"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="8"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="8"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!--動的に作るんだからidはいらない。もし変更する必要ができたら、
+                    その時は、EditTextにするか。buttonにしてDialog を表示するか？calcに戻すか-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="キタサンブラック"
+                        android:ems="5"
                         android:textSize="7dp"
                         android:layout_gravity="center"
                         android:gravity="center"/>
@@ -2082,13 +2097,17 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="チャット履歴 桜花賞"/>
+            android:text="チャット履歴 桜花賞"
+            android:paddingBottom="2dp"
+            />
 
 
         <!--listviewは、全てのレースを選択するか、1レースを選択するかでlisviewにセットする値は変わる。idは同じ-->

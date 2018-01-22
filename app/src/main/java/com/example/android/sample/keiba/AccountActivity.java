@@ -143,13 +143,14 @@ public class AccountActivity extends Activity implements View.OnClickListener {
 
 //        この下のspinnerの数は可変にするためにはNew3のコードを見る
 
-        raceSpinner = new String[6];
-        raceSpinner[0] = "全レース";
-        raceSpinner[1] = "桜花賞 2017 12/24(日)";
-        raceSpinner[2] ="菊花賞 2018 1/22(土)";
-        raceSpinner[3] ="天皇賞・秋 2018 3/13(日)";
-        raceSpinner[4] ="有馬記念 2018 5/23(土)";
-        raceSpinner[5] ="日本ダービー 2018 10/4(土)";
+        //全レースを無くしたが、これだと他のspinnerと共有できない
+        //ただ、ここは最新のデータを表示しておけばいい。
+        raceSpinner = new String[5];
+        raceSpinner[0] = "桜花賞 2017 12/24(日)";
+        raceSpinner[1] ="菊花賞 2018 1/22(土)";
+        raceSpinner[2] ="天皇賞・秋 2018 3/13(日)";
+        raceSpinner[3] ="有馬記念 2018 5/23(土)";
+        raceSpinner[4] ="日本ダービー 2018 10/4(土)";
 
 //        この下のコードがあるとlistが表示されなくなり、ボタンが押せなくなる。とりあえず省いておく
         //このしたが、キーボードが押されないようにしてる

@@ -136,7 +136,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8">
+        android:layout_weight="8"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -252,6 +255,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -263,6 +267,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -270,8 +275,9 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:ems="5"
                             android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:layout_gravity="center" />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -279,6 +285,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -286,6 +293,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -295,22 +303,24 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
                     </LinearLayout>
 
 
+
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
 
@@ -322,6 +332,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -333,6 +344,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -340,8 +352,10 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:text="ショウナンバッハ"
+                            android:ems="5"
+                            android:layout_gravity="center"
+                            />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -349,6 +363,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -356,6 +371,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -365,22 +381,22 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
                     </LinearLayout>
 
-
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
 
@@ -392,6 +408,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -403,6 +420,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -410,8 +428,10 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:text="サトノダイアモンド"
+                            android:ems="5"
+                            android:layout_gravity="center"
+                            />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -419,6 +439,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -426,6 +447,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -435,22 +457,21 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
                     </LinearLayout>
-
-
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
 
@@ -462,6 +483,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -473,6 +495,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -480,8 +503,10 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:text="ルーラーシップ"
+                            android:layout_gravity="center"
+                            android:ems="5"
+                             />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -489,6 +514,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -496,6 +522,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -505,22 +532,22 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
                     </LinearLayout>
 
-
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
 
@@ -532,6 +559,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -543,6 +571,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -550,8 +579,10 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:text="マカヒキ"
+                            android:ems="5"
+                            android:layout_gravity="center"
+                             />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -559,6 +590,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -566,6 +598,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -575,12 +608,14 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
@@ -588,9 +623,8 @@
 
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
 
@@ -602,6 +636,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -613,6 +648,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -620,8 +656,10 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:text="ディープインパクト"
+                            android:ems="5"
+                            android:layout_gravity="center"
+                           />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -629,6 +667,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -636,6 +675,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -645,12 +685,14 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
@@ -658,9 +700,8 @@
 
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:orientation="vertical">
 
 
@@ -672,6 +713,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
 
@@ -683,6 +725,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="1" />
 
                         <TextView
@@ -690,8 +733,10 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
+                            android:text="サイレントスズカ"
+                            android:ems="5"
+                            android:layout_gravity="center"
+                            />
 
                         <!--文字数が多いときは、字を自動で小さくする-->
 
@@ -699,6 +744,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="牡5" />
 
@@ -706,6 +752,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="57" />
 
@@ -715,156 +762,19 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:text="武 豊" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:text="清水 久" />
 
                     </LinearLayout>
 
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
-                        <!--動的に作るんだからidはいらない。もし変更する必要ができたら、
-                        その時は、EditTextにするか。buttonにしてDialog を表示するか？calcに戻すか-->
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1" />
-
-
-                        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
-
-                        <!--文字数が多いときは、字を自動で小さくする-->
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="牡5" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="57" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="武 豊" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="清水 久" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
-                        <!--動的に作るんだからidはいらない。もし変更する必要ができたら、
-                        その時は、EditTextにするか。buttonにしてDialog を表示するか？calcに戻すか-->
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1" />
-
-
-                        <!--buttonしか配置できないから、buttonにしちゃう。ボタンを押したら編集画面のダイアログを出すようにする-->
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="キタサンブラック"
-                            android:textSize="7dp" />
-
-                        <!--文字数が多いときは、字を自動で小さくする-->
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="牡5" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="57" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="武 豊" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="清水 久" />
-
-                    </LinearLayout>
 
 
                 </LinearLayout>

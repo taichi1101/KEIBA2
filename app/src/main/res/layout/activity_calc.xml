@@ -127,6 +127,9 @@
             android:id="@+id/pager"
             android:layout_width="wrap_content"
             android:layout_height="440dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
            />
 
 
