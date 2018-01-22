@@ -32,6 +32,8 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     Button sentencePushbutton;
     Button pushRaceOrderButton;
     Button pushAccountButton;
+    Button pushForecastButton;
+    Button pushChatButton;
 
 
     ArrayListAdapter setCommentAdapterlist;
@@ -54,11 +56,15 @@ public class ChatActivity extends Activity implements View.OnClickListener {
         sentencePushbutton=(Button)findViewById(R.id.sentencePushbutton);
         pushRaceOrderButton=(Button)findViewById(R.id.pushRaceOrderButton);
         pushAccountButton=(Button)findViewById(R.id.pushAccountButton);
+        pushForecastButton=(Button)findViewById(R.id.pushForecastButton);
+        pushChatButton=(Button)findViewById(R.id.pushChatButton);
 
         pushCalcButton.setOnClickListener(this);
         sentencePushbutton.setOnClickListener(this);
         pushRaceOrderButton.setOnClickListener(this);
         pushAccountButton.setOnClickListener(this);
+        pushForecastButton.setOnClickListener(this);
+        pushChatButton.setOnClickListener(this);
 
 
 //        spinner
@@ -284,6 +290,19 @@ public class ChatActivity extends Activity implements View.OnClickListener {
             case R.id.pushAccountButton:
                 intent= new Intent(this,AccountActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.pushForecastButton:
+                intent = new Intent(this,ForecastActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.pushChatButton:
+                intent = new Intent(this,ChatActivity.class);
+                startActivity(intent);
+                break;
+
+
 
         }
     }
