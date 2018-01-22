@@ -106,10 +106,35 @@ public class ForecastActivity  extends AppCompatActivity implements View.OnClick
         usersListView=(ListView)findViewById(R.id.users_list_view);
         setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
 
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
 
-            usersListView.setAdapter(setUsersAdapterlist);
-            usersListView.setSelection(usersListView.getCount());
 
+
+        //違うlistviewもセットしておく
+        usersListView=(ListView)findViewById(R.id.users_list_view_score);
+        setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
+
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
+
+
+
+        //違うlistviewもセットしておく
+        usersListView=(ListView)findViewById(R.id.users_list_view_friend);
+        setUsersAdapterlist = new ArrayUserListAdapter(ForecastActivity.this, usersAdapterlist);
+
+        usersListView.setAdapter(setUsersAdapterlist);
+        usersListView.setSelection(usersListView.getCount());
+
+
+        user();
+        user();
+        user();
+
+        user();
+        user();
+        user();
 
         user();
         user();
